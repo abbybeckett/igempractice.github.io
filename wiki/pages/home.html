@@ -1,60 +1,146 @@
-{% extends "layout.html" %}
+<!DOCTYPE html>
+	<head>
+    <meta charset = "utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet"> 
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+  <link href = "index.css" rel = "stylesheet">
+ 
+ 
+  
+    </head>
 
-{% block title %}Home{% endblock %}
-{% block lead %}<b>Welcome to iGEM 2023!</b> Your team has been approved and you are ready to start the iGEM season!{% endblock %}
 
-{% block page_content %}
+	<body>
+        <div class="page-wrapper">
+            <div class="nav-wrapper">
+              <div class="grad-bar"></div>
+              <nav class="navbar">
+                <img src="igem iisertvm logo (1).png" alt="iGEM Logo" height="200">
+                <div class="menu-toggle" id="mobile-menu">
+                  <span class="bar"></span>
+                  <span class="bar"></span>
+                  <span class="bar"></span>
+                </div>
+                <ul class="nav no-search">
+                  <li class="nav-item"><a href="index.html">Home</a></li>
+                  <li class="nav-item"><div class="dropdown">
+                    <button class="dropbtn">Team
+                      <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                      <a href="Team.html">Team</a>
+                      <a href="Attribution.html">Attributions</a>
+                      <a href="Collaboration.html">Collaborations</a>
+                    </li>
+                  <li class="nav-item">
+                     <div class="dropdown">
+                    <button class="dropbtn">Project
+                      <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                      <a href="Project/comm.html">Communication</a>
+                      <a href="Project/contribution.html">Contribution</a>
+                      <a href="Project/description.html">Description</a>
+                      <a href="Project/engineering.html">Engineering</a>
+                      <a href="Project/experiment.html">Experiments</a>
+                      <a href="Project/implementation.html">Implementation</a>
+                      <a href="Project/notebook.html">Notebook</a>
+                      <a href="Project/partnership.html">Partnership</a>
+                      <a href="Project/proof.html">Proof of Concept</a>                      
+                      <a href="Project/results.html">Results</a>
 
-<div class="row">
-  <div class="col">
-    <h2>Before you start</h2>
-    <hr>
-    <p>Please read the following pages:</p>
-    <ul>
-      <li><a href="https://competition.igem.org/deliverables/team-wiki" target="_blank">Wiki Requirements page</a></li>
-      <li><a href="https://competition.igem.org/judging/pages-for-awards" target="_blank">Standard URL Pages for Awards</a></li>
-    </ul>
-  </div>
-</div>
-<div class="row mt-4">
-  <div class="col">
-    <h2>Styling your wiki</h2>
-    <hr>
-    <p>Feel free to customize the page styling according to your preferences, or you can simply leave the style as it is. It's wise to focus on a clear content first, and on a clean design later.</p>
-    <p>Be cautious with the size of the assets like images, videos, and more into your wiki. Large file sizes can hinder the presentation of wikis due to slow internet connections. Remember to compress large files before uploading them to iGEM servers.</p>
-    <p>This default wiki meets the requirements, enhances navigability, and provides a user-friendly experience for visitors. You should not feel obliged to go beyond the provided styling.</p>
-  </div>
-</div>
-<div class="row mt-4">
-  <div class="col-lg-8">
-    <h2>Tips</h2>
-    <hr>
-    <p>This wiki will be your team's first interaction with the rest of the world, so here are a few tips to help you get started:</p>
-    <ul>
-      <li>State your accomplishments! Tell people what you have achieved from the start.</li>
-      <li>Be clear about what you are doing and how you plan to do this.</li>
-      <li>You have a global audience! Consider the different backgrounds that your users come from.</li>
-      <li>Make sure information is easy to find; nothing should be more than 3 clicks away.</li>
-      <li>Avoid using very small fonts and low contrast colors; information should be easy to read.</li>
-      <li>Start documenting your project as early as possible; don't leave anything to the last minute before the Wiki Freeze. For a complete list of deadlines visit the <a href="https://competition.igem.org/calendar" target="_blank">iGEM Competition calendar</a></li>
-      <li>Have lots of fun!</li>
-    </ul>
-  </div>
-  <div class="col-lg-4">
-    <h2>Inspiration</h2>
-    <hr>
-    <p>You can also view other team wikis for inspiration! Here are some examples:</p>
-    <ul>
-      <li><a href="https://2022.igem.wiki/dtu-denmark">2022 DTU-Denmark</a></li>
-      <li><a href="https://2022.igem.wiki/virginia">2022 Virginia</a></li>
-      <li><a href="https://2022.igem.wiki/crete">2022 Crete</a></li>
-      <li><a href="https://2022.igem.wiki/estonia-tuit">2022 Estonia_TUIT</a></li>
-      <li><a href="https://2022.igem.wiki/ashesighana">2022 AshesiGhana</a></li>
-      <li><a href="https://2021.igem.org/Team:SDU-Denmark">2021 SDU-Denmark</a></li>
-      <li><a href="https://2020.igem.org/Team:XMU-China">2020 XMU China </a></li>
-      <li><a href="https://2020.igem.org/Team:TAS_Taipei">2020 TAS Taipei </a></li>
-    </ul>
-  </div>
-</div>
+                    
+                    </div>
+                  </div>
+                </li>
+                  <li class="nav-item"><a href="Parts.html">
+                    <div class="dropdown">
+                      <button class="dropbtn">Parts
+                        <i class="fa fa-caret-down"></i>
+                      </button>
+                      <div class="dropdown-content">
 
-{% endblock %}
+                        <a href="Parts/partcollection.html">Parts Collection</a>
+                        <a href="Parts.html">Parts</a>
+                        <a href="Parts/Improve.html">Improve</a>        
+                  </a></li>
+                  <li class="nav-item"><a href="Results.html">Safety</a></li>
+                  <li class="nav-item"><a href="iHP.html">Human Practices</a></li>
+                  <li class="nav-item"><a href="Results.html"></a></li>
+                  
+                </ul>
+              </nav>
+            </div>
+            <section class="headline">
+              <h1>iGEM IISERTVM</h1>
+              <h3>Depression Diagnostics Kit</h3>
+
+              <!--<img src = "oasys.png" class = "center" height = "160"  >-->
+
+            </section>
+            <section class="features">
+              <div class="feature-container">
+                <img src="oasys.png" alt="Flexbox Feature">
+                <h2>Depression Statistics</h2>
+                <p>blah blah</p>
+              </div>
+              <div class="feature-container">
+                <img src="oasys.png" alt="Flexbox Feature">
+                <h2>Blood Biomarkers</h2>
+                <p>GSalpha protein, miRNA and neurotransmitters</p>
+              </div>
+              <div class="feature-container">
+                <img src="oasys.png" alt="Flexbox Feature">
+                <h2>Novelty</h2>
+                <p>Click Chemistry, aptamers</p>
+              </div>
+            </section>
+          </div>
+            <!-- Site footer -->
+            <footer id="svg-end" class="pt-5 pb-5 footer py-5 bg-dark text-white">
+              <div class="container">
+                <div class="row mb-4">
+                  <div class="col-lg-6 col-xs-12">
+                    <h4 class="mb-3" style="padding-left: 50px;"><a href="https://2023.igem.wiki/iiser-tvm/">Oasys</a></h4>
+                    <p style="color: aliceblue;">A depression diagnostics kit envisioned by iGEM IISER TVM 2023</p>
+                  </div>
+                  <div class="col-lg-3 col-xs-12">
+                    <h4 class="mt-lg-0 mt-sm-3">Links</h4>
+                      <ul class="m-2 p-2">
+                        <li><a href="https://biology.iisertvm.ac.in/">School of Biology, IISER TVM</a></li>
+                        <li><a href="https://www.instagram.com/igem_iisertvm">Instagram</a></li>
+                        <li><a href="https://twitter.com/igem_iisertvm">Twitter</a></li>
+                        <li><a href="https://www.youtube.com/c/iGEMIISERTVM">YouTube</a></li>
+                        <li><a href="https://2021.igem.org/Team:IISER_TVM">iGEM IISER TVM 2021</a></li>
+                        <li><a href="https://2023.igem.wiki/iiser-tvm/">iGEM IISER TVM 2022</a></li>
+                      </ul>
+                  </div>
+                  <div class="col-lg-3 col-xs-12">
+                    <h4 class="mt-lg-0 mt-sm-4 mb-3 center">Contact</h4>
+                    <p style="color: aliceblue";>IISER Thiruvananthapuram, Maruthamala PO, Vithura, Kerala, India - 695551</p>
+                    <p class="mb-0"style="color: aliceblue">+91 0471 277 8009</p>
+                    <p style="color: aliceblue">igem@iisertvm.ac.in</p>
+                  </div>
+                </div>
+                <hr>
+                <!-- The following MUST be on every page: license information and link to the repository on gitlab.igem.org -->
+                <div class="row mt-4">
+                  <div class="col">
+                    <p class="mb-0"><small>© 2022 - Content on this site is licensed under a <a class="subfoot" href="https://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International license</a>.</small></p>
+                    <p><small>The repository used to create this website is available at <a href="https://gitlab.igem.org/2022/iiser-tvm">gitlab.igem.org/2022/iiser-tvm</a>.</small></p>
+                  </div>
+                </div>
+              </div>
+            </footer>
+            <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous">
+    
+            </script>
+            <script>
+                $('.menu-toggle').click(function(){
+                   $(".nav").toggleClass("mobile-nav");
+                   $(this).toggleClass("is-active");
+                });
+                </script>
+ </body>
+ </html>          
