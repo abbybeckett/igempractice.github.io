@@ -1,4 +1,4 @@
-<div class="nav-wrapper">
+<div class="nav-wrapper">html
   <div class="grad-bar"></div>
   <nav class="navbar">
     <img src="igem iisertvm logo (1).png" alt="iGEM Logo" height="200">
@@ -14,9 +14,9 @@
           <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-content">
-          <a href="Team.html">Team</a>
-          <a href="Attribution.html">Attributions</a>
-          <a href="Collaboration.html">Collaborations</a>
+          <a href="{{ url_for('pages', page='team') }}">Team</a>
+          <a href="{{ url_for('pages', page='attributions') }}">Attributions</a>
+          <a href="{{ url_for('pages', page='collaboration') }}">Collaborations</a>
         </li>
       <li class="nav-item">
          <div class="dropdown">
@@ -24,16 +24,16 @@
           <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-content">
-          <a href="Project/comm.html">Communication</a>
-          <a href="Project/contribution.html">Contribution</a>
-          <a href="Project/description.html">Description</a>
-          <a href="Project/engineering.html">Engineering</a>
-          <a href="Project/experiment.html">Experiments</a>
-          <a href="Project/implementation.html">Implementation</a>
-          <a href="Project/notebook.html">Notebook</a>
-          <a href="Project/partnership.html">Partnership</a>
-          <a href="Project/proof.html">Proof of Concept</a>                      
-          <a href="Project/results.html">Results</a>
+          <a href="{{ url_for('pages', page='communication') }}">Communication</a>
+          <a href="{{ url_for('pages', page='contribution') }}">Contribution</a>
+          <a href="{{ url_for('pages', page='description') }}">Description</a>
+          <a href="{{ url_for('pages', page='engineering') }}">Engineering</a>
+          <a href="{{ url_for('pages', page='experiments') }}">Experiments</a>
+          <a href="{{ url_for('pages', page='implements') }}">Implementation</a>
+          <a href="{{ url_for('pages', page='notebook') }}">Notebook</a>
+          <a href="{{ url_for('pages', page='partnetship') }}">Partnership</a>
+          <a href="{{ url_for('pages', page='proof_of_concept') }}">Proof of Concept</a>                      
+          <a href="{{ url_for('pages', page='results') }}">Results</a>
 
         
         </div>
