@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Oswald");
 
+.body {
+    background-color: #f1efe5;
+}
 * {
     margin: 0;
     padding: 0;
@@ -96,7 +99,7 @@ h4 {
   .page-wrapper {
     width: 100%;
     height: auto;
-    background-color: #F1EFE5;
+    background-color: #f1efe5;
   }
   
   .nav-wrapper {
