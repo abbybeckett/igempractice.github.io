@@ -138,7 +138,7 @@ h4 {
   
   .navbar ul {
     list-style: none;
-    display: grid;
+    display: contents;
     grid-template-columns: repeat(8,0.8fr);
     justify-self: end;
     
@@ -5593,7 +5593,6 @@ container,
   
   .fixed-content{
     margin-top: 25%;
-    display: contents;
     position: sticky;
     top:10%;
     z-index: 1;
