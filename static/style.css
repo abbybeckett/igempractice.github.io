@@ -5229,7 +5229,8 @@ container,
 }
 
 .list-group {
-    display: flex;
+    margin-top:25%;
+    display: contents;
     flex-direction: column;
     padding-left: 0;
     margin-bottom: 0;
@@ -5591,6 +5592,8 @@ container,
   }
   
   .fixed-content{
+    margin-top: 25%;
+    display: contents;
     position: sticky;
     top:10%;
     z-index: 1;
