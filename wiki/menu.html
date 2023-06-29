@@ -8,7 +8,7 @@
       <span class="bar"></span>
     </div>
     <ul class="nav no-search">
-      <li class="nav-item"><a href="index.html">Home</a></li>
+      <li class="nav-item"><a href="{{ url_for('pages', page='home') }}">Home</a></li>
       <li class="nav-item"><div class="dropdown">
         <button class="dropbtn">Team
           <i class="fa fa-caret-down"></i>
@@ -39,20 +39,20 @@
         </div>
       </div>
     </li>
-      <li class="nav-item"><a href="Parts.html">
+      <li class="nav-item"><a href="{{ url_for('pages', page='parts') }}">
         <div class="dropdown">
           <button class="dropbtn">Parts
             <i class="fa fa-caret-down"></i>
           </button>
           <div class="dropdown-content">
 
-            <a href="Parts/partcollection.html">Parts Collection</a>
-            <a href="Parts.html">Parts</a>
-            <a href="Parts/Improve.html">Improve</a>        
+            <a href="{{ url_for('pages', page='software') }}">Software</a>
+            <a href="{{ url_for('pages', page='sustainable') }}">Sustainable</a>
+            <a href="{{ url_for('pages', page='hardware') }}">Hardware</a>        
       </a></li>
-      <li class="nav-item"><a href="Results.html">Safety</a></li>
-      <li class="nav-item"><a href="iHP.html">Human Practices</a></li>
-      <li class="nav-item"><a href="Results.html"></a></li>
+      <li class="nav-item"><a href="safety.html">Safety</a></li>
+      <li class="nav-item"><a href="human-practices.html">Human Practices</a></li>
+      <li class="nav-item"><a href="results.html"></a></li>
       
     </ul>
   </nav>
