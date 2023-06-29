@@ -5594,7 +5594,7 @@ container,
   }
   
   .fixed-content{
-    margin-left:-20%;
+    margin-left:-100px;
     max-width: 100%;
     height: auto;
     top: 20%;
