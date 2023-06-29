@@ -5611,3 +5611,6 @@ opacity : 1 !important ;
 .navbar-links {
     display: grid;
 }
+.menuprop {
+    font-size: smaller;
+}
