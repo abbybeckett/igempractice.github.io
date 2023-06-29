@@ -126,7 +126,7 @@ h4 {
     grid-template-columns: 1fr 3fr;
     align-items: center;
     height:100px;
-    z-index: 99;
+    z-index: 1000;
   }
   
   .navbar img {
