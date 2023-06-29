@@ -5605,3 +5605,6 @@ opacity : 1 !important ;
 .a-href-fix a {
     position: relative;
 }
+.navbar-links {
+    display: grid;
+}
