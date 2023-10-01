@@ -5645,6 +5645,7 @@ opacity : 1 !important ;
   overflow: scroll;
   overscroll-behavior-x: contain;
   scrollbar-width: none;
+  padding-right: 5px;
 }
 .cards::-webkit-scrollbar {
   width: 0 !important;
