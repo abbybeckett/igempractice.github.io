@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Oswald");
 
+:root {
+    --space: 2rem;
+    --radius: 0.15rem;
+  }
+  
 .body {
     background-color: #f1efe5;
 }
