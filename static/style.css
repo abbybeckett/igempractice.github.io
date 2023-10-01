@@ -5691,8 +5691,8 @@ opacity : 1 !important ;
   width: 70%;
   height: 24px;
   border-radius: var(--radius);
-  background-color: #f25c5a;
-}
+  background: linear-gradient(#000,transparent);
+  
 
 .card__line {
   height: 12px;
