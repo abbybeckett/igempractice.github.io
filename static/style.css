@@ -5659,11 +5659,11 @@ opacity : 1 !important ;
   .cards > * + * {
     margin-left: var(--space);
   }
-  .cards::after {
+ /* .cards::after {
     content: "";
     display: block;
     flex: 0 0 var(--space);
-  }
+  }*/
   
   .card {
     flex: 1 0 auto;
@@ -5672,7 +5672,7 @@ opacity : 1 !important ;
     opacity: 0;
     background-color: #e6e6e6;
     border-radius: var(--radius);
-    overflow: hidden;
+    /*overflow: hidden;*/
     transform: translateX(400px);
   }
   
@@ -5680,12 +5680,12 @@ opacity : 1 !important ;
     width: 100%;
     background-color: #70c2b4;
   }
-  .card__image::before {
+  /*.card__image::before {
     content: "";
     display: block;
     padding-bottom: calc(100% / (16 / 9));
   }
-  
+  */
   .card__content {
     padding: var(--space);
   }
