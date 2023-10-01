@@ -5668,7 +5668,7 @@ opacity : 1 !important ;
   border-radius: var(--radius);
   overflow: hidden;
   transform: translateX(400px);
-  padding: auto;
+  padding-right: 2px;
   border-radius:10px;
 }
 
