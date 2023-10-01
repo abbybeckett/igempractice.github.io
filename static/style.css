@@ -5670,7 +5670,7 @@ opacity : 1 !important ;
     width: 100%;
     max-width: 250px;
     opacity: 0;
-    background-color: #e6e6e6;
+    background-color: #231d1d;
     border-radius: var(--radius);
     /*overflow: hidden;*/
     transform: translateX(400px);
