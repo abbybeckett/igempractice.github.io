@@ -5679,7 +5679,7 @@ opacity : 1 !important ;
 .card__image::before {
   content: "";
   display: block;
-  padding-bottom: calc(100% / (16 / 9));
+ /* padding-bottom: calc(100% / (16 / 9));*/
 }
 
 .card__content {
