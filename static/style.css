@@ -5651,10 +5651,11 @@ opacity : 1 !important ;
     overscroll-behavior-x: contain;
     scrollbar-width: none;
   }
-  .cards::-webkit-scrollbar {
+  /*.cards::-webkit-scrollbar {
     width: 0 !important;
     display: none;
   }
+  */
   .cards > * + * {
     margin-left: var(--space);
   }
