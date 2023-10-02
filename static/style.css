@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Oswald");
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+
 
 .body {
     background-color: #f1efe5;
@@ -5703,6 +5706,12 @@ opacity : 1 !important ;
 }
 .card__line:last-child {
   width: 60%;
+}
+
+::selection{background-color: white;}
+
+i {
+  font-size: 20px;
 }
 
 input {}
