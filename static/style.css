@@ -5638,7 +5638,7 @@ opacity : 1 !important ;
   opacity: 0;
   transform: translateX(-100%);
 }
-
+/*
 .cards {
   display: flex;
   width: 100%;
@@ -5705,7 +5705,7 @@ opacity : 1 !important ;
 .card__line:last-child {
   width: 60%;
 }
-
+*/
 ::selection{background-color: white;}
 
 i {
