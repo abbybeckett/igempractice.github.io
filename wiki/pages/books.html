@@ -1,0 +1,265 @@
+{% extends "layout.html" %}
+  
+{% block title %}Hardware{% endblock %}
+{% block lead %}Hardware in iGEM should make synthetic biology based on standard parts easier, faster, better, or more accessible to our community.{% endblock %}
+
+{% block page_content %}
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<div id="app"></div>
+
+
+<div class="row mt-4">
+  <div class="col">
+    <div class="bd-callout bd-callout-info">
+      <h4>Best Hardware</h4>
+      <p>This is a prize for the team that has developed a piece of hardware for synthetic biology. Hardware in iGEM should make synthetic biology based on standard parts easier, faster, better or more accessible to our community. Did your team make a sensor to help teams characterize parts? Did you make a robot that can help teams perform experiments or do cloning more easily? Tell us what your team did for this award!</p>
+      <p>To compete for the Best Hardware prize, please describe your work on this page and also fill out the description on the <a href="https://competition.igem.org/deliverables/judging-form">judging form</a>.</p>
+      <hr>
+      <p>Please see the <a href="https://competition.igem.org/judging/awards">2023 Awards Page</a> for more information.</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="row mt-4">
+  <div class="col-lg-8">
+    <h2>Overview</h2>
+    <hr>
+    <p>In addition to encouraging teams to work with DNA parts and build biological devices in the lab, iGEM also encourages other types of technical solutions for synthetic biology. This can include physical devices (hardware) related to robotic assembly, microfluidics, low-cost measurement devices, to name a few examples. There are many exciting opportunities for hardware innovation in synthetic biology.</p>
+  </div>
+  <div class="col-lg-4">
+    <h2>Inspirations</h2>
+    <hr>
+    <ul>
+      <li><a href="http://2018.igem.org/Team:Valencia_UPV/Hardware">2018 Valencia UPV</a></li>
+      <li><a href="http://2018.igem.org/Team:Unesp_Brazil/Hardware">2018 Unesp Brazil</a></li>
+      <li><a href="https://2019.igem.org/Team:BIT/Hardware">2019 BIT</a></li>
+      <li><a href="https://2019.igem.org/Team:Bielefeld-CeBiTec/Hardware">2019 Bielefeld CeBiTec</a></li>
+      <li><a href="https://2019.igem.org/Team:Nanjing-China/Hardware">2019 Nanjing China</a></li>
+      <li><a href="https://2020.igem.org/Team:Vilnius-Lithuania/Hardware">2020 Vilnius Lithuania</a></li>
+      <li><a href="https://2020.igem.org/Team:Aachen/Hardware">2020 Aachen</a></li>
+      <li><a href="https://2020.igem.org/Team:ZJUT_China_B/Hardware">2020 ZJUT China B</a></li>
+    </ul>
+  </div>
+</div>
+
+<script>
+    //react
+import React, { useState, useRef, useEffect } from 'https://esm.sh/react@18.2.0';
+//react dom
+import { createRoot } from 'https://esm.sh/react-dom@18.2.0/client';
+
+function useTilt(animationDuration = '150ms') {
+  const ref = useRef(null);
+
+  useEffect(() => {
+    if (!ref.current) {
+      return;
+    }
+
+    // used to unify the touch and click cases
+    const unify = e => e.changedTouches ? e.changedTouches[0] : e;
+
+    const state = {
+      rect: undefined,
+      mouseX: undefined,
+      mouseY: undefined };
+
+
+    let el = ref.current;
+
+    const handleEnterEvent = () => {
+      el.style.transition = `transform ${animationDuration} ease-out`;
+    };
+
+    const handleMoveEvent = e => {
+      e.preventDefault();
+
+      if (!el) {
+        return;
+      }
+      if (!state.rect) {
+        state.rect = el.getBoundingClientRect();
+      }
+      state.mouseX = unify(e).clientX;
+      state.mouseY = unify(e).clientY;
+
+      const px = (state.mouseX - state.rect.left) / state.rect.width;
+      const py = (state.mouseY - state.rect.top) / state.rect.height;
+
+      el.style.setProperty('--px', px.toFixed(2));
+      el.style.setProperty('--py', py.toFixed(2));
+    };
+
+    const handleEndEvent = () => {
+      el.style.setProperty('--px', 0.5);
+      el.style.setProperty('--py', 0.5);
+      el.style.transition = `transform ${animationDuration} ease-in`;
+    };
+
+    el.addEventListener('mouseenter', handleEnterEvent);
+    el.addEventListener('mousemove', handleMoveEvent);
+    el.addEventListener('mouseleave', handleEndEvent);
+    el.addEventListener('touchstart', handleEnterEvent);
+    el.addEventListener('touchmove', handleMoveEvent);
+    el.addEventListener('touchend', handleEndEvent);
+
+    return () => {
+      el.removeEventListener('mouseenter', handleEnterEvent);
+      el.removeEventListener('mousemove', handleMoveEvent);
+      el.removeEventListener('mouseleave', handleEndEvent);
+      el.removeEventListener('touchstart', handleEnterEvent);
+      el.removeEventListener('touchmove', handleMoveEvent);
+      el.removeEventListener('touchend', handleEndEvent);
+    };
+  }, [animationDuration]);
+
+  return ref;
+}
+
+const Slide = ({ image, title, subtitle, description, offset, isPageBackground }) => {
+  const active = offset === 0 ? true : null,
+  ref = useTilt(active);
+
+  return /*#__PURE__*/(
+    React.createElement("div", {
+      ref: ref,
+      className: "slide",
+      "data-active": active,
+      style: {
+        '--offset': offset,
+        '--dir': offset === 0 ? 0 : offset > 0 ? 1 : -1 } },
+
+
+    isPageBackground && /*#__PURE__*/
+    React.createElement("div", {
+      className: "slideBackground",
+      style: {
+        backgroundImage: `url('${image}')` } }), /*#__PURE__*/
+
+
+
+    React.createElement("div", {
+      // ref={ref}
+      className: "slideContent",
+      style: {
+        backgroundImage: `url('${image}')` } }, /*#__PURE__*/
+
+
+    React.createElement("div", { className: "slideContentInner" },
+    title && /*#__PURE__*/
+    React.createElement("h2", { className: "slideTitle", dir: "auto" },
+    title),
+
+
+    subtitle && /*#__PURE__*/
+    React.createElement("h3", { className: "slideSubtitle", dir: "auto" },
+    subtitle),
+
+
+    description && /*#__PURE__*/
+    React.createElement("p", { className: "slideDescription", dir: "auto" },
+    description)))));
+
+
+
+
+
+
+};
+
+Slide.propTypes = {
+  image: PropTypes.string.isRequired,
+  title: PropTypes.string,
+  subtitle: PropTypes.string,
+  description: PropTypes.string,
+  offset: PropTypes.number.isRequired,
+  isPageBackground: PropTypes.bool };
+
+
+const Carousel = ({ slides, isPageBackground }) => {
+  const [slideIndex, setSlideIndex] = useState(0);
+
+  const handlePrevSlide = () => {
+    setSlideIndex(prev => prev === 0 ? slides.length - 1 : prev - 1);
+  };
+
+  const handleNextSlide = () => {
+    setSlideIndex(prev => (prev + 1) % slides.length);
+  };
+
+  return /*#__PURE__*/(
+    React.createElement("section", { className: "slidesWrapper" }, /*#__PURE__*/
+    React.createElement("div", { className: "slides" }, /*#__PURE__*/
+    React.createElement("button", { className: "prevSlideBtn", onClick: handlePrevSlide }, /*#__PURE__*/
+    React.createElement("i", { className: "fas fa-chevron-left" })),
+
+
+    [...slides, ...slides, ...slides].map((slide, i) => {
+      let offset = slides.length + (slideIndex - i);
+
+      if (typeof slide === 'string') {
+        return /*#__PURE__*/(
+          React.createElement(Slide, { image: slide, offset: offset, isPageBackground: isPageBackground, key: i }));
+
+      } else {
+        return /*#__PURE__*/(
+          React.createElement(Slide, {
+            image: slide.image,
+            title: slide.title,
+            subtitle: slide.subtitle,
+            description: slide.description,
+            offset: offset,
+            isPageBackground: isPageBackground,
+            key: i }));
+
+
+      }
+    }), /*#__PURE__*/
+    React.createElement("button", { className: "nextSlideBtn", onClick: handleNextSlide }, /*#__PURE__*/
+    React.createElement("i", { className: "fas fa-chevron-right" })))));
+
+
+
+
+};
+
+Carousel.propTypes = {
+  slides: PropTypes.array.isRequired,
+  isPageBackground: PropTypes.bool };
+
+
+const slides = [
+{
+  id: 1,
+  title: 'First',
+  subtitle: 'slide',
+  description: 'Praesent ac sem eget est.',
+  image: 'https://picsum.photos/id/1/500/500' },
+
+{
+  id: 2,
+  title: 'Second',
+  subtitle: 'slide',
+  description: 'Praesent ac sem eget est.',
+  image: 'https://picsum.photos/id/234/500/500' },
+
+{
+  id: 3,
+  title: 'Third',
+  subtitle: 'slide',
+  description: 'Praesent ac sem eget est.',
+  image: 'https://picsum.photos/id/790/500/500' }];
+
+
+
+const App = () => /*#__PURE__*/React.createElement(Carousel, { slides: slides, isPageBackground: true });
+
+const container = document.getElementById('app'),
+root = createRoot(container);
+
+root.render( /*#__PURE__*/React.createElement(App, null));
+</script>
+
+{% endblock %}
