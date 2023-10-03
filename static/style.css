@@ -36,7 +36,7 @@
   }
   
   .light-theme {
-    --background: #F1EFE5;
+    --background: #fffdf8;
     --text: #000;
     background: var(--background);
   }
@@ -119,7 +119,7 @@ h4 {
   .grad-bar {
     width: 100%;
     height: 5px;
-    background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+    background: linear-gradient(-45deg, #3d5f7b, #80c6b3, #6eaaa4, #568590);
     background-size: 400% 400%;
         -webkit-animation: gradbar 15s ease infinite;
       -moz-animation: gradbar 15s ease infinite;
