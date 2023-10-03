@@ -5609,6 +5609,9 @@ container,
   
   .fixed-content{
     margin-left:-100px;
+    box-shadow: #000;
+    border-radius: 10px;
+    filter:blur(10px)
     max-width: 100%;
     height: auto;
     top: 20%;
