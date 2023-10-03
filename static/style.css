@@ -1,4 +1,7 @@
-@import url("https://fonts.googleapis.com/css?family=Oswald");
+@import url("https://fonts.googleapis.com/css?family=Montserrat"); /* headings*/
+@import url("https://fonts.googleapis.com/css?family=Quattrocento+Sans"); /*nav, captions */
+@import url("https://fonts.googleapis.com/css?family=Poppins"); /*content */
+
 
 
 .body {
@@ -60,6 +63,9 @@ a:not([href]):not([class]):hover {
     text-decoration: underline;
 }
 
+.p {
+  font-family: 'Poppins';
+}
   h1, p {
     color: #000000;
     text-align: center;
