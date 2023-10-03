@@ -52,7 +52,7 @@
    text-decoration: none;
 }
 a:hover {
-    color: #0a58ca;
+    font-size: 2%;
 }
 a:not([href]):not([class]),
 a:not([href]):not([class]):hover {
@@ -490,8 +490,15 @@ h4 {
   }
 
   /* footer */
-  .bg-dark { background-color: #343a40 !important; }
-  .bg-hero { background-color: #6796a2; }
+  .bg-dark { 
+    background: linear-gradient(-45deg, #3d5f7b, #80c6b3, #6eaaa4, #568590);
+    background-size: 400% 400%;
+   -webkit-animation: gradbar 5s ease infinite;
+ -moz-animation: gradbar 10s ease infinite;
+ animation: gradbar 10s ease infinite;
+
+}
+.bg-hero { background-color: #6796a2; }
 footer {
   background-color:#0D0B0A;
 }
