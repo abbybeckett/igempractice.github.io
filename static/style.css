@@ -66,6 +66,9 @@ a:not([href]):not([class]):hover {
 .p {
   font-family: 'Poppins', 'normal', sans-serif;
 }
+.font-head {
+  font-family: 'Montserrat', 'normal', sans-serif;
+}
   h1, p {
     color: #000000;
     text-align: center;
