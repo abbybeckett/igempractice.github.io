@@ -140,6 +140,7 @@ h4 {
     align-items: center;
     height:100px;
     z-index: 1000;
+    font-family: 'Quattrocento Sans';
   }
   
   .navbar img {
