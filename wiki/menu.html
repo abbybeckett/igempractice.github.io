@@ -8,7 +8,7 @@
       <span class="bar"></span>
     </div>
     <ul class="nav no-search">
-      <li class="nav-item"><a href="index.html">Home</a></li>
+      <li class="nav-item"><a href="index.html"><br>Home</a></li>
       <li class="nav-item"><div class="dropdown">
         <button class="dropbtn">Team
           <i class="fa fa-caret-down"></i>
@@ -29,13 +29,9 @@
           <a href="{{ url_for('pages', page='communication') }}">Communication</a>
           <a href="{{ url_for('pages', page='contribution') }}">Contribution</a>
           <a href="{{ url_for('pages', page='description') }}">Description</a>
-          <a href="{{ url_for('pages', page='engineering') }}">Engineering</a>
-          <a href="{{ url_for('pages', page='experiments') }}">Experiments</a>
           <a href="{{ url_for('pages', page='education') }}">Education</a>
-                    
-          <a href="{{ url_for('pages', page='measurement') }}">Measurements</a>
+                 
           <a href="{{ url_for('pages', page='implementation') }}">Implementation</a>
-          <a href="{{ url_for('pages', page='notebook') }}">Notebook</a>
           <a href="{{ url_for('pages', page='partnership') }}">Partnership</a>
           <a href="{{ url_for('pages', page='proof_of_concept') }}">Proof of Concept</a>                      
           <a href="{{ url_for('pages', page='results') }}">Results</a>
@@ -44,17 +40,23 @@
         </div>
       </div>
     </li>
-      <li class="nav-item"><a href="Parts.html">
+      <li class="nav-item">
         <div class="dropdown">
-          <button class="dropbtn">Parts
+          <button class="dropbtn">Wetlab
             <i class="fa fa-caret-down"></i>
           </button>
           <div class="dropdown-content">
 
-            <a href="Parts/partcollection.html">Parts Collection</a>
-            <a href="Parts.html">Parts</a>
-            <a href="Parts/Improve.html">Improve</a>        
-      </a></li>
+            <a href="{{ url_for('pages', page='experiments') }}">Experiments</a>
+            <a href="{{ url_for('pages', page='notebook') }}">Notebook</a>
+                  
+            <a href="{{ url_for('pages', page='engineering') }}">Engineering</a>
+            <a href="{{ url_for('pages', page='measurement') }}">Measurements</a>
+            <a href="{{ url_for('pages', page='results') }}">Results</a>
+  
+      </div>
+      </div>
+    </li>
       <li class="nav-item"><a href="{{ url_for('pages', page='safety') }}">Safety</a></li>
       <li class="nav-item"><a href="{{ url_for('pages', page='human-practices') }}">Human Practices</a></li>
       
