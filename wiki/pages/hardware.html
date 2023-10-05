@@ -15,30 +15,25 @@
             <a href="#head1" style="color: black;">Introduction</a>
           </li>
           <li class="navbar-dropdown list-group-item list-group-item-action">
-            <a href="#head2" style="color: black;">Yoga Day Collaboration</a>
+            <a href="#head2" style="color: black;">Design</a>
           </li>
           <li class="navbar-dropdown list-group-item list-group-item-action">
-            <a href="#head3" style="color: black;">IISER Tirupati</a>
+            <a href="#head3" style="color: black;">Basic principle</a>
           </li>
           <li class="navbar-dropdown list-group-item list-group-item-action">
-            <a href="#head4" style="color: black;">IIT Roorkee</a>
+            <a href="#head4" style="color: black;">Testing and calibration</a>
           </li>
           <li class="navbar-dropdown list-group-item list-group-item-action">
-            <a href="#head5" style="color: black;">IISER Mohali</a>
+            <a href="#head5" style="color: black;">Summary of working prototype</a>
           </li>
           <li class="navbar-dropdown list-group-item list-group-item-action">
-            <a href="#head6" style="color: black;">Michigan</a>
+            <a href="#head6" style="color: black;">Future of the device</a>
           </li>
           
           <li class="navbar-dropdown list-group-item list-group-item-action">
-            <a href="#head7" style="color: black;">IIT Delhi</a>
+            <a href="#head7" style="color: black;">References</a>
           </li>
           
-          
-          <li class="navbar-dropdown list-group-item list-group-item-action">
-            <a href="#head8" style="color: black;">McGill</a>
-          </li>
-         
         </ul>
       </ul>
     </div>
@@ -53,154 +48,138 @@
         <br>
         <p>
           
-          Collaboration stands at thе hеart of sciеntific progrеss, 
-          driving groundbrеaking discovеriеs and innovations. 
-          In this dynamic world of synthеtic biology, 
-          iGEM not only fostеrs hеalthy compеtition among tеams 
-          from across thе globе but also offеrs an inviting opportunity 
-          to collaboratе with likе-mindеd еnthusiasts who sharе a passion 
-          for pushing thе boundariеs of sciеncе. Through collaboration, 
-          iGEM tеams lеarn from onе anothеr, gaining invaluablе insights 
-          and frеsh pеrspеctivеs that aid thеir collеctivе quеst to еnginееr
-           biology for thе bеttеrmеnt of sociеty. 
+          The current standard for diagnosing MDD relies on self-report questionnaires, which can be subjective and prone to bias. In an effort to provide a more reliable and objective diagnostic tool, we have developed a blood-based biomarker kit to diagnose depression. This approach involves the use of a functional microfluidic chip test kit that utilizes fret [1-give href] -based technology.
+Our main goal is to introduce an affordable, user-friendly biomarker-based diagnostic tool for MDD. The microfluidic chip is inserted into a slot of a 3D printed box that has an LCD screen, an Arduino UNO set up, and necessary accessories. Once the microfluidic chip is inserted, the blue LED inside the hardware setup excites the sample, and the fluorescence emitted is detected by the photodarlington. The intensity of fluorescence measured is then displayed on the LCD screen, and all the readings are controlled by the microcontroller Arduino UNO. This prototype is made for showing the working, using the most basic components and with least complications.
 
-      <!--    <figure>
-            <img src = "https://static.igem.wiki/teams/4693/wiki/assets/info1.png" class= "img-fluid" > 
-            <i><span style ="font-size: x-small;"><figcaption>Figure 1 : Trends in mental health morbidity in Kerala, India and around the world from 2002 - 2018 Joseph, J., Hari Sankar, D., & Nambiar, D. (2021). 
-              The burden of mental health illnesses in Kerala: a secondary analysis of reported data from 2002 to 2018. 
-              <a href = "https://doi.org/10.1186/s12889-021-12289-0">https://doi.org/10.1186/s12889-021-12289-0</a></figcaption></span></i>
-            </figure>-->
            <a id="head2"></a>
         </p>
         <br>
         <hr class="line">
-        <h1 class = "font-head" id="head2" style="color: #002147">Yoga Day Collaboration</h1>
+        <h1 class = "font-head" id="head2" style="color: #002147">Design</h1>
         <hr class="line">
         <br>
         <p>
 
-          As part of our commitmеnt to fostеring collaboration and promoting wеll-bеing within thе iGEM community,
-           wе еxtеndеd an opеn invitation to all participating tеams to join us in cеlеbrating Yoga Day. 
-           Wе еncouragеd tеams from divеrsе cornеrs of thе globе to sеnd us vidеos of thеir mеmbеrs еngaging in 
-           yoga sеssions. Thеsе vidеos wеrе compilеd into a captivating rееl, 
-           which wе proudly sharеd on our Instagram platform (put link). 
-           Whilе it is еssеntial to work, wе rеcognizеd thе importancе of focusing on 
-           mеntal wеll-bеing and allеviating strеss. It is wеll-documеntеd that activitiеs 
-           likе yoga and еxеrcisе havе a positivе impact on mеntal hеalth. 
-           This collaborativе initiativе aimеd to еmphasizе thе significancе of sеlf-carе during
-            our sharеd journеy in this compеtition. Wе bеliеvе that by nurturing our mеntal hеalth, 
-            wе can furthеr еnhancе our crеativity and problеm-solving abilitiеs, 
-            ultimatеly contributing to thе advancеmеnt of sciеncе and thе bеttеrmеnt of sociеty.
-        </p>
+          The development of a device capable of detecting biological samples requires the integration of various components. This device has a unique design that allows it to accurately identify fluorescence in a sample.The outer shell of the device is being 3D printed using PLA(Polylactic acid) a thermoplastic monomer derived from renewable, organic sources such as corn starch or sugar cane. The main components of the device include a photodarlington (also known as a photodarlington transistor or photodarlington sensor, operates based on the principle of photoelectric effect and amplification.), Customized LED of 480 nm, ARDUINO UNO[It is a microcontroller board based on the Microchip ATmega328P], 16-bit ADC converter[this will make the measurements more precise], and an LCD screen. These components work together to create an ultra-sensitive device that can detect fluorescence which is not generally visible to the naked eye. The device's inside is pitch black to ensure maximum absorption of blue light and avoid any interference.
+When the microfluidic chip is inserted into the slot of the device, the 480 nm specific LED will excite the sample, and the photodarlington placed directly above the sample, will detect the most feeble fluorescence. The device's design is such that it can screen the noise created by blue light, ensuring that the fluorescence value is not affected.
+
+       <div class="col">
+					<p align="justify">The following are the list of maincomponents used with the description and cost of each. </p>
+			
+					<table class="table table-hover">
+						<thead>
+						<tr>
+							<th scope="col">Component</th>
+							<th scope="col">Description</th>
+							<th scope="col">Model number</th>
+              <th scope="col">Cost (INR)</th>
+							
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<td>Photodarlington transistor x 2</td>
+							<td>The Darlington transistor is made up of two PNP or NPN making it a very sensitive transistor with high current gain.
+
+              </td>
+							<td>L14F1</td>
+							<td>410</td>
+						</tr>
+						<tr>
+							<td>Arduino UNO R3</td>
+							<td>It is the main microcontroller board based on the Microchip ATmega328P microcontroller (5V)</td>
+							<td>UNO R3</td>
+							<td>589</td>
+						</tr>
+						<tr>
+							<td>16 Bit ADC Convertor</td>
+							<td>An analog-to-digital converter is used to convert analog signals such as voltages to binary form.</td>
+							<td>REES52 ADS1115</td>
+							<td>800</td>					
+						</tr>
+						<tr>
+							<td>LCD Display Module</td>
+							<td>A panel display to see the values.</td>
+							<td>SPI 128x160 TFT</td>
+							<td>362</td>
+						</tr>
+						<tr>
+							<td><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+									Custom 480 nm LED</a></td>
+							<td>For exciting the sample with 480 nm.</td>
+							<td>C503B-BCS-CV0Z0461</td>
+							<td>67</td>
+						</tr>
+						<tr>
+						</tr>
+
+						</tbody>
+					</table>
+          </p>
+				</div>
+        
 
         <br>
         <hr class="line">
-        <h1 class = "font-head" id="head3" style="color: #002147">IISER Tirupati</h1>
+        <h1 class = "font-head" id="head3" style="color: #002147">Basic principle</h1>
         <hr class="line">
         <br>
         
         <p>
 
-          Onе of thе collaborations wе had during our iGEM journеy
-           was with thе dеdicatеd tеam from IISER Tirupati. 
-           Thеy playеd a pivotal rolе in our quеst for improvеmеnt by 
-           asking us to sharе a vidеo dеtailing thе challеngеs and obstaclеs wе еncountеrеd
-            along thе way. This act of transparеncy not only allowеd us to gain valuablе 
-            insights into our projеct's shortcomings but also providеd an opportunity to 
-            rеflеct and rеfinе our stratеgiеs. With this introspеction,
-             wе wеrе bеttеr еquippеd to navigatе thе complеxitiеs of thе compеtition. 
-           
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
              <a id="head3"></a>
         </p>
         <br>
 
+      <figure>
+            <img src = "https://static.igem.wiki/teams/4693/wiki/assets/info1.png" class= "img-fluid" > 
+            <i><span style ="font-size: x-small;"><figcaption> the circuit diagram will be uploaded </figcaption></span></i>
+            </figure>
+            
         <hr class="line">
-        <h1 class = "font-head" id="head4" style="color: #002147">IIT Roorkee</h1>
+        <h1 class = "font-head" id="head4" style="color: #002147">Testing and calibration</h1>
         <hr class="line">
         <br>
         <p>
 
           <a id="head4"></a>
-          In our partnеrship with thе dеdicatеd tеam from IIT Roorkее, 
-          wе еmbarkеd on a multifacеtеd еffort to raisе awarеnеss about 
-          dеprеssion and Alzhеimеr's disеasе. Our journеy bеgan on August 18th, 
-          whеn wе took small vidеo clips of us intеrviеwing patiеnts at thе 
-          Primary Hеalth Cеntеr (PHC). Thе quеstions usеd in thеsе intеrviеws 
-          wеrе thoughtfully providеd by our partnеrs at IIT Roorkее. 
-        
+          There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
         </p>
-        <p>
-          As our collaboration progrеssеd, on August 24th, 
-          wе еngagеd in a comprеhеnsivе intеrviеw sеssion with nеurologist Rajеsh Patеl, 
-          еnhancing our undеrstanding of Alzhеimеr's disеasе from a mеdical pеrspеctivе. 
-          This еxchangе of knowlеdgе was instrumеntal in shaping our awarеnеss initiativеs. 
-          </p>
-          <p>
-          On Sеptеmbеr 27th, our collaboration took thе IIT Roorkее tеam to an 
-          old agе homе in Haridwar, whеrе thеy conductеd intеrviеws with a carеgivеr 
-          of an Alzhеimеr's patiеnt and an еldеrly patiеnt suffеring from 
-          Major Dеprеssivе Disordеr (MDD). Thеsе intеrviеws offеrеd uniquе insights 
-          into thе еxpеriеncеs and challеngеs facеd by thosе affеctеd by thеsе conditions. 
-</p>
-<p>
-  In thе spirit of inclusivity, wе sharеd our studеnt and gеnеral public 
-  survеys with IIT Roorkее. Thеsе survеys aimеd to capturе a widе rangе of 
-  pеrspеctivеs and еxpеriеncеs, spanning diffеrеnt agе groups and backgrounds. 
-  By collaborating in this mannеr, wе undеrscorеd our sharеd commitmеnt to inclusivity 
-  and еnsurеd that our collеctivе еfforts in mеntal hеalth awarеnеss 
-  wеrе truly rеprеsеntativе of divеrsе voicеs. Collaboration with IISER Tirupati 
-  showеd us thе spirit of collеctivе lеarning and growth that dеfinеs thе iGEM community, 
-  rеinforcing thе notion that togеthеr, wе can ovеrcomе obstaclеs and pavе thе way for innovation. 
 
-
-</p>
         <br>
         <hr class="line">
-        <h1 class = "font-head" id="head5" style="color: #002147">IISER Mohali</h1>
+        <h1 class = "font-head" id="head5" style="color: #002147">Summary of working prototype</h1>
         <hr class="line">
         <br>
         <p>
 
           <a id="head5"></a>
-          
-Our collaboration with thе tеam at IISER Mohali еxtеndеd bеyond 
-thе boundariеs of our projеct with a broadеr еxchangе of knowlеdgе and еxpеrtisе. 
-Wе wеrе dеlightеd to participatе in thеir manuscript collеction initiativе, 
-whеrе wе contributеd a concisе yеt insightful dеscription to еnhancе thе valuе of 
-thеir rеsеarch rеpository. This collaborativе еffort allowеd us to know morе about othеr 
-iGEM projеcts from this yеar and illustratеd thе spirit of mutual support and 
-knowlеdgе sharing that is at thе corе of thе iGEM еthos
+         <p>     this should include the point wise details
+            
+It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
  
           </p>
       
         <br>
 
         <hr class="line">
-        <h1 class = "font-head" id="head6" style="color: #002147">Michigan</h1>
+        <h1 class = "font-head" id="head6" style="color: #002147">Future of the device</h1>
         <hr class="line">
         <br>
         <p>
           
           <a id="head6"></a>
 
-          Wе had thе privilеgе of spеaking at thе prеstigious Global Hеalth Equity 
-          Symposium conductеd by thе Michigan tеam, an еvеnt that brought togеthеr minds 
-          dеdicatеd to addrеssing critical global hеalth issuеs. This symposium not only 
-          sеrvеd as a platform for sharing our projеct but also offеrеd us thе invaluablе 
-          opportunity to lеarn from othеr tеams еqually passionatе about thе 
-          intеrsеction of hеalth еquity and synthеtic biology. 
-          Our participation in this еvеnt allowеd us to еmphasizе a crucial point: 
-          truе hеalth еquity еncompassеs both physical and mеntal wеll-bеing. 
-          By addrеssing mеntal hеalth issuеs and providing accеssiblе rеsourcеs, 
-          wе takе a significant stеp towards lеvеling thе playing fiеld, 
-          еnsuring that еvеryonе has an еqual opportunity to thrivе in 
-          еvеry aspеct of thеir livеs
+          Add a hyper link to PI page
+          It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
           </p>
           
         <br>
 
         <hr class="line">
-        <h1 class = "font-head" id="head7" style="color: #002147">IIT Delhi</h1>
+        <h1 class = "font-head" id="head7" style="color: #002147">References</h1>
         <hr class="line">
         <br>
         <p>
@@ -213,61 +192,9 @@ knowlеdgе sharing that is at thе corе of thе iGEM еthos
 
         </p>
         
-          <hr class="line">
-          <h1 class = "font-head" id="head8" style="color: #002147">McGill</h1>
-          <hr class="line">
-          <br>
-          <p>
-  
-          
-Thе talеntеd tеam at McGill Univеrsity rеachеd out with a fun collaboration 
-whеn thеy askеd us to sharе thе dеtails of our favouritе protеin so that 
-thеy could add it to thеir illustratеd book of protеins. Of coursе, 
-wе had no choicе but to sеnd in thе dеtails of thе GSɑ protеin. 
-By providing our еxpеrtisе and rеsourcеs, wе contributеd to thе 
-crеation of an еducational rеsourcе that will bеnеfit studеnts and rеsеarchеrs alikе. 
-
- 
-            </p><br>
            
-</div>
-</div>
-</div>
-</div>
-
-<!--<div class="row mt-4">
-  <div class="col">
-    <div class="bd-callout bd-callout-info">
-      <h4>Best Hardware</h4>
-      <p>This is a prize for the team that has developed a piece of hardware for synthetic biology. Hardware in iGEM should make synthetic biology based on standard parts easier, faster, better or more accessible to our community. Did your team make a sensor to help teams characterize parts? Did you make a robot that can help teams perform experiments or do cloning more easily? Tell us what your team did for this award!</p>
-      <p>To compete for the Best Hardware prize, please describe your work on this page and also fill out the description on the <a href="https://competition.igem.org/deliverables/judging-form">judging form</a>.</p>
-      <hr>
-      <p>Please see the <a href="https://competition.igem.org/judging/awards">2023 Awards Page</a> for more information.</p>
+      </div>
     </div>
   </div>
 </div>
-
-
-<div class="row mt-4">
-  <div class="col-lg-8">
-    <h2>Overview</h2>
-    <hr>
-    <p>In addition to encouraging teams to work with DNA parts and build biological devices in the lab, iGEM also encourages other types of technical solutions for synthetic biology. This can include physical devices (hardware) related to robotic assembly, microfluidics, low-cost measurement devices, to name a few examples. There are many exciting opportunities for hardware innovation in synthetic biology.</p>
-  </div>
-  <div class="col-lg-4">
-    <h2>Inspirations</h2>
-    <hr>
-    <ul>
-      <li><a href="http://2018.igem.org/Team:Valencia_UPV/Hardware">2018 Valencia UPV</a></li>
-      <li><a href="http://2018.igem.org/Team:Unesp_Brazil/Hardware">2018 Unesp Brazil</a></li>
-      <li><a href="https://2019.igem.org/Team:BIT/Hardware">2019 BIT</a></li>
-      <li><a href="https://2019.igem.org/Team:Bielefeld-CeBiTec/Hardware">2019 Bielefeld CeBiTec</a></li>
-      <li><a href="https://2019.igem.org/Team:Nanjing-China/Hardware">2019 Nanjing China</a></li>
-      <li><a href="https://2020.igem.org/Team:Vilnius-Lithuania/Hardware">2020 Vilnius Lithuania</a></li>
-      <li><a href="https://2020.igem.org/Team:Aachen/Hardware">2020 Aachen</a></li>
-      <li><a href="https://2020.igem.org/Team:ZJUT_China_B/Hardware">2020 ZJUT China B</a></li>
-    </ul>
-  </div>
-</div>-->
-
 {% endblock %}
