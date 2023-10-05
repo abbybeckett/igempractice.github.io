@@ -6453,12 +6453,6 @@ i.fa-star.rating{color: rgb(232, 217, 31);}
           grid-template-columns: 1fr;
       }    
   }
-
-  body {
-    background: #0f0f0f;
-    padding: 40px;
-    font-family: Arial, sans-serif;
-  }
   
   .wrapper {
     display: flex;
