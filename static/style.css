@@ -6456,7 +6456,7 @@ i.fa-star.rating{color: rgb(232, 217, 31);}
 
 
 .wrapper {
-  width: 80%;
+  width: 34%;
   height: auto;
   background: #fff;
   position: relative;
@@ -6555,9 +6555,9 @@ i.fa-star.rating{color: rgb(232, 217, 31);}
 
 .item.animate {
   z-index: 999;
-  width: 80%;
-  position: fixed;
-  left: 0;
+  width: 200%;
+  position: relative;
+  left: -50%;
   right: 0;
   max-height: 98%;
   overflow-y: scroll;
