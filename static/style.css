@@ -6580,3 +6580,8 @@ i.fa-star.rating{color: rgb(232, 217, 31);}
 .item.animate .brief {
   border-radius: 0;
 }
+#bayesian-container {
+	min-width: 320px;
+	max-width: 800px;
+	margin: 0 auto;
+}
