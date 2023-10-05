@@ -6453,86 +6453,130 @@ i.fa-star.rating{color: rgb(232, 217, 31);}
           grid-template-columns: 1fr;
       }    
   }
-  
-  .wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .parallax-card {
-    width: 250px;
-    height: 280px;
-    border-radius: 15px;
-    margin: 10px 10px 10px 0;
-  }
-  .parallax-card__holder {
-    height: 100%;
-    transform-style: preserve-3d;
-    perspective: 1000px;
-    will-change: transform;
-  }
-  .parallax-card__holder:hover .parallax-card__front {
-    transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
-    transform: rotateY(-180deg);
-    transform-style: preserve-3d;
-  }
-  .parallax-card__holder:hover .parallax-card__back {
-    transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
-    transform: rotateY(0deg);
-    transform-style: preserve-3d;
-  }
-  .parallax-card__content {
-    transform: translateY(-50%) translateZ(60px) scale(0.94);
-    top: 50%;
-    position: absolute;
-    left: 0;
-    width: 100%;
-    padding: 2rem;
-    box-sizing: border-box;
-    outline: 1px solid transparent;
-    perspective: inherit;
-    z-index: 2;
-    will-change: transform;
-  }
-  .parallax-card__front {
-    transform: rotateY(0deg);
-    transform-style: preserve-3d;
-    background-size: cover;
-    min-height: 100%;
-    height: auto;
-    -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
-    border-radius: 10px;
-    color: #fff;
-    font-size: 1.5rem;
-    transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
-    will-change: transform;
-  }
-  .parallax-card__front-title {
-    display: block;
-    text-align: center;
-  }
-  .parallax-card__back {
-    transform: rotateY(180deg);
-    transform-style: preserve-3d;
-    background: #000;
-    background-size: cover;
-    transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
-    min-height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    will-change: transform;
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    color: #fff;
-    -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
-    font-size: 1.5rem;
-  }
-  .parallax-card__back-descr {
-    display: block;
-    text-align: center;
-  }
+
+
+.wrapper {
+  width: 80%;
+  height: auto;
+  background: #fff;
+  position: relative;
+  margin: 0 auto;
+}
+.wrapper .item {
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  margin: 60px auto;
+  border-radius: 14px;
+  box-shadow: 0px 0px 7px 4px rgba(0, 0, 0, 0.2);
+  width: 360px;
+  background: #f9f9f9;
+  position: relative;
+}
+.wrapper .item span.close {
+  position: absolute;
+  top: 10px;
+  right: -35px;
+  transition: all 0.4s ease;
+  z-index: 9;
+  font-weight: 800;
+}
+.wrapper .item span.close::before {
+  content: "-";
+  background: #fff;
+  border-radius: 50%;
+  padding: 0px 7px;
+  font-weight: 300;
+}
+.wrapper .item .graphic {
+  position: relative;
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+  overflow: hidden;
+}
+.wrapper .item .graphic img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  min-height: 270px;
+}
+.wrapper .item .graphic span {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  font-size: 2em;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 800;
+  max-width: 35%;
+  line-height: 30px;
+}
+.wrapper .item .brief {
+  margin-top: -4px;
+  position: relative;
+  display: flex;
+  background: linear-gradient(to right, #22c1c3, #fdbb2d);
+  padding: 10px 10px;
+  border-bottom-left-radius: 14px;
+  border-bottom-right-radius: 14px;
+}
+.wrapper .item .brief .icon {
+  width: 40px;
+}
+.wrapper .item .brief .icon img {
+  object-fit: cover;
+  width: 100%;
+}
+.wrapper .item .brief .typo {
+  margin-left: 20px;
+}
+.wrapper .item .brief .typo span {
+  color: #fff;
+  font-size: 13px;
+  display: block;
+}
+.wrapper .item .brief .typo span:first-child {
+  font-size: 15px;
+  font-weight: 800;
+}
+.wrapper .item .sub {
+  position: absolute;
+  transition: all 0.4s ease;
+  padding: 20px 40px;
+}
+.wrapper .item .sub p.header {
+  font-size: 3em;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+.wrapper .item .sub p.story {
+  line-height: 25px;
+}
+
+.item.animate {
+  z-index: 999;
+  width: 80%;
+  position: fixed;
+  left: 0;
+  right: 0;
+  max-height: 98%;
+  overflow-y: scroll;
+  /* margin-left: auto; */
+  /* margin-right: auto; */
+  margin: auto;
+  border-radius: 0;
+}
+
+.item.animate span.close {
+  transition-delay: 0.3s;
+  right: 10px;
+}
+
+.item.animate .sub {
+  position: relative;
+}
+
+.item.animate .graphic,
+.item.animate .brief {
+  border-radius: 0;
+}
