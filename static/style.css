@@ -6585,3 +6585,92 @@ i.fa-star.rating{color: rgb(232, 217, 31);}
 	max-width: 800px;
 	margin: 0 auto;
 }
+
+#hero {
+    height: 800px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  #content {
+    background-color: #130d0a;
+  }
+  
+  .layer {
+    background-position: bottom center;
+    background-size: auto;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 800px;
+    position: fixed;
+  }
+  
+  #hero-mobile {
+    display: none;
+    background: url("https://i.ibb.co/d7hw559/full-illustration.png") no-repeat center bottom/cover;
+    height: 320px;
+  }
+  
+  .first-section {
+    padding: 50px 0 20px 0;
+  }
+  
+  .text-header {
+    font-size: 50px;
+    text-align: center;
+  }
+  
+  
+  #hero,
+  .layer {
+    min-height: 800px;
+    max-width: 1900px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  
+  /*.layer-bg {
+      background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/ilu_bg.jpg");
+  }*/
+  .layer-1 {
+    background-image: url("https://static.igem.wiki/teams/4693/wiki/assets/mainpage/forth-layer.png");
+    opacity: 50%;
+    size: 50%;
+  }
+  
+  .layer-2 {
+    background-image: url("https://static.igem.wiki/teams/4693/wiki/assets/mainpage/third-layer.png");
+    opacity: 50%;
+  }
+  
+  .layer-3 {
+    background-image: url("https://static.igem.wiki/teams/4693/wiki/assets/mainpage/second-layer.png");
+    opacity: 50%;
+  }
+  
+  .layer-4 {
+    background-image: url("https://static.igem.wiki/teams/4693/wiki/assets/mainpage/first-layer.png");
+    opacity: 50%;
+  }
+  
+  /*.layer-overlay {
+      background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/ilu_overlay.png");
+  }
+  */
+  @media only screen and (max-width: 768px) {
+    #hero {
+      display: none;
+    }
+  
+    #hero-mobile {
+      display: block;
+    }
+  }
+  .tutorial-link {
+    color: #fff;
+    font-size: 18px;
+    text-decoration: underline;
+  }
+  .tutorial-link:hover {
+    color: #ede0d5;
+  }
