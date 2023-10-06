@@ -52,8 +52,8 @@
         <p>
           
           Our project began with research on biomarkers and their diagnostic assays. Initially, microfluidics seemed to be a promising approach to streamlining the diagnostic process. However, as we progressed, it became evident that there was also a pressing need for a hardware solution capable of fluorescence detection and quantification. We recognized the need to keep it an accessible, affordable and practical device for widespread use, in comparison to traditional fluorimeters. In an effort to provide a more reliable and objective diagnostic tool, we have attempted to develop a novel FRET-based microfluidic device to diagnose clinical depression. 
-Our main goal is to introduce an affordable and user-friendly biomarker-based diagnostic tool for Major Depressive Disorder (MDD). To achieve this, we’ve designed a simple and accessible system. It consists of a microfluidic chip that is inserted into the slot of a 3D printed box equipped with an LCD screen, an Arduino UNO setup, and the necessary accessories.
-Here’s how it works: when the microfluidic chip is inserted into the device, the internal blue LED excites the sample, and the fluorescence emitted is detected by a photodarlington sensor. The intensity of fluorescence measured is then converted into the biomarker concentration levels and displayed on the LCD screen,with all data readings being managed by the Arduino UNO microcontroller. This prototype is designed to show the functionality of the system, using the most basic components and with the least complexities.
+<br>Our main goal is to introduce an affordable and user-friendly biomarker-based diagnostic tool for Major Depressive Disorder (MDD). To achieve this, we’ve designed a simple and accessible system. It consists of a microfluidic chip that is inserted into the slot of a 3D printed box equipped with an LCD screen, an Arduino UNO setup, and the necessary accessories.
+<br>Here’s how it works: when the microfluidic chip is inserted into the device, the internal blue LED excites the sample, and the fluorescence emitted is detected by a photodarlington sensor. The intensity of fluorescence measured is then converted into the biomarker concentration levels and displayed on the LCD screen,with all data readings being managed by the Arduino UNO microcontroller. This prototype is designed to show the functionality of the system, using the most basic components and with the least complexities.
 
            <a id="head2"></a>
         </p>
@@ -64,7 +64,7 @@ Here’s how it works: when the microfluidic chip is inserted into the device, t
         <br>
         <p>
           The development of a device capable of detecting biological samples requires the integration of various components. This device has a unique design that allows it to accurately identify fluorescence in a sample.The outer shell of the device is being 3D printed using PLA(Polylactic acid) a thermoplastic monomer derived from renewable, organic sources such as corn starch or sugar cane. The main components of the device include a photodarlington (also known as a photodarlington transistor or photodarlington sensor, operates based on the principle of photoelectric effect and amplification.), Customized LED of 480 nm, ARDUINO UNO(It is a microcontroller board based on the Microchip ATmega328P), 16-bit ADC converter(this will make the measurements more precise), and an LCD screen. These components work together to create an ultra-sensitive device that can detect fluorescence which is not generally visible to the naked eye. The device's inside is pitch black to ensure maximum absorption of blue light and avoid any interference. 
-          When the microfluidic chip is inserted into the slot of the device, the 480 nm specific LED will excite the sample, and the photodarlington placed directly above the sample, will detect the most feeble fluorescence. The device's design is such that it can screen the noise created by blue light, ensuring that the fluorescence value is not affected. 
+          <br>When the microfluidic chip is inserted into the slot of the device, the 480 nm specific LED will excite the sample, and the photodarlington placed directly above the sample, will detect the most feeble fluorescence. The device's design is such that it can screen the noise created by blue light, ensuring that the fluorescence value is not affected. 
           </p>
           
        <div class="col">
@@ -164,7 +164,21 @@ Here’s how it works: when the microfluidic chip is inserted into the device, t
         <p>
 
           <a id="head4"></a>
-          There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+          <b>Which sensor is the best?</b>
+          <br>
+          To determine which sensor would detect the lowest fluorescence, we conducted experimental trials with three different sensors: a photodiode, a phototransistor, and a Darlington transistor. We ultimately chose to use the Darlington transistor in our hardware design. 
+          <br><b>Why not the other two?  </b>
+          <br>
+          Even though Photodiodes are very specific to the wavelength of our interest it can't detect the lowest intensity of them hence both photodiodes and phototransistors require an external amplifier to boost the signal, which increases the cost and complexity of the circuit.
+          <br>
+          To determine the sensitivity of the photodarlington sensor, we conducted a series of experiments:
+          <br>
+          Firstly,we measured the output voltage of the sensor at different light intensities from a green LED. We then plotted the output voltage versus the light intensity to create a calibration curve.
+          <br>
+          In the second, we moved on with a real lab sample, where we measured the output voltage of the sensor when exposed to different concentrations of PTE(phenyl tetraene) in DCM(dichloromethane). We also plotted the output voltage versus the PTE concentration to create a calibration curve.
+          <br>
+          Lastly, we immobilized the biomarker on an apta sensor and then measured the output voltage of the sensor when exposed to different concentrations of the Biomarker bound with the aptasensor. We again plotted the output voltage versus the biomarker concentration to create a calibration curve.
+          
         </p>
 
         <br>
