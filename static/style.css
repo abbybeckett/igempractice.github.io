@@ -6674,3 +6674,86 @@ i.fa-star.rating{color: rgb(232, 217, 31);}
   .tutorial-link:hover {
     color: #ede0d5;
   }
+
+  .sponsorwrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .parallax-card {
+    width: 250px;
+    height: 280px;
+    border-radius: 15px;
+    margin: 10px 10px 10px 0;
+  }
+  .parallax-card__holder {
+    height: 100%;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    will-change: transform;
+  }
+  .parallax-card__holder:hover .parallax-card__front {
+    transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transform: rotateY(-180deg);
+    transform-style: preserve-3d;
+  }
+  .parallax-card__holder:hover .parallax-card__back {
+    transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transform: rotateY(0deg);
+    transform-style: preserve-3d;
+  }
+  .parallax-card__content {
+    transform: translateY(-50%) translateZ(60px) scale(0.94);
+    top: 50%;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding: 2rem;
+    box-sizing: border-box;
+    outline: 1px solid transparent;
+    perspective: inherit;
+    z-index: 2;
+    will-change: transform;
+  }
+  .parallax-card__front {
+    transform: rotateY(0deg);
+    transform-style: preserve-3d;
+    background-size: cover;
+    min-height: 100%;
+    height: auto;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 1.5rem;
+    transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    will-change: transform;
+  }
+  .parallax-card__front-title {
+    display: block;
+    text-align: center;
+  }
+  .parallax-card__back {
+    transform: rotateY(180deg);
+    transform-style: preserve-3d;
+    background: #000;
+    background-size: cover;
+    transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    min-height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    will-change: transform;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    color: #fff;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    font-size: 1.5rem;
+  }
+  .parallax-card__back-descr {
+    display: block;
+    text-align: center;
+  }
