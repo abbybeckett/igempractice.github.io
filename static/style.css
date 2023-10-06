@@ -6757,3 +6757,20 @@ i.fa-star.rating{color: rgb(232, 217, 31);}
     display: block;
     text-align: center;
   }
+
+/* THIS IS FOR HARDWARE ANIMATION */
+.png-animation {
+  animation: png-move 1s infinite;
+}
+
+@keyframes png-move {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
