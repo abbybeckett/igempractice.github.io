@@ -6759,9 +6759,10 @@ i.fa-star.rating{color: rgb(232, 217, 31);}
   }
 
 /* THIS IS FOR HARDWARE ANIMATION */
-.png-animation {
+
+ .png-animation {
   animation: png-move 1s infinite;
-}
+  }  
 
 @keyframes png-move {
   0% {
