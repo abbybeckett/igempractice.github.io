@@ -4,106 +4,8 @@
 {% block lead %}We ask every team to think deeply and creatively about whether their project is responsible and good for the world. Consider how the world affects your work and how your work affects the world.{% endblock %}
 
 {% block page_content %}
-<!-- TAB CONTROLLERS -->
-<input id="panel-1-ctrl"
-       class="panel-radios" type="radio" name="tab-radios" checked>
-<input id="panel-2-ctrl"
-       class="panel-radios" type="radio" name="tab-radios">
-<input id="panel-3-ctrl"
-       class="panel-radios" type="radio" name="tab-radios">
-<input id="panel-4-ctrl"
-       class="panel-radios" type="radio" name="tab-radios">
-<input id="panel-5-ctrl"
-       class="panel-radios" type="radio" name="tab-radios">
-<input id="nav-ctrl"
-       class="panel-radios" type="checkbox" name="nav-checkbox">
 
-<header id="introduction">
-  <h1>No JS: Tabs That Scale Down to Menu</h1>
-</header>
-
-<!-- TABS LIST -->
-<ul id="tabs-list">
-    <!-- MENU TOGGLE -->
-    <label id="open-nav-label" for="nav-ctrl"></label>
-    <li id="li-for-panel-1">
-      <label class="panel-label"
-             for="panel-1-ctrl">Radio Toggles</label>
-    </li><!--INLINE-BLOCK FIX
- --><li id="li-for-panel-2">
-      <label class="panel-label"
-             for="panel-2-ctrl">Input :checked</label>
-    </li><!--INLINE-BLOCK FIX
- --><li id="li-for-panel-3">
-      <label class="panel-label"
-             for="panel-3-ctrl">The Tabs</label>
-    </li><!--INLINE-BLOCK FIX
- --><li id="li-for-panel-4">
-      <label class="panel-label"
-             for="panel-4-ctrl">Tab :hover</label>
-    </li><!--INLINE-BLOCK FIX
- --><li id="li-for-panel-5" class="last">
-      <label class="panel-label"
-             for="panel-5-ctrl">Menu</label>
-    </li>
-    <label id="close-nav-label" for="nav-ctrl">Close</label>
-</ul>
-
-<!-- THE PANELS -->
-<article id="panels">
-  <div class="container">
-    <section id="panel-1">
-      <main>
-        <h1>Radio Toggles</h1>
-        <p>In this demo, <code>labels</code> for hidden <code>radios</code> toggle the content. This is based on the behavior in which clicked <code>labels</code> for a <code>radio</code> or <code>checkbox</code> input will check that <code>input</code>.</p> 
-<pre>&lt;input id="radio-1" type="radio" name="demo-radios"&gt;
-&lt;input id="radio-2" type="radio" name="demo-radios"&gt;</pre>
-        #radio-1: <input id="radio-1" type="radio" name="demo-radios"> #radio-2: <input id="radio-2" type="radio" name="demo-radios">
-<pre>&lt;label for="radio-1"&gt;Toggle #radio-1&lt;/label&gt;
-&lt;label for="radio-2"&gt;Toggle #radio-2&lt;/label&gt;</pre>
-        <label for="radio-1" class="demo-label">Toggle #radio-1</label>
-        <label for="radio-2" class="demo-label">Toggle #radio-2</label>
-        <p>Click one of the labels above and see its effect on the radios above it.</p>
-        <p>The radios for this pen's tabs are displayed semi-transparently at the top of this demo page.</p>
-      </main>
-    </section>
-    <section id="panel-2">
-      <main>
-        <h1>Input :checked</h1>
-        <p>In CSS, you can query based on the <code>:checked</code> selector for <code>radios</code> and <code>checkboxes</code> to style siblings down the DOM scope. To do this, we can use the <code>~</code>. It will select same-level siblings after the given selector. Because the tab <code>labels</code> in this demo are nested and not immediate siblings, we will need to select their topmost parent that is at the same level as our <code>input</code>.</p>
-        <p>To demonstrate, we will do a simplified version of this with a checkbox:</p>
-        <pre><strong>&lt;!-- invisible input and its label --&gt;</strong>
-&lt;input id="demo-child-toggle" type="checkbox"&gt;
-&lt;label for="demo-child-toggle"&gt;Toggle #demo-child&lt;/label&gt;
-
-<strong>&lt;-- parent to select first via "~" --&gt;</strong>
-&lt;div id="demo-parent"&gt;
-  <strong>&lt;-- child to select through parent --&gt;</strong>
-  &lt;div id="demo-child"&gt;#demo-child&lt;/div&gt;
-&lt;/div&gt;</pre>
-        <p>and in our CSS:</p>
-        <pre><strong>/* hiding our checkbox */</strong>
-#demo-child-toggle {
-  display: none;  
-}
-<strong>/* selecting the child */</strong>
-#demo-child-toggle:checked ~ #demo-parent #demo-child {
-  color: #c0392b;
-  font-weight: bold;
-  text-transform: uppercase;
-}</pre>
-        <hr>
-        <input id="demo-child-toggle" type="checkbox">
-        <label class="demo-label" for="demo-child-toggle">Toggle #demo-child</label>
-        <div id="demo-parent">
-          <div id="demo-child">#demo-child</div>
-        </div>
-        <hr>
-        <p>As you can see, we can control the style of content that comes after a hidden input by toggling it via its label.</p>
-        <p>At this point you can probably get the picture for how we can conditionally display the tabbed panel content in this pen.</p>
-      </main>
-    </section>
-<div class="row mt-4">
+<!--<div class="row mt-4">
   <div class="col">
     <div class="bd-callout bd-callout-info">
       <h4>Silver Medal Criterion #2</h4>
@@ -144,6 +46,1199 @@
       <li><a href="https://2020.igem.org/Team:Baltimore_BioCrew/Human_Practices">2020 Baltimore BioCrew</a></li>
     </ul>
   </div>
-</div>
+</div>-->
+
+
+<script defer>
+
+  $(document).ready(function(){
+      $(".c1").click(function(){
+        $(".hp-part1").fadeIn().css("display", "inline-block");
+        $(".hp-part-2").fadeOut().css("display", "none");
+        $(".hp-part-3").fadeOut().css("display", "none");
+        $(".hp-part-5").fadeOut().css("display", "none");
+        $(".hp-part-4").fadeOut().css("display", "none");
+      });
+    });
+  
+    $(document).ready(function(){
+      $(".c2").click(function(){
+        $(".hp-part-2").fadeIn().css("display", "inline-block");
+        $(".hp-part1").fadeOut().css("display", "none");
+        $(".hp-part-3").fadeOut().css("display", "none");
+        $(".hp-part-4").fadeOut().css("display", "none");
+        $(".hp-part-5").fadeOut().css("display", "none");
+      });
+    });
+  
+    $(document).ready(function(){
+      $(".c3").click(function(){
+        $(".hp-part-3").fadeIn().css("display", "inline-block");
+        $(".hp-part1").fadeOut().css("display", "none");
+        $(".hp-part-2").fadeOut().css("display", "none");
+        $(".hp-part-4").fadeOut().css("display", "none");
+        $(".hp-part-5").fadeOut().css("display", "none");
+      });
+    });
+  
+    $(document).ready(function(){
+      $(".c4").click(function(){
+        $(".hp-part-4").fadeIn().css("display", "inline-block");
+        $(".hp-part1").fadeOut().css("display", "none");
+        $(".hp-part-2").fadeOut().css("display", "none");
+        $(".hp-part-3").fadeOut().css("display", "none");
+        $(".hp-part-5").fadeOut().css("display", "none");
+      });
+    });
+  
+    $(document).ready(function(){
+      $(".c5").click(function(){
+        $(".hp-part-5").fadeIn().css("display", "inline-block");
+        $(".hp-part1").fadeOut().css("display", "none");
+        $(".hp-part-2").fadeOut().css("display", "none");
+        $(".hp-part-3").fadeOut().css("display", "none");
+        $(".hp-part-4").fadeOut().css("display", "none");
+      });
+    });
+  
+        $(document).ready(function () {
+          $(".t1").click(function () {
+            $(".timeline-1").fadeIn().css("display", "inline-block");
+            $(".timeline-2").fadeOut().css("display", "none");
+            $(".timeline-3").fadeOut().css("display", "none");
+          });
+        });
+        $(document).ready(function () {
+          $(".t2").click(function () {
+            $(".timeline-2").fadeIn().css("display", "inline-block");
+            $(".timeline-1").fadeOut().css("display", "none");
+            $(".timeline-3").fadeOut().css("display", "none");
+          });
+        });
+        $(document).ready(function () {
+          $(".t3").click(function () {
+            $(".timeline-3").fadeIn().css("display", "inline-block");
+            $(".timeline-1").fadeOut().css("display", "none");
+            $(".timeline-2").fadeOut().css("display", "none");
+          });
+        });
+      
+        // function scrolldiv() {
+        //   window.scrollTo(
+        //     0,
+        //     findPosition(document.getElementsByClassName(".cmodal"))
+        //   );
+        // }
+        // function findPosition(obj) {
+        //   var currenttop = 0;
+        //   if (obj.offsetParent) {
+        //     do {
+        //       currenttop += obj.offsetTop;
+        //     } while ((obj = obj.offsetParent));
+        //     return [currenttop];
+        //   }
+        // }
+      
+        //modal script
+        ("use strict");
+      
+        const modal = document.getElementsByClassName(".cmodal");
+        const overlay = document.querySelector(".overlay");
+        const btnCloseModal = document.querySelector(".close-modal");
+        const btnsOpenModal = document.querySelectorAll(".show-modal");
+      
+        // const openModal = function () {
+        //   console.log("modal called");
+        //   // modal.classList.remove("hidden");
+        //   // overlay.classList.remove("hidden");
+        //   // $(".hp-content").css("max-height", "100vh");
+        //   $(".cmodal").removeClass("hidden");
+        //   $(".overlay").removeClass("hidden");
+        // };
+      
+        const closeModal = function () {
+          $(".cmodal").addClass("hidden");
+          $(".overlay").addClass("hidden");
+        };
+      
+        $(document).ready(function () {
+          //call functions
+          $(".show-hotha").click(function () {
+            $(".hotha-content").removeClass("hidden");
+            $(".overlay").removeClass("hidden");
+          });
+          //
+          $(".show-madhu").click(function () {
+            $(".msmadhusadhan-content").removeClass("hidden");
+            $(".overlay").removeClass("hidden");
+          });
+          //
+          $(".show-david").click(function () {
+            $(".dbjc-content").removeClass("hidden");
+            $(".overlay").removeClass("hidden");
+          });
+          //
+          $(".show-satyajit").click(function () {
+            $(".satyajit-content").removeClass("hidden");
+            $(".overlay").removeClass("hidden");
+          });
+          $(".show-vineeta").click(function () {
+            $(".vineeta-content").removeClass("hidden");
+            $(".overlay").removeClass("hidden");
+          });
+          $(".show-nishad").click(function () {
+            $(".nishad-content").removeClass("hidden");
+            $(".overlay").removeClass("hidden");
+          });
+          $(".show-shashank").click(function () {
+            $(".shashank-content").removeClass("hidden");
+            $(".overlay").removeClass("hidden");
+          });
+          $(".show-alexander").click(function () {
+            $(".alexander-content").removeClass("hidden");
+            $(".overlay").removeClass("hidden");
+          });  
+          $(".show-gavin").click(function () {
+            $(".gavin-content").removeClass("hidden");
+            $(".overlay").removeClass("hidden");
+          });
+          $(".show-thomas").click(function () {
+            $(".thomas-content").removeClass("hidden");
+            $(".overlay").removeClass("hidden");
+          });
+          $(".show-mayurika").click(function () {
+            $(".mayurika-content").removeClass("hidden");
+            $(".overlay").removeClass("hidden");
+          });   
+          $(".show-varad").click(function () {
+            $(".varad-content").removeClass("hidden");
+            $(".overlay").removeClass("hidden");
+          });   
+          $(".show-vidya").click(function () {
+            $(".vidya-content").removeClass("hidden");
+            $(".overlay").removeClass("hidden");
+          });   
+  
+          $(".show-mugdha").click(function () {
+            $(".mugdha-content").removeClass("hidden");
+            $(".overlay").removeClass("hidden");
+          });   
+          $(".show-milind").click(function () {
+            $(".milind-content").removeClass("hidden");
+            $(".overlay").removeClass("hidden");
+          });   
+          $(".show-shannon").click(function () {
+            $(".shannon-content").removeClass("hidden");
+            $(".overlay").removeClass("hidden");
+          });   
+          $(".show-vince").click(function () {
+            $(".vince-content").removeClass("hidden");
+            $(".overlay").removeClass("hidden");
+          });   
+          //no popup
+          // $(".show-sanjeev").click(function () {
+          //   $(".sanjeev-content").removeClass("hidden");
+          //   $(".overlay").removeClass("hidden");
+          // });
+          $(".show-sunish").click(function () {
+            $(".sunish-content").removeClass("hidden");
+            $(".overlay").removeClass("hidden");
+          });   
+          $(".show-gayathri").click(function () {
+            $(".gayathri-content").removeClass("hidden");
+            $(".overlay").removeClass("hidden");
+          });   
+          $(".show-rahul").click(function () {
+            $(".rahul-content").removeClass("hidden");
+            $(".overlay").removeClass("hidden");
+          });  
+          //no popup 
+          // $(".show-raghavan").click(function () {
+          //   $(".raghavan-content").removeClass("hidden");
+          //   $(".overlay").removeClass("hidden");
+          // });  
+          //no popup
+          // $(".show-sandhya").click(function () {
+          //   $(".sandhya-content").removeClass("hidden");
+          //   $(".overlay").removeClass("hidden");
+          // });  
+          $(".show-vandana").click(function () {
+            $(".vandana-content").removeClass("hidden");
+            $(".overlay").removeClass("hidden");
+          });  
+          $(".show-maulori").click(function () {
+            $(".maulori-content").removeClass("hidden");
+            $(".overlay").removeClass("hidden");
+          }); 
+          $(".show-siddhesh").click(function () {
+            $(".siddhesh-content").removeClass("hidden");
+            $(".overlay").removeClass("hidden");
+          }); 
+          //no popup 
+          // $(".show-rakesh").click(function () {
+          //   $(".rakesh-content").removeClass("hidden");
+          //   $(".overlay").removeClass("hidden");
+          // });  
+          $(".show-nishikant").click(function () {
+            $(".nishikant-content").removeClass("hidden");
+            $(".overlay").removeClass("hidden");
+          });  
+          //no popup
+          // $(".show-prof").click(function () {
+          //   $(".prof-content").removeClass("hidden");
+          //   $(".overlay").removeClass("hidden");
+          // });  
+          $(".show-madhubhashini").click(function () {
+            $(".madhubhashini-content").removeClass("hidden");
+            $(".overlay").removeClass("hidden");
+          });  
+          $(".show-vasti").click(function () {
+            $(".vasti-content").removeClass("hidden");
+            $(".overlay").removeClass("hidden");
+          });  
+          $(".show-bbmp").click(function () {
+            $(".bbmp-content").removeClass("hidden");
+            $(".overlay").removeClass("hidden");
+          });  
+          $(".show-mitmahe").click(function () {
+            $(".collabmahe-content").removeClass("hidden");
+            $(".overlay").removeClass("hidden");
+          });  
+          $(".show-santosh").click(function () {
+            $(".santosh-content").removeClass("hidden");
+            $(".overlay").removeClass("hidden");
+          }); 
+  
+          $(".show-cbtl").click(function () {
+            $(".cbtl-content").removeClass("hidden");
+            $(".overlay").removeClass("hidden");
+          });  
+       
+          $(".show-mehmet").click(function () {
+            $(".mehmet-content").removeClass("hidden");
+            $(".overlay").removeClass("hidden");
+          });  
+          $(".show-rajeev").click(function () {
+            $(".rajeev-content").removeClass("hidden");
+            $(".overlay").removeClass("hidden");
+          });  
+          $(".show-supriya").click(function () {
+            $(".supriya-content").removeClass("hidden");
+            $(".overlay").removeClass("hidden");
+          });  
+          $(".show-vikram").click(function () {
+            $(".vikram-content").removeClass("hidden");
+            $(".overlay").removeClass("hidden");
+          });  
+          $(".show-narendra").click(function () {
+            $(".narendra-content").removeClass("hidden");
+            $(".overlay").removeClass("hidden");
+          });  
+  
+          $(".show-pradeep").click(function () {
+            $(".pradeep-content").removeClass("hidden");
+            $(".overlay").removeClass("hidden");
+          });  
+          $(".show-ratnesh").click(function () {
+            $(".ratnesh-content").removeClass("hidden");
+            $(".overlay").removeClass("hidden");
+          });  
+          //no popup
+          // $(".show-vinod").click(function () {
+          //   $(".vinod-content").removeClass("hidden");
+          //   $(".overlay").removeClass("hidden");
+          // });
+          $(".show-smita").click(function () {
+            $(".shobha-content").removeClass("hidden");
+            $(".overlay").removeClass("hidden");
+          });
+          $(".show-is").click(function () {
+            $(".is-content").removeClass("hidden");
+            $(".overlay").removeClass("hidden");
+          });
+          $(".show-pooja").click(function () {
+            $(".pooja-content").removeClass("hidden");
+            $(".overlay").removeClass("hidden");
+          });
+          $(".show-prema").click(function () {
+            $(".prema-content").removeClass("hidden");
+            $(".overlay").removeClass("hidden");
+          });
+          $(".show-harsha").click(function () {
+            $(".harsha-content").removeClass("hidden");
+            $(".overlay").removeClass("hidden");
+          });
+          $(".show-gyana").click(function () {
+            $(".gyana-content").removeClass("hidden");
+            $(".overlay").removeClass("hidden");
+          });
+          $(".show-vinod").click(function () {
+            $(".vinod-content").removeClass("hidden");
+            $(".overlay").removeClass("hidden");
+          });
+        });
+      
+        $(document).ready(function () {
+          $(".close-modal").click(function () {
+            closeModal();
+          });
+        });
+      
+        overlay.addEventListener("click", closeModal);
+      
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape" && !$(".cmodal").hasClass(".hidden")) {
+            closeModal();
+          }
+        });
+      
+        // $(document).ready(function () {
+        //   $(window).scroll(function () {
+        //     if ($(window).scrollTop() >= $(".hp-content").offset().top) {
+        //       $(".index-list").css("display", "inline-block");
+        //     }
+        //     if ($(window).scrollTop() < $(".hp-content").offset().top) {
+        //       $(".index-list").css("display", "none");
+        //     }
+        //   });
+        // });
+      </script>
+      
+      <div class="section-main hp-main">
+        <div class="section-title hp-title">
+          <img src="https://static.igem.wiki/teams/4429/wiki/tittles/ihpf2.png" />
+          <svg class="arrows">
+            <path class="a1" d="M0 0 L30 32 L60 0"></path>
+            <path class="a2" d="M0 20 L30 52 L60 20"></path>
+            <path class="a3" d="M0 40 L30 72 L60 40"></path>
+          </svg>
+          <div>
+            <svg
+              class="waves"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              viewBox="0 24 150 28"
+              preserveAspectRatio="none"
+              shape-rendering="auto"
+            >
+              <defs>
+                <path
+                  id="gentle-wave"
+                  d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+                />
+              </defs>
+              <g class="parallax">
+                <use
+                  xlink:href="#gentle-wave"
+                  x="48"
+                  y="0"
+                  fill="rgba(255,255,255,0.7"
+                />
+                <use
+                  xlink:href="#gentle-wave"
+                  x="48"
+                  y="3"
+                  fill="rgba(255,255,255,0.5)"
+                />
+                <use
+                  xlink:href="#gentle-wave"
+                  x="48"
+                  y="5"
+                  fill="rgba(255,255,255,0.3)"
+                />
+                <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+              </g>
+            </svg>
+          </div>
+        </div>
+        <div class="section-content hp-content">
+          <div class="content-card">
+            <h1>Introduction</h1>
+            <p>
+              Science and Synthetic Biology has always had a mixed reception from the public, with some viewing it as a brilliant strategy to combat 
+              real-world problems and improve human life while others are mistrustful of the threats and dangers it can pose. In order to design a good 
+              solution to any problem, one must have a good idea of what those affected by the problem and, therefore, the solution needed. It is 
+              important to have <b> a people-centered approach </b> and to actively seek their input at every stage of your project. It is vital to 
+              understand their perspective and how your solution should cater to their needs. 
+            </p>
+            <p>
+              Our integrated Human Practices is a story of our journey through <b> understanding and identifying the problem </b>, coming up with a 
+              <b> suitable solution </b>, and continuously <b>modifying our solution based on the inputs we have received</b>, ensuring that our 
+              project can move <b>beyond being just a laboratory concept</b> into a real-world therapeutic. 
+            </p>
+          </div>
+          <div class="content-card">
+            <h1>Highlights</h1>
+            <p>A summary of our main findings and how they influenced our project:</p>
+            <ul>
+              <li>
+              We researched extensively about <b>Dengue in the news, from papers, on the World Health Organisation site, and from our friends, families,
+              academicians, and virologists</b>. We obtained a thorough understanding of the problem in terms of the disease pathology and how it can
+              be stopped effectively. We spoke with the <b>local municipal bodies</b> in India - PMC and BBMP, to obtain a case-wise distribution and
+              breakup in terms of age, gender, areas prone. We also spoke to a <b>Dengue virologist</b> who routinely interacts and is actively
+              involved in spreading awareness about dengue, <b>Dr Maulori Curio Cabral, from Brazil</b> to get a deeper understanding of the situation
+              in a different country and social context than ours. 
+              </li>
+              <li>
+               We learned that <b>Dengue has no true cure</b>, and interactions with <b>several doctors</b> in the field made us aware that the current
+               treatment for Dengue is aimed at <b>symptom control</b> which is sufficient for a primary infection. However, most primary infections
+               are undiagnosed which could lead to a <b>worse secondary infection</b> masquerading as a primary infection. Therefore, our therapeutic
+               needs to be equally effective against both primary as well as secondary infections. 
+      
+              </li>
+              <li>
+               Our initial project idea involved the production of IgY-IgG hybrid antibodies to target the NS1 antigen. However, <b>based on inputs
+               received from several experts</b>, as outlined below, we <b>modified our project</b> to now be the production of scFvs with an
+               engineered FcRn binding peptide to increase half-life to target the E dimer Epitope.
+              </li>
+              <li>
+                We sought to <b>quantify the public awareness of Dengue</b> through an informative survey. The point of the survey was to gauge the
+                general knowledge about Dengue and simultaneously help spread awareness. 
+      
+              </li>
+              <li>
+               Since our project involved working with the Dengue virus, which is a <b>risk group 2 organism</b> and our epitopes contribute toward
+               increasing the virulence of the organism, we looked into alternatives for conducting our assay and decided on using VLPs based on the
+               suggestion of Dr Rahul Roy.
+      
+              </li>
+              <li>
+               We also conducted a webinar in collaboration with MIT_MAHE on <b>Biosafety and Ethics</b> and interacted with the speaker <b>Dr Vinod
+               Jyothikumar</b>, regarding the possible safety concerns our project could have and alternative production methods.
+              </li>
+              <li>
+               We spoke to <b>several people from varying socio-economic backgrounds</b> and sought to learn how dengue has affected them and to spread
+               awareness about vector control measures.  
+      
+              </li>
+            </ul>
+            
+  
+          </div>
+          <div class = "content-card">
+            <p><h2> Please click on the different buttons to get a detailed overview of our human practices!<h2></p>
+            </div>
+          <div class="tl-change-buttons">
+            <a class="change-btn comm tb-1 first c1" href="#!">Timeline</a>
+            <a class="change-btn comm tb-1 first c2" href="#!">Understanding</a>
+            <a class="change-btn comm tb-1 first c3" href="#!">Ideating</a>
+            <a class="change-btn comm tb-1 first c4 " href="#!">Designing</a>
+            <a class="change-btn comm tb-1 first c5" href="#!">Spreading Awareness</a>
+          </div>
+          
+      
+          <div class="hp-part1">
+  
+            <div class="content-card follow-card" >
+              <h1>Follow our Journey</h1>
+              <h2>as we interact with and learn from our various stakeholders</h2>
+              <p> Don't forget to click on each of our stakeholders to get details on how they helped us take our project forward</p>
+              </div>
+              <br/>
+             
+            <div class="tl-change-buttons">
+              <a class="change-btn  tb-1  t1 comm asi acad-btn" href="#!">Academician</a>
+              <a class="change-btn  tb-1  t2 comm asi soc-btn" href="#!">Society</a>
+              <a class="change-btn tb-1 t3 comm asi ind-btn" href="#!">Industrialist</a>
+            </div>
+            <div class="cmodal hidden hotha-content">
+              <button class="close-modal">&times;</button>
+              <h1>Prof Srinivas Hotha</h1>
+              <div>
+                <p>
+                 WHO:<br/>
+                 Dr Srinivas Hotha is a Professor at IISER Pune who works on Glycochemical Biology. He is also our primary PI.
+                </p>
+                <p>
+                  WHY:<br/>
+                  We’ve had several bi-monthly meetings with our PI throughout our iGEM cycle and have constantly updated him regarding our progress. 
+                  We’ve also sought his inputs on all things related to our project, whether it be the science, or outreach, or effective human practices. 
+                  We’ve even approached him about managing our mounting academic course-work and keeping up with the iGEM deadlines! 
+                </p>
+                <p>TAKEAWAY:</p>
+                <ul>
+                  <li>He guided us during our initial ideation phase and helped us by letting us bounce our ideas off him. </li>
+                  <li>He advised us to make a list of our priorities and see if we’re working in accordance with that.   </li>
+                  <li>He helped us modify our presentation and offered several suggestions on it. </li>
+                  <li>Our discussions helped us finalise our project and arrive at a viable solution.</li>
+                </ul>
+              </div>
+              <div class="popup-img">
+                <img src="https://static.igem.wiki/teams/4429/wiki/ihp/hotha.jpg"/>
+              </div>
+            </div>
+            <div class="cmodal hidden msmadhusadhan-content">
+              <button class="close-modal">&times;</button>
+              <h1>Dr M S Madhusudhan</h1>
+              <div>
+                <p>
+                 WHO:<br/>
+                 Dr Madhusudhan is an Associate Professor working in the field on Bioinformatics and Structure at IISER, Pune. 
+                </p>
+                <p>
+                  WHY:</br/>
+                  We approached him early-on in our project for help with sequence finding and modeling. 
+                </p>
+                <p>ADVICE: </p>
+                <ul>
+                  <li>He guided us on Ab-intio Modelling of IgY.</li>
+                  <li>He advised us to explore A-body Builder for structure predictions.</li>
+                  <li>He helped us understand the in-silico aspects associated with proteonomics.</li>
+                  <li>He was the first person to expose us to Molecular Dynamics.</li>
+                </ul>
+              </div>
+              <div class="popup-img">
+                <img src="https://static.igem.wiki/teams/4429/wiki/ihp/madhu.jpg"/>
+              </div>
+            </div>
+            <div class="cmodal hidden madhubhashini-content">
+              <button class="close-modal">&times;</button>
+              <h1>Dr Madhu Bashini:</h1>
+              <div>
+                <p>
+                 WHO:<br/>
+                 Dr Madhu Bashini is a renowned doctor at Chettinad Hospital and is an expert on treating Dengue fever and Viral fevers.
+                </p>
+                <p>
+                  WHY:<br/>
+                  We wanted to gain insight into the current treatment methods for Dengue from a first-hand source and to see if an alternative therapeutic was necessary.
+                </p>
+                <p>TAKEAWAY: </p>
+                <ul>
+                  <li>She told us that the primary treatment was a combination of fluids and was aimed at symptom control.</li>
+                  <li>She did not feel that it was necessary for an alternative therapeutic for a primary treatment. However, she said that most primary infections are undiagnosed which could inadvertently lead to a worse secondary infection and so our therapy must be aimed at treating a secondary infection. </li>
+                  <li>She asked us to look into the vector control measures undertaken by the Singaporean Government in keeping Dengue under control.</li>
+                  <li>She also told us that most Dengue infections during the covid pandemic went undiagnosed due to being accidentally mistaken for a Covid infection.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="cmodal hidden dbjc-content">
+                <button class="close-modal">&times;</button>
+                <h1>Juho Choi:</h1>
+                <div>
+                  <p>
+                   WHO:<br/>
+                   Juho Choi is a Masters’ Student at the Ajou University, Graduate School, South Korea, Suwon, who has worked extensively with IgY antibodies before.
+                  </p>
+                  <p>
+                    WHY:<br/>
+                    We approached them regarding acquiring the sequence of the constant region of IgY.
+                  </p>
+                  <p>TAKEAWAY: </p>
+                  <ul>
+                    <li>They were incredibly kind in giving us the sequences of the constant heavy and light chains of a chicken IgY. </li>
+                    <li>They also went on to explain to us that the sequence he had sent did not consist of a leader sequence and that a leader sequence which is also known as a signal peptide sequence starting with MET should be added if we wished to express and secrete our antibody in the bacterial system. </li>
+                    <li>They added that any antibody sequence to be expressed in a vector should have a Leader sequence - Variable light or heavy chain sequence - Constant light or heavy chain sequence.</li>
+                    <li>They told us that, in theory, we could add the sequence of any variable chain before the constant chain and express it, thereby making the construct modular. </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="cmodal hidden satyajit-content">
+                <button class="close-modal">&times;</button>
+                <h1>Prof Satyajit Rath: </h1>
+                <div>
+                  <p>
+                   WHO:<br/>
+                   Prof Rath is an Immunologist at IISER Pune and is formerly from NIV. He has been closely associated with our project over the entire cycle and has always provided us with extremely thoughtful inputs.<br/>
+                   <br/>
+                   “Why do you want to do IgY? You’re coming up with a very high tech solution for a very low-tech industry.”
+                  </p>
+                  <p>
+                    WHY:<br/>
+                    We initially approached him to learn of the possible immune response of our body toward an avian antibody. Since then we have approached him several times to seek his input regarding scFvs, their clearance from the body, possible ways to reduce immunogenicity and therapeutic delivery methods.
+                  </p>
+                  <p>TAKEAWAY: </p>
+                  <ul>
+                    <li>Prof Rath warned us against a possible immune response and said that we would have to be very careful in that aspect since our dosage might also have to vary depending on the disease progression which could lead to toxicity.</li>
+                    <li>He advised against deimmunisation via T-cell epitope mapping and mutations since it might destabilize the antibody and compromise functionality. </li>
+                    <li>He told us that we were coming up with a much more expensive production method for IgYs than what already existed and cautioned us against going ahead with it since the cons outweighed the pros.</li>
+                    <li>He allayed our fears about lacking a possible clearance mechanism and told us that the body’s natural processes of pinocytosis, proteases and lysis should be enough.  </li>
+                    <li>He told us that there was no concrete evidence that the FcRn receptor is solely responsible for increasing the half-life, and that it may as well be that size plays an equally important role. He asked us to conduct a four-fold assay with scFv + FcRnBp, scFv dimers + FcRnBp, scFv dimers and scFv to analyse this. We were very interested in knowing how this assay pans out but were unable to run it owing to time constraints.</li>
+                  </ul>
+                </div>
+                <div class="popup-img">
+                <img src="https://static.igem.wiki/teams/4429/wiki/ihp/rath.jpg"/>
+              </div>
+            </div>
+            
+              <div class="cmodal hidden vineeta-content">
+                <button class="close-modal">&times;</button>
+                <h1>Dr Vineeta Bal:</h1>
+                <div>
+                  <p>
+                   WHO:<br/>
+                  <br/>
+                   <br/>
+                   “You worry too much. That’s not the point. Even I can’t say which therapy is useful, that is a 15-year project. You don’t even have 15 months.” - when asked if our therapeutic seemed viable.
+                  </p>
+                  <p>
+                    WHY:<br/>
+                    We approached herinitially to learn more about the immune system and the possible immune reaction against avian antibodies and later to update her regarding our project and gain her inputs.
+                  </p>
+                  <p>TAKEAWAY: </p>
+                  <ul>
+                    <li>She cautioned us about using IgY as a mode of treatment since it could cause a possibly fatal immunogenic reaction in the body. </li>
+                    <li>She also told us not to worry too much about our project and that it did sound viable with the kind of assays we had planned. </li>
+                    <li>She asked us to look into epitopes involved with membrane fusion since those were usually structural proteins and easier to target.</li>
+                    <li>TShe advised against an antibody cocktail targeting more than one serotype since it would bring down the titre value of the useful antibodies. </li>
+                    <li>She also imparted much needed advice on how to look for the correct literature, which sources to trust and how best to conduct a literature review. </li>
+                    <li>She also told us that we should not be looking at the relative affinity of IgY and IgG to dengue and instead be looking at the off-rate of IgG and the on-rate of IgY since we are not trying to outcompete but to displace.</li>
+                  </ul>
+                </div>
+                <div class="popup-img">
+                <img src="https://static.igem.wiki/teams/4429/wiki/ihp/bal.jpg"/>
+              </div>
+              </div>
+              <div class="cmodal hidden rajeev-content">
+                <button class="close-modal">&times;</button>
+                <h1>Dr Rajeev Dhere:</h1>
+                <div>
+                  <p>
+                   WHO:<br/>
+                   Dr Dhere is the Executive Director of R&D at the Serum Institute of India. 
+                  <p>
+                    WHY:<br/>
+                    We initially approached him for a possible sponsorship, but ended up with advice to take away from the meeting.
+                  </p>
+                  <p>TAKEAWAY: </p>
+                  <ul>
+                    <li>He had several pointers regarding conducting effective drug trials. </li>
+                    <li>He told us that in a country like India, the majority of the people refused to get themselves tested, vaccinated, or treated. They instead prefer to take random medicines and self-medicate. </li>
+                    <li>Only serious cases end up getting treated which does not make for an effective drug/vaccine trial.  </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="cmodal hidden nishad-content">
+                <button class="close-modal">&times;</button>
+                <h1>Dr Nishad Matange: </h1>
+                <div>
+                  <p>
+                   WHO:<br/>
+                   Dr Matange is an Assistant Professor at IISER, Pune. His fields of research include Evolution and Genetics of Antimicrobial Resistance in Bacteria.
+                  </p>
+                  <p>
+                    WHY:<br/>
+                    We approached him to brainstorm our fledgling idea with him and sought his inputs.
+                  </p>
+                  <p>TAKEAWAY: </p>
+                  <ul>
+                    <li>He suggested that we target the NS1 antigen. NS1 antigens are key to the replication of the virus inside the host cell. NS1 is also the only non-structural protein to be secreted extracellularly and is moderately conserved across all four serotypes of Dengue.
+                    </li>
+                    <li>He said if aglycosylation makes our antibody less stable, we could use Molecular Dynamics simulations to figure out mutations that fix that and offered to help us out </li>
+                  </ul>
+                </div>
+                <div class="popup-img">
+                <img src="https://static.igem.wiki/teams/4429/wiki/ihp/ihp/human-prac/20221013-145836.jpg"/>
+              </div>
+              </div>
+              
+              <div class="cmodal hidden alexander-content">
+                <button class="close-modal">&times;</button>
+                <h1>Dr Alexander I Taylor: </h1>
+                <div>
+                  <p>
+                   WHO:<br/>
+                   Dr Alex Taylor is a former staff member at King’s College, London. He is a world expert on IgY structure and function and has worked extensively with it before. 
+                  </p>
+                  <p>
+                    WHY:<br/>
+                    When we were considering IgY as a possible candidate for our therapeutic, we approached him to learn more about why IgY made for a better therapeutic IgG atleast in terms of efficiency.
+                  </p>
+                  <p>TAKEAWAY: </p>
+                  <ul>
+                    <li>He said that the possible reason why IgY bound more efficiently could be due to its low-entropic energy as opposed to IgG which is floppy due to its hinge.  </li>
+                    <li>He also suggested that we could use IgY paired with a Lateral Flow Test for diagnostics.  </li>
+                    <li>He cautioned us against using IgY as an intravenous drug since it has higher chances of causing adverse reactions in the body.</li>
+                    <li>He laid a greater emphasis on the immunogenicity of IgY in the body. </li>
+                  </ul>
+                </div>
+                <div class="popup-img">
+                <img src="https://static.igem.wiki/teams/4429/wiki/ihp/alex-taylor.png"/>
+              </div>
+              </div>   
+              <div class="cmodal hidden supriya-content">
+                <button class="close-modal">&times;</button>
+                <h1>Dr Supriya Kashikar</h1>
+                <div>
+                  <p>
+                   WHO:<br/>
+                   Dr Kashikar is the founder of GeNext Genomics Pvt. Ltd. which is a biotechnology company dedicated to areas of Diagnostic and Therapeutic Proteins Development. 
+                  </p>
+                  <p>
+                    WHY:<br/>
+                    We had several questions regarding absolving the immunogenicity of IgY and the mode of drug delivery. 
+                  </p>
+                  <p>TAKEAWAY: </p>
+                  <ul>
+                    <li>She was apprehensive about using a prokaryotic system for the expression of a large protein as IgY.
+                    </li>
+                    <li>As for the mode of delivery, she told us that developments were in place for an oral prophylactic treatment of IgY for Covid-19 and that this form of treatment was feasible since IgY can get absorbed through the digestive tract. She told us that not much is known about the administration of IgY Intravenously or Sub-cutaneously. </li>
+                    <li>She cautioned us against the possibility of having a much-lowered half-life for IgY since it does not have effector functionality and therefore cannot bing to the FcRn receptor.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="cmodal hidden gavin-content">
+                <button class="close-modal">&times;</button>
+                <h1>Dr Gavin Screaton:</h1>
+                <div>
+                  <p>
+                   WHO:<br/>
+                   Dr Screaton is a highly acclaimed immunologist at the University of Oxford. 
+                  </p>
+                  <p>
+                    WHY:<br/>
+                    We reached out to him regarding the efficacy of using IgY over IgG.
+                  </p>
+                  <p>TAKEAWAY: </p>
+                  <ul>
+                    <li>In a series of mail exchanges, he asked us not to continue with IgY as a therapeutic and instead asked us to simplify our project to an Fc-mutated IgG.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="cmodal hidden thomas-content">
+                <button class="close-modal">&times;</button>
+                <h1>Thomas Howard:</h1>
+                <div>
+                  <p>
+                   WHO:<br/>
+                   Dr Howard, is an international expert in Statistical Design of Experiments in Synthetic Biology. He is a senior lecturer in the field of Molecular Biology and Biotechnology at Newcastle University. 
+                  </p>
+                  <p>
+                    WHY:<br/>
+                    Upon the suggestion of Memo and via his connection, we reached out to Dr Howard to learn about the Statistical Design of Experiments (DOE) and how to apply it to our project. We have had multiple conversations since. 
+                  </p>
+                  <p>TAKEAWAY: </p>
+                  <ul>
+                    <li>Dr Howard explained the philosophy behind DOE and was crucial in getting us started with DOE and introduced us to the various softwares we’d need to use.  </li>
+                    <li>He also guided us regarding prioritising our factors and adapting it to SHuffle.  </li>
+                    <li>He also suggested that we use a BSA calibrated SDS-Page as a quantitative method for protein yield estimation. </li>
+                  </ul>
+                </div>
+                <div class="popup-img">
+                <img src="https://static.igem.wiki/teams/4429/wiki/ihp/thomas-howard.png"/>
+              </div>
+              </div>
+              <div class="cmodal hidden mayurika-content">
+                <button class="close-modal">&times;</button>
+                <h1>Dr Mayurika Lahiri: </h1>
+                <div>
+                  <p>
+                   WHO:<br/>
+                   Dr Lahiri is an Associate Professor at IISER, Pune. She works on DNA damage and cell cycle, 3D studies of breast cancer progression. She has also used animal models to produce antibodies before. 
+                  </p>
+                  <p>
+                    WHY:<br/>
+                    We approached Dr Lahiri regarding working out certain logistics of our project with respect to protein production in bacteria and wanted to explore other models.
+                  </p>
+                  <p>TAKEAWAY: </p>
+                  <ul>
+                    <li>She recommended producing full-length antibodies in SHuffle before moving onto fragments as a test of functionality, which we did. </li>
+                    <li>She told us that most animal house facilities rarely have chickens since they can only be used for producing IgY. This means that chickens are disassociated from science and bacterial systems could provide a modular and cheap method of producing any antibodies. </li>
+                  </ul>
+                </div>
+                <div class="popup-img">
+                <img src="https://static.igem.wiki/teams/4429/wiki/ihp/mayurika.png"/>
+              </div>
+              </div>
+              <div class="cmodal hidden shobha-content">
+                <button class="close-modal">&times;</button>
+                <h1> Dr Shobha Rao and Dr Smita Jog</h1>
+                <div>
+                  <p>
+                   WHO:<br/>
+                   Dr Shobha Rao is a Director of Research & Training at Society for Initiatives in Nutrition & Development  and Dr Smita Jog is a President at Rotary Club, Shivaji Nagar, Pune 
+                  </p>
+                  <p>
+                    WHY:<br/>
+                    Dr Rao and Dr Jog are working in the rural areas in India and educating women about the ‘Importance of Nutrition and breastfeeding in Pregnant women’. They are closely associated with the healthcare facilities in the rural parts of the country. We wanted to learn more of the ways in which they communicated with the public and wanted their inputs on what we can do to have a greater impact.
+                  </p>
+                  <p>TAKEAWAY: </p>
+                  <ul>
+                    <li>Dr Rao and Dr Jog emphasized on the lack of knowledge and information about healthcare in the rural parts of India. </li>
+                    <li>Since Dengue can be passed on from mothers to unborn fetuses in pregnant individuals, we asked Dr Rao about the number of such cases and measures taken in such situations. Dr Rao and Dr Jog stressed that most of such cases go unnoticed because of lack of awareness and diagnostic facilities.
+                        She highlighted that there should be awareness campaigns and spread of information to the masses to explain Dengue precautions and treatment.
+                        </li>
+                  </ul>
+                </div>
+                <div class="popup-img">
+                <img src="https://static.igem.wiki/teams/4429/wiki/ihp/shobha-rao.png"/>
+              </div>
+              </div>
+              <div class="cmodal hidden varad-content">
+                <button class="close-modal">&times;</button>
+                <h1>Dr Varadharajan Sundaramurthy:</h1>
+                <div>
+                  <p>
+                   WHO:<br/>
+                   Dr Sundaramurthy is a host-pathogen expert at the National Centre for Biological Sciences, Bangalore. The Host-Pathogen interface provides insight into the forces that have shaped the contours of pathogenesis, and his lab aims to understand this better. 
+    “Since you are considering IgY for therapeutics, you should look into how the functionality of IgY is affected by glycosylation”
+     
+                  </p>
+                  <p>
+                    WHY:<br/>
+                    We approached Dr Sundaramurthy to understand more about the virus-host interactions in our body and how we might be able to manipulate that to our benefit. We posed our solution to be a cocktail of IgY-IgG hybrid antibodies and Aglycosylated IgG antibodies. 
+                  </p>
+                  <p>TAKEAWAY: </p>
+                  <ul>
+                    <li>He asked us to look into several valid questions that he raised during the meeting that helped us modify our project. </li>
+                    <li>He urged us to look into the properties that glycosylation confers onto the antibody and said that functionality might be affected since we were basing our project on data obtained from glycosylated IgY whereas we were producing aglycosylated IgY-IgG antibody hybrid. He suggested that we look into phagocytosis assays to test the interaction between the virus-antibody complex and Fc receptors. </li>
+                  </ul>
+                </div>
+                <div class="popup-img">
+                <img src="https://static.igem.wiki/teams/4429/wiki/ihp/ihp/varadha.png"/>
+              </div>
+              </div>
+              <div class="cmodal hidden vikram-content">
+                <button class="close-modal">&times;</button>
+                <h1>Dr Vikram Paradkar</h1>
+                <div>
+                  <p>
+                   WHO:<br/>
+                   Dr Paradkar is the Executive vice president at Biological E. Limited.  
+                  </p>
+                  <p>
+                    WHY:<br/>
+                    We initially approached him for a potential sponsorship and to learn more about the processes involved in designing an ideal therapeutic.
+                  <p>TAKEAWAY: </p>
+                  <ul>
+                    <li>We learned about the right antibody to choose to produce - 
+                        It has to be proven to work with several studies
+                        It needs to have some utility, which in this case would be to neutralise Dengue and not cause ADE.
+                    </li>
+                    <li>He advised us to go for a serotype-specific antibody like the one against DENV-2. However, we chose not to do this since our entire project is based on avoiding sequences specific to one virus and instead opted for a conserved sequence. </li>
+                  </ul>
+                </div>
+                <div class="popup-img">
+                <img src="https://static.igem.wiki/teams/4429/wiki/ihp/vikram-paradkar.png"/>
+              </div>
+              </div>
+              <div class="cmodal hidden vidya-content">
+                <button class="close-modal">&times;</button>
+                <h1>Dr Vidya Mangala Prasad</h1>
+                <div>
+                  <p>
+                   WHO:<br/>
+                   Dr Prasad is an Assistant Professor at Molecular Biophysics Unit, IISC, Bangalore. Her research areas include structural biology, Cryo-EM, virology, and infectious diseases.  
+                  </p>
+                  <p>
+                    WHY:<br/>
+                    We approached Dr Prasad to learn more about the structural aspects of the virus and sought to improve upon our choice of an epitope.
+                  </p>
+                  <p>TAKEAWAY: </p>
+                  <ul>
+                    <li>She suggested, and we accepted after a literature review, to opt for the E dimer Epitope which exists in the pre-mature to mature stage of the virus. Since the breathability of this dimer structure to form a trimer and allow the Fusion loop to establish contact with the host cell is crucial for viral entry, hindering this would aid in decreasing the viral load in the body. </li>
+                    <li>She also suggested that we choose the C-10 class of antibodies which had been isolated from humans that targetted the EDE. </li>
+                    <li>She told us that the envelope protein could be induced to dimerize in the solution. </li>
+                    <li>She advised against using Anti-NS1 antibodies since it requires a certain threshold viral load to produce NS1 proteins. </li>
+                    <li>She also told us that Anti-NS1 antibodies are found to destroy epithelial cells, which could contribute to Dengue Hemorrhagic Fever, and that they cross-react with host proteins.
+                        She advised against going for the fusion loop epitope, which was our then plan since apparently exposure of the epitope varies according to the serotype.
+                        She told us that dosage calculations have to be experimental and that any model or formula could lead to over or under estimations. 
+                    </li>
+                  </ul>
+                </div>
+                <div class="popup-img">
+                <img src="https://static.igem.wiki/teams/4429/wiki/ihp/ihp/vidya-m.png"/>
+              </div>
+              </div>
+              <div class="cmodal hidden gyana-content">
+                <button class="close-modal">&times;</button>
+                <h1>Gyanaranjan (Team Lead - IISER BERHAMPUR 2020)</h1>
+                <div>
+                  <p>
+                   WHO:<br/>
+                   Gyanaranjan was the Team Lead of the 2020 iGEM IISER Berhampur Team. The team had worked on coming up with a FRET based Ranker for Proteins and Peptides, which will use molecular biology tools assembled using Synthetic Biology principles. It will be a fast, cost-effective and high-throughput solution to screen drugs. Their project was also centred around Dengue. 
+                  </p>
+                  <p>
+                    WHY:<br/>
+                    We approached Gyanaranjan and presented our project to him. We wanted inputs on our project from an experienced iGEMer who had also worked on a similar project. 
+                  </p>
+                  <p>TAKEAWAY: </p>
+                  <ul>
+                    <li>He asked us to reach out to Foundations that help with Dengue. He wanted us to talk to more industrialists and vaccine producers. He was quite satisfied with our progress in the cycle and offered small tips on coming up with a good pitch and presentation. 
+                        He asked us to talk to the district magistrate office since they would have information on the distribution of Dengue Cases.
+                    </li>
+                  </ul>
+                </div>
+                <div class="popup-img">
+                <img src="https://static.igem.wiki/teams/4429/wiki/ihp/gyanaranjan.png"/>
+              </div>
+              </div>
+              <div class="cmodal hidden mugdha-content">
+                <button class="close-modal">&times;</button>
+                <h1>Dr Mugdha Gadgil:</h1>
+                <div>
+                  <p>
+                   WHO:<br/>
+                   Dr Gadgil is a scientist at the National Chemical Laboratory (NCL), Pune. Her research area includes cell-culture engineering.
+                  </p>
+                  <p>
+                    WHY:<br/>
+                    Dr Gadgil is an expert on working with CHO cells and statistical DOE. We reached out to her seeking her expertise in these subjects. 
+                  </p>
+                  <p>TAKEAWAY: </p>
+                  <ul>
+                    <li>She recommended us on the first approach to Design of Experiments </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="cmodal hidden milind-content">
+                <button class="close-modal">&times;</button>
+                <h1>Dr Milind Gore:</h1>
+                <div>
+                  <p>
+                   WHO:<br/>
+                   Prof. Milind M. Gore worked on various levels at the National Institute of Virology Pune from 1978 to 2017 after his initial Ph.D. studies. He is currently a retired Scientist G (Director level) from NIV. He has extensive experience and expertise in Immunology including clinical situations and animal models. 
+                  </p>
+                  <p>
+                    WHY:<br/>
+                    We sought the expertise of Dr Gore and wanted his insights into improving our project. At the time, we were trying to decide between Aglycosylated IgGs and NeoFvs. 
+                  </p>
+                  <p>TAKEAWAY: </p>
+                  <ul>
+                    <li>Dr Gore was of the opinion that scFvs might be a viable option over a full-length IgG as long as the half-lives were comparable.</li>
+                    <li>He agreed that EDE was a great option to target and wanted to know our plans of obtaining it. When he heard that we planned on inducing dimerisation of Envelope protein in solution, he disagreed with us and said that the E protein tends to not dimerise or fold properly in the absence of the pRM protein. 
+                    He suggested that we modify the design for a MAC-ELISA protocol for testing the functionality of our NeoFvs. 
+                </li>
+                  </ul>
+                </div>
+                <div class="popup-img">
+                <img src="https://static.igem.wiki/teams/4429/wiki/ihp/milind-gore.png"/>
+              </div>
+              </div>
+              <div class="cmodal hidden shannon-content">
+                <button class="close-modal">&times;</button>
+                <h1>Dr Shannon Sirk:</h1>
+                <div>
+                  <p>
+                   WHO:<br/>
+                   Dr Sirk is an Assistant Professor in the department of Bioengineering at the Grainger College of Engineering. Her research area includes synthetic bioengineering. 
+                  </p>
+                  <p>
+                    WHY:<br/>
+                    Following Dr Gore’s suggestions and our own readings, we decided upon working with scFvs with an engineered binding peptide to increase half-life and we had several questions regarding the functionality of these modified scFvs. To have some of these questions answered, we reached out to Dr Sirk who is the person that helped engineer these binding peptides onto scFvs for breast cancer. 
+                  </p>
+                  <p>TAKEAWAY: </p>
+                  <ul>
+                    <li>She said that the orientation of the scFvs either in VL-VH or VH-VL does not matter since most scFvs work in both directions. However, she did say that they experienced certain problems with expression and binding to FcRn in certain variants which might have been solved by using the reverse orientation (they had used the VL-VH orientation.
+                        She told us that their engineered fragments are predicted to persist for several days, and hopefully weeks.
+                    </li>
+                    <li>She also told us that these binding peptides did not seem to be interfering with the antigen binding affinity and that the case was the same for all variants including unmodified fragments which came as a relief for us. 
+                        She also asked us to reach out to Mr Vince Kelly, who was the primary author on the paper.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="cmodal hidden vince-content">
+                <button class="close-modal">&times;</button>
+                <h1>Mr Vince Kelly:</h1>
+                <div>
+                  <p>
+                   WHO:<br/>
+                   Mr Vince Kelly is a 3rd-year PhD student in the Department of Bioengineering at the University of Illinois. His research interests lie at the intersection of protein engineering and synthetic biology, engineering commensal bacteria and biotherapeutics to address significant human health challenges. 
+                  </p>
+                  <p>
+                    WHY:<br/>
+                    We reached out to him upon the suggestion of Dr Sirk to clarify some further questions that we had about scFvs + FcRn Bp.
+                  <p>TAKEAWAY: </p>
+                  <ul>
+                    <li>He informed us that in their study not all variants (including N terminal peptides) could be generated due to time and resource constraints (we surpassed that by using haddock correctly)
+                        He advised us against expressing and purifying our own FcRn is very difficult, try to do it on cell lines
+                    </li>
+                    <li>He told us that the orientation (VH-VL or VL-VH) probably doesn't matter too much in agreement with Dr Sirk.He added that the double peptide variant was to mimic the homodimeric nature of IgG
+                        We wanted to know if the cyclic or linearised version of the peptide was better to which he said that the cyclic mutation plays a structural stability role
+                    </li>
+                    <li>He also said that the Y12H mutation plays a role in enhanced pH dependent binding due to histidine being more active at low pH in the endosome and was essential for proper functionality. 
+                        He proposed that one of the directions to take this forward is to engineer bacteria and release them into the gut such that they produce these scfv-fcrnbps when needed.
+                        He was happy with our project taking the initially engineered fragment beyond cancer into Dengue therapeutics.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="cmodal hidden vasti-content">
+                <button class="close-modal">&times;</button>
+                <h1>Vasti Visit:</h1>
+                <div>
+                  <p>
+                   WHO:<br/>
+                   We visited a vasti near our campus to gain their perspective on Dengue. A vasti is the local term for a slum-like area consisting of people living in very poor conditions. 
+                  </p>
+                  <p>
+                    WHY:<br/>
+                    People living in slums, in closed and cramped quarters in poor living conditions are the most hard-hit demographic by Dengue. It is crucial to understand the extent of the problem and how best to cater to their needs. 
+                  </p>
+                  <p>TAKEAWAY: </p>
+                  <p>
+                    When we first walked into their vasti which was just off the main road, we saw that the entire place was filled with water from the recent rains. In fact a few days back some of our team members saw that the heavy rains had forced most of the people away from the settlement due water logging. We saw people standing on the road with their belongings on their heads, which prompted us to visit to learn more. 
+    We learnt that during every rainy season, their surroundings turn into swamps from where begins the uncontrollable problem of mosquitoes and other insects. We learnt that their toilets get flooded and their water supply gets contaminated. We also learnt of their reluctance to go to a clinic and seek medical help despite serious illnesses. Our conversations led us to the conclusion that the majority of our consumers would be ignorant, from low economic backgrounds, reluctant to seek medical attention and get tested. Therefore, our solution and efforts needed to cater to all these points. <br/><br/>
+            <div class="pd-img-container"><img src="https://static.igem.wiki/teams/4429/wiki/ihp/ihp/httpsdrive-google-comopenid-1kk4uftzb4sebafh9o12wm4r-irwnu0x-19.png"/></div>
+            <br/><br/>
+    
+                  </p>
+                </div>
+              </div>
+              <div class="cmodal hidden pooja-content">
+                <button class="close-modal">&times;</button>
+                <h1>Dr Pooja Sancheti:</h1>
+                <div>
+                  <p>
+                   WHO:<br/>
+                   Dr Sancheti is an Assistant Professor in the department of Humanities and the Social Sciences at IISER, Pune. Her research interests include Postmodernist fiction, Magical Realism, Myth, English Language Teaching, Narrative Theories, Art & Aesthetics.  She is actively involved in several outreach activities and during the pandemic, with the help of Dr Nadkarni, Dr Rajamani and several others, started the Milk and Eggs program for the vasti children to ensure that they received adequate nutrition. They also supplied basic rations to the vasti residents during that period.  
+                  </p>
+                  <p>
+                    WHY:<br/>
+                    We sought the help of Dr Sancheti to learn how to conduct effective human practises and outreach and for her input on our survey. 
+                  </p>
+                  <p>TAKEAWAY: </p>
+                  <ul>
+                    <li>We had a series of meetings with Dr Sancheti and from the very beginning she emphasised upon the importance of having an accessible and informative approach. 
+                        She asked us how our outreach and efforts at educating the public be any different than reading something in the news, and stressed the importance of having a good approach.
+                    </li>
+                    <li>She also advised us to talk to the adults, in most demographics, about spreading efforts and education so that they can go ahead and educate their children. 
+                        With reference to our survey, she said the simpler and easier it is to understand the better reception we would get. She also wanted us to gauge the variation of awareness amongst those from a tropical country vs those from non-tropical countries. We made edits to our survey based on her suggestions.
+                    </li>
+                  </ul>
+                  <div class="popup-img">
+                <img src="https://static.igem.wiki/teams/4429/wiki/ihp/ihp/human-prac/20221013-150003.jpg"/>
+              </div>
+                </div>
+              </div>
+              <div class="cmodal hidden rahul-content">
+                <button class="close-modal">&times;</button>
+                <h1>Dr Rahul Roy: </h1>
+                <div>
+                  <p>
+                   WHO:<br/>
+                   Dr Rahul Roy is a Dengue virologist at IISC, Bangalore. He has worked extensively with the DENV2 serotype and has recently published a paper that characterizes the incidences of the various strains and serotypes of DENV throughout India.
+                  </p>
+                  <p>
+                    WHY:<br/>
+                    We approached him regarding acquiring the E dimer Epitope and for inputs on our project. 
+                  </p>
+                  <p>TAKEAWAY: </p>
+                  <ul>
+                    <li>We had an offline meeting with him at his institute, where we spoke at length about our project. 
+                        He approved of our choice of epitope and said that quaternary epitopes are the best. 
+                        He went on to tell us that he had just recently finished writing a paper on the distribution of Dengue serotypes in India.
+                    </li>
+                    <li>He suggested that we use a Dengue VLP when we were looking for an alternative to a whole virus to express our protein and very kindly offered to give us the plasmid. He went on to offer to produce the VLPs himself and help us run our assays at his institute. Debayani Chakraborty, from his lab, gave us her time and helped us perform a successful assay. 
+                        For proof of concept, he suggested that we do a Fusion-quenching assay to check the neutralization of the virus. He also offered to perform the same at his institute. 
+                        He sent us the manuscript of the paper that he published recently on Dengue Serotype distribution in India. 
+                    </li>
+                  </ul>
+                  <div class="popup-img">
+                <img src="https://static.igem.wiki/teams/4429/wiki/ihp/rahul-roy.png"/>
+              </div>
+                </div>
+              </div>
+              <div class="cmodal hidden collabmahe-content">
+                <button class="close-modal">&times;</button>
+                <h1>Collaboration with the MIT_MAHE iGEM team: </h1>
+                <div>
+                  <p>
+                   WHO:<br/>
+                   The MIT_MAHE iGEM team aim to improve coastal aquaculture operations through a novel peptide by targeting Vibrio parahaemolyticus. It is one of the most prevalent bacteria involved in spreading the Vibriosis disease in fish. Our approach involves targeting Multivalent Adhesion Molecule 7—i.e., MAM7—an adhesion protein which helps the bacteria to hold onto the host cells. 
+                  </p>
+                  <p>
+                    We collaborated with MIT_MAHE  on multiple accounts - dry lab, wet lab, Integrated Human Practises and Outreach. 
+                    On the iHP and Outreach front, MIT_MAHE reached out to to doctors, on our behalf, from the Infectious Disease Department in a government medical college located in Kerala, India and spoke with Dr. Veeresh Kumar, MBBS MD, Arun Clinic, Guntakal, Anantapur, located in Andhra Pradesh, India managed to obtain data regarding the daily cases, hospital measures taken to treat patients, and their opinion on the government initiatives taken.<br/> We also conducted a webinar on Biosafety and Ethics in collaboration with them and invited Dr Vinod Jyothikumar, a consultant at DSS+ to share his inputs.  
+                  </p>
+                </div>
+                <div class="popup-img">
+                <img src="https://static.igem.wiki/teams/4429/wiki/communication/webinar/safety-webinar.jpg"/>
+              </div>
+              </div>
+              <div class="cmodal hidden bbmp-content">
+                <button class="close-modal">&times;</button>
+                <h1>BBMP AND PMC: </h1>
+                <div>
+                  <p>
+                   WHO:<br/>
+                   The Bruhat Bengaluru Mahanagara Palike (BBMP) and the Pune Municipal Corporation are local governing bodies in Bangalore and Pune respectively. We spoke to Dr Madhusudan and Shri. Sanjiv Vavare from the two bodies. 
+                  </p>
+                  <p>
+                    WHY:<br/>
+                    We wished to understand the case-wise distribution of Dengue in areas close to us and know of the measures undertaken by the governments to prevent the spread of dengue. Knowing the patterns of spread and the measures already undertaken would help us understand the scope of our project better and fill the gaps in communication with our outreach. 
+                  </p>
+                  <p>At the PMC, we met Shri. Sanjeev Wavare from the Health Department. He spoke of the general trend seen in Pune over the years and said that due to the intermittent rains that cause an increase in stagnant water-filled years which in turn see a rise in the incidences of Dengue during the months of July-October. He was of the opinion that during covid, the number of cases went down since people weren’t in closed spaces as much and added that it could also be due to Aedes primarily being a day-biter. He also made it a point to mention that the prevention of the spread of Dengue is entirely dependent on public participation and that their main control measures were holding rallies, society meetings for vector control, demonstrations and distributing pamphlets.  
+                    July and October tend to have the most Dengue cases. He mentioned that 2014 saw the highest no. of cases due to intermittent rains. This caused a lot of transfusion shortage. He mentioned that around 70 percent of the cases were Normal Dengue cases, 20 percent had Dengue Haemorrhagic fever while 10 percent got Dengue Shock syndrome. 
+                    We also asked Dr Wavare about the measures taken after people are diagnosed with Dengue. Fogging and spraying is done immediately by PMC workers at locations where the cases were diagnosed. He also mentioned chemical control using chemicals like Temephos, VTI liquid, larvicides, and dichlorobenzene. 
+                    At the BBMP, we met Dr Madhusudan from the Health Department. He gave us extensive data on the ward-wise cases of dengue in the last few years and commented on the decrease in cases seen over the last couple of years and agreed that it might be due to the pandemic.
+                    </p>
+                </div>
+                <!-- <div class="popup-img">
+                <img src="https://static.igem.wiki/teams/4429/wiki/ihp/ihp/human-prac/pmc-sanjeev-wavare-1.png"/>
+              </div> -->
+              <div
+              id="carouselExampleIndicators2"
+              class="carousel slide"
+              data-ride="carousel"
+            >
+              <ol class="carousel-indicators">
+                <li
+                  data-target="#carouselExampleIndicators2"
+                  data-slide-to="0"
+                  class="active"
+                ></li>
+                <li data-target="#carouselExampleIndicators2" data-slide-to="1"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    class="d-block w-75 m-auto"
+                    src="https://static.igem.wiki/teams/4429/wiki/ihp/ihp/human-prac/pmc-sanjeev-wavare-1.png"
+                    alt="First slide"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    class="d-block w-75 m-auto"
+                    src="https://static.igem.wiki/teams/4429/wiki/ihp/ihp/httpsdrive-google-comopenid-1kk4uftzb4sebafh9o12wm4r-irwnu0x-18.png"
+                    alt="Second slide"
+                  />
+                </div>
+              </div>
+              <a
+                class="carousel-control-prev"
+                href="#carouselExampleIndicators2"
+                role="button"
+                data-slide="prev"
+              >
+                <span class="carousel-control-prev-icon"></span>
+                <!-- <span class="sr-only">Previous</span> -->
+              </a>
+              <a
+                class="carousel-control-next"
+                href="#carouselExampleIndicators2"
+                role="button"
+                data-slide="next"
+              >
+                <span class="carousel-control-next-icon"></span>
+                <!-- <span class="sr-only">Next</span> -->
+              </a>
+            </div>
+              </div>
+              <div class="cmodal hidden santosh-content">
+                <button class="close-modal">&times;</button>
+                <h1>Santosh Kadam: </h1>
+                <div>
+                  <p>
+                   WHO:<br/>
+                   Santosh Kadam is 34 years old and has been working as a helper at our institute for 10 years. He has only been educated till 8th grade but has picked up skills of operating the autoclave and protocols of decontamination and discard of waste biological materials.
+                  </p>
+                  <p>
+                    WHY:<br/>
+                    These workers are typically from marginalized communities from rural areas. He counts as an important stakeholder in our quest for a therapeutic for Dengue. 
+                  </p>
+                  <p>TAKEAWAY: <br/>
+                    He talked about another neglected disease prevalent in his hometown of Nanded, in Hingoli district of our state of Maharashtra - Chikungunya. He spoke about his observations of people having extreme joint pain that they couldn’t walk or stand.
+    He talked at length about the low levels of medical care in the village, and their dependence on homemade remedies. Sometimes visiting doctors would come to his village and administer shots, but there weren’t any established well-educated doctors in residence there.
+    When we asked him about how a therapeutic for Dengue fever could be received in his community, he brought about the point of awareness. He drew parallels with the low COVID vaccination rates in his village and erroneous beliefs like how COVID would vanish because of the high heat in the summer. We felt this was a point we overlooked. Once our drug eventually comes to market, it should be received well, given it works. 
+    We also had other discussions about the relevance of scientific research for the common man in India, about the education system in India and how it differs in urban and rural areas. He also said that he is employed because students like us work at the institute. If we don’t study – people like him don’t have a job.
+                </p>
+                </div>
+  
+  
 
 {% endblock %}
