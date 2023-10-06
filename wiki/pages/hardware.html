@@ -4,7 +4,10 @@
 {% block lead %}Hardware in iGEM should make synthetic biology based on standard parts easier, faster, better, or more accessible to our community.{% endblock %}
 
 {% block page_content %}
-  
+<tag>
+
+</tag>  
+
 <div class="cointainer my-4 mx-4">
   <div class="row">
    
@@ -42,30 +45,31 @@
       <div class="container a-href-fix" data-bs-spy="scroll" data-bs-offset="-200px">
 
         <!--intro-->
-        <hr class="line">
+       
         <h1 class = "font-head" id="head1" style="color: #002147">Introduction</h1>
-        <hr class="line">
+       
         <br>
         <p>
           
-          The current standard for diagnosing MDD relies on self-report questionnaires, which can be subjective and prone to bias. In an effort to provide a more reliable and objective diagnostic tool, we have developed a blood-based biomarker kit to diagnose depression. This approach involves the use of a functional microfluidic chip test kit that utilizes fret [1-give href] -based technology.
-Our main goal is to introduce an affordable, user-friendly biomarker-based diagnostic tool for MDD. The microfluidic chip is inserted into a slot of a 3D printed box that has an LCD screen, an Arduino UNO set up, and necessary accessories. Once the microfluidic chip is inserted, the blue LED inside the hardware setup excites the sample, and the fluorescence emitted is detected by the photodarlington. The intensity of fluorescence measured is then displayed on the LCD screen, and all the readings are controlled by the microcontroller Arduino UNO. This prototype is made for showing the working, using the most basic components and with least complications.
+          Our project began with research on biomarkers and their diagnostic assays. Initially, microfluidics seemed to be a promising approach to streamlining the diagnostic process. However, as we progressed, it became evident that there was also a pressing need for a hardware solution capable of fluorescence detection and quantification. We recognized the need to keep it an accessible, affordable and practical device for widespread use, in comparison to traditional fluorimeters. In an effort to provide a more reliable and objective diagnostic tool, we have attempted to develop a novel FRET-based microfluidic device to diagnose clinical depression. 
+Our main goal is to introduce an affordable and user-friendly biomarker-based diagnostic tool for Major Depressive Disorder (MDD). To achieve this, we’ve designed a simple and accessible system. It consists of a microfluidic chip that is inserted into the slot of a 3D printed box equipped with an LCD screen, an Arduino UNO setup, and the necessary accessories.
+Here’s how it works: when the microfluidic chip is inserted into the device, the internal blue LED excites the sample, and the fluorescence emitted is detected by a photodarlington sensor. The intensity of fluorescence measured is then converted into the biomarker concentration levels and displayed on the LCD screen,with all data readings being managed by the Arduino UNO microcontroller. This prototype is designed to show the functionality of the system, using the most basic components and with the least complexities.
 
            <a id="head2"></a>
         </p>
         <br>
-        <hr class="line">
+        
         <h1 class = "font-head" id="head2" style="color: #002147">Design</h1>
-        <hr class="line">
+       
         <br>
         <p>
-
-          The development of a device capable of detecting biological samples requires the integration of various components. This device has a unique design that allows it to accurately identify fluorescence in a sample.The outer shell of the device is being 3D printed using PLA(Polylactic acid) a thermoplastic monomer derived from renewable, organic sources such as corn starch or sugar cane. The main components of the device include a photodarlington (also known as a photodarlington transistor or photodarlington sensor, operates based on the principle of photoelectric effect and amplification.), Customized LED of 480 nm, ARDUINO UNO[It is a microcontroller board based on the Microchip ATmega328P], 16-bit ADC converter[this will make the measurements more precise], and an LCD screen. These components work together to create an ultra-sensitive device that can detect fluorescence which is not generally visible to the naked eye. The device's inside is pitch black to ensure maximum absorption of blue light and avoid any interference.
-When the microfluidic chip is inserted into the slot of the device, the 480 nm specific LED will excite the sample, and the photodarlington placed directly above the sample, will detect the most feeble fluorescence. The device's design is such that it can screen the noise created by blue light, ensuring that the fluorescence value is not affected.
-        </p>
-
+          The development of a device capable of detecting biological samples requires the integration of various components. This device has a unique design that allows it to accurately identify fluorescence in a sample.The outer shell of the device is being 3D printed using PLA(Polylactic acid) a thermoplastic monomer derived from renewable, organic sources such as corn starch or sugar cane. The main components of the device include a photodarlington (also known as a photodarlington transistor or photodarlington sensor, operates based on the principle of photoelectric effect and amplification.), Customized LED of 480 nm, ARDUINO UNO(It is a microcontroller board based on the Microchip ATmega328P), 16-bit ADC converter(this will make the measurements more precise), and an LCD screen. These components work together to create an ultra-sensitive device that can detect fluorescence which is not generally visible to the naked eye. The device's inside is pitch black to ensure maximum absorption of blue light and avoid any interference. 
+          When the microfluidic chip is inserted into the slot of the device, the 480 nm specific LED will excite the sample, and the photodarlington placed directly above the sample, will detect the most feeble fluorescence. The device's design is such that it can screen the noise created by blue light, ensuring that the fluorescence value is not affected. 
+          </p>
+          
        <div class="col">
-					<p align="justify">The following are the list of maincomponents used with the description and cost of each. </p>
+        <p>
+          The list of main components used in the hardware with its model number and cost is given below, click on the components to get more details on each</p>
 			
 					<table class="table table-hover">
 						<thead>
@@ -74,43 +78,58 @@ When the microfluidic chip is inserted into the slot of the device, the 480 nm s
 							<th scope="col">Description</th>
 							<th scope="col">Model number</th>
               <th scope="col">Cost (INR)</th>
-							
+							<th scope="col">Quantity</th>
+              <th scope="col">Total Cost (INR)</th>
 						</tr>
 						</thead>
 						<tbody>
 						<tr>
-							<td>Photodarlington transistor x 2</td>
-							<td>The Darlington transistor is made up of two PNP or NPN making it a very sensitive transistor with high current gain.
-
-              </td>
+							<td>Photodarlington transistor </td>
+							<td>The Darlington transistor is made up of two PNP or NPN making it a very sensitive transistor with high current gain.</td>
 							<td>L14F1</td>
-							<td>410</td>
+							<td>205</td>
+              <td>2</td>
+              <td>410</td>
 						</tr>
 						<tr>
 							<td>Arduino UNO R3</td>
 							<td>It is the main microcontroller board based on the Microchip ATmega328P microcontroller (5V)</td>
 							<td>UNO R3</td>
 							<td>589</td>
+              <td>1</td>
+              <td>589</td>
 						</tr>
 						<tr>
 							<td>16 Bit ADC Convertor</td>
 							<td>An analog-to-digital converter is used to convert analog signals such as voltages to binary form.</td>
 							<td>REES52 ADS1115</td>
-							<td>800</td>					
+							<td>800</td>		
+              <td>1</td>			
+              <td>800</td>
 						</tr>
 						<tr>
 							<td>LCD Display Module</td>
 							<td>A panel display to see the values.</td>
 							<td>SPI 128x160 TFT</td>
 							<td>362</td>
+              <td>1</td>
+              <td>362</td>
 						</tr>
 						<tr>
 							<td>Custom 480 nm LED</td>
 							<td>For exciting the sample with 480 nm.</td>
 							<td>C503B-BCS-CV0Z0461</td>
-							<td>67</td>
+							<td>33.5</td>
+              <td>2</td>
+              <td>67</td>
 						</tr>
 						<tr>
+              <td>Total</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>2118</td>
 						</tr>
 
 						</tbody>
