@@ -6761,7 +6761,7 @@ i.fa-star.rating{color: rgb(232, 217, 31);}
 /* THIS IS FOR HARDWARE ANIMATION */
 
  .png-animation {
-  animation: png-move 1s infinite;
+  animation: png-move 8s infinite;
   }  
 
 @keyframes png-move {
@@ -6769,14 +6769,14 @@ i.fa-star.rating{color: rgb(232, 217, 31);}
     transform: translateY(0px);
   }
   50% {
-    transform: translateY(10px);
+    transform: translateY(0px);
   }
   100% {
     transform: translateY(0px);
   }
   }
   .png-animation1 {
-    animation: png-move 1s infinite;
+    animation: png-move 8s infinite;
   }  
    
   @keyframes png-move {
@@ -6784,7 +6784,7 @@ i.fa-star.rating{color: rgb(232, 217, 31);}
       transform: translateY(0px);
     }
     50% {
-      transform: translateY(10px);
+      transform: translateY(0px);
     }
     100% {
       transform: translateY(0px);
