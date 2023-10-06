@@ -6769,12 +6769,12 @@ i.fa-star.rating{color: rgb(232, 217, 31);}
     transform: translateY(0px);
   }
   50% {
-    transform: translateY(0px);
+    transform: translateY(500px);
   }
   100% {
     transform: translateY(0px);
   }
-  }
+}
   .png-animation1 {
     animation: png-move 8s infinite;
   }  
@@ -6784,7 +6784,7 @@ i.fa-star.rating{color: rgb(232, 217, 31);}
       transform: translateY(0px);
     }
     50% {
-      transform: translateY(0px);
+      transform: translateY(500px);
     }
     100% {
       transform: translateY(0px);
