@@ -6909,6 +6909,225 @@ i.fa-star.rating{color: rgb(232, 217, 31);}
     z-index: 9999;
     text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), -1px 0px 2px rgba(255, 255, 255, 0);
 }
+.hp-part-2,
+.hp-part-3,
+.hp-part-4,
+.hp-part-5,
+.hp-part-6 {
+  display: none;
+}
+
+.results-part-2,
+.results-part-3,
+.results-part-4 {
+  display: none;
+}
+
+/* human practices css starts */
+
+.tl-change-buttons {
+  width: 100% !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5vw;
+}
+
+.asi {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px !important;
+  transition: all 0.75s ease-in-out;
+}
+
+.asi:hover {
+  box-shadow: 0 0px 0px 0 rgba(0, 40, 120, 0) !important;
+  background-position: 0 0 !important;
+  text-decoration: none !important;
+  transform: scale(1.1);
+  color: #fff;
+}
+
+.ind-btn {
+  background-color: #fc7171 !important;
+}
+
+.soc-btn {
+  background-color: #ff499b !important;
+}
+
+.acad-btn {
+  background-color: #e53e5a !important;
+}
+
+.page-header h1 {
+  text-align: center;
+}
+
+.follow-card {
+  display: block !important;
+  margin: auto !important;
+}
+
+/* human practices css ends */
+
+/* project description scroll bar css */
+
+/* our team css */
+
+/* our team css ends */
+
+
+/* tooltip css starts */
+
+
+
+/* tooltip css ends */
+
+/* attribution css starts */
+
+
+/* attribution css ends */
+
+/* dp index css starts */
+
+.label-container {
+  position: fixed;
+  bottom: 48px;
+  right: 105px;
+  display: table;
+  visibility: hidden;
+}
+
+.label-text {
+  color: #fff;
+  background: rgba(51, 51, 51, 0.5);
+  display: table-cell;
+  vertical-align: middle;
+  padding: 10px;
+  border-radius: 3px;
+}
+
+.label-arrow {
+  display: table-cell;
+  vertical-align: middle;
+  color: #333;
+  opacity: 0.5;
+}
+
+.float {
+  padding: 10px;
+  position: fixed;
+  width: fit-content;
+  height: 45px;
+  bottom: 40px;
+  left: 40px;
+  background-color: transparent;
+  color: #126aad;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 2px 2px 3px rgb(230, 230, 230);
+  z-index: 1000;
+  animation: bot-to-top 2s ease-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.index-list {
+  display: none;
+  position: fixed;
+  left: 0px;
+  padding-bottom: 20px;
+  bottom: 80px;
+  z-index: 100;
+}
+
+.index-list li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.index-list li a {
+  padding: 15px !important;
+  background-color: transparent;
+  color: black;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 2px 2px 2px rgb(230, 230, 230);
+  width: fit-content;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.index-list:hover {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.my-float {
+  font-size: 24px;
+  margin-top: 18px;
+}
+
+/* a#menu-share + ul {
+  visibility: hidden;
+} */
+
+a#menu-share:hover + ul {
+  visibility: visible;
+  animation: scale-in 0.5s;
+}
+
+a#menu-share i {
+  animation: rotate-in 0.5s;
+}
+
+a#menu-share:hover > i {
+  animation: rotate-out 0.5s;
+}
+
+@keyframes bot-to-top {
+  0% {
+    bottom: -40px;
+  }
+  50% {
+    bottom: 40px;
+  }
+}
+
+@keyframes scale-in {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes rotate-in {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate-out {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
 
 .first {
   background-color: #002878;
