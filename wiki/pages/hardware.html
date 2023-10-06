@@ -15,7 +15,7 @@
       <ul class=" fixed-content font-acc" id="sidenav" >
         <ul class="navbar-links menuprop">
           <li class="navbar-dropdown list-group-item list-group-item-action">
-            <a href="#head1" style="color: black;">Introduction</a>
+            <a href="#head1" style="color: black;">Overview</a>
           </li>
           <li class="navbar-dropdown list-group-item list-group-item-action">
             <a href="#head2" style="color: black;">Design</a>
@@ -25,9 +25,6 @@
           </li>
           <li class="navbar-dropdown list-group-item list-group-item-action">
             <a href="#head4" style="color: black;">Testing and calibration</a>
-          </li>
-          <li class="navbar-dropdown list-group-item list-group-item-action">
-            <a href="#head5" style="color: black;">Summary of working prototype</a>
           </li>
           <li class="navbar-dropdown list-group-item list-group-item-action">
             <a href="#head6" style="color: black;">Future of the device</a>
@@ -46,14 +43,14 @@
 
         <!--intro-->
        
-        <h1 class = "font-head" id="head1" style="color: #002147">Introduction</h1>
+        <h1 class = "font-head" id="head1" style="color: #002147">Overview</h1>
        
         <br>
         <p>
           
           Our project began with research on biomarkers and their diagnostic assays. Initially, microfluidics seemed to be a promising approach to streamlining the diagnostic process. However, as we progressed, it became evident that there was also a pressing need for a hardware solution capable of fluorescence detection and quantification. We recognized the need to keep it an accessible, affordable and practical device for widespread use, in comparison to traditional fluorimeters. In an effort to provide a more reliable and objective diagnostic tool, we have attempted to develop a novel FRET-based microfluidic device to diagnose clinical depression. 
-<br>Our main goal is to introduce an affordable and user-friendly biomarker-based diagnostic tool for Major Depressive Disorder (MDD). To achieve this, we’ve designed a simple and accessible system. It consists of a microfluidic chip that is inserted into the slot of a 3D printed box equipped with an LCD screen, an Arduino UNO setup, and the necessary accessories.
-<br>Here’s how it works: when the microfluidic chip is inserted into the device, the internal blue LED excites the sample, and the fluorescence emitted is detected by a photodarlington sensor. The intensity of fluorescence measured is then converted into the biomarker concentration levels and displayed on the LCD screen,with all data readings being managed by the Arduino UNO microcontroller. This prototype is designed to show the functionality of the system, using the most basic components and with the least complexities.
+<br><br>Our main goal is to introduce an affordable and user-friendly biomarker-based diagnostic tool for Major Depressive Disorder (MDD). To achieve this, we’ve designed a simple and accessible system. It consists of a microfluidic chip that is inserted into the slot of a 3D printed box equipped with an LCD screen, an Arduino UNO setup, and the necessary accessories.
+<br><br>Here’s how it works: when the microfluidic chip is inserted into the device, the internal blue LED excites the sample, and the fluorescence emitted is detected by a photodarlington sensor. The intensity of fluorescence measured is then converted into the biomarker concentration levels and displayed on the LCD screen,with all data readings being managed by the Arduino UNO microcontroller. This prototype is designed to show the functionality of the system, using the most basic components and with the least complexities.
 
            <a id="head2"></a>
         </p>
@@ -165,38 +162,23 @@
 
           <a id="head4"></a>
           <b>Which sensor is the best?</b>
-          <br>
+          <br><br>
           To determine which sensor would detect the lowest fluorescence, we conducted experimental trials with three different sensors: a photodiode, a phototransistor, and a Darlington transistor. We ultimately chose to use the Darlington transistor in our hardware design. 
-          <br><b>Why not the other two?  </b>
+          <br><br><b>Why not the other two?  </b>
           <br>
           Even though Photodiodes are very specific to the wavelength of our interest it can't detect the lowest intensity of them hence both photodiodes and phototransistors require an external amplifier to boost the signal, which increases the cost and complexity of the circuit.
-          <br>
+          <br><br>
           To determine the sensitivity of the photodarlington sensor, we conducted a series of experiments:
-          <br>
+          <br><br>
           Firstly,we measured the output voltage of the sensor at different light intensities from a green LED. We then plotted the output voltage versus the light intensity to create a calibration curve.
-          <br>
+          <br><br>
           In the second, we moved on with a real lab sample, where we measured the output voltage of the sensor when exposed to different concentrations of PTE(phenyl tetraene) in DCM(dichloromethane). We also plotted the output voltage versus the PTE concentration to create a calibration curve.
-          <br>
+          <br><br>
           Lastly, we immobilized the biomarker on an apta sensor and then measured the output voltage of the sensor when exposed to different concentrations of the Biomarker bound with the aptasensor. We again plotted the output voltage versus the biomarker concentration to create a calibration curve.
           
         </p>
 
         <br>
-        <hr class="line">
-        <h1 class = "font-head" id="head5" style="color: #002147">Summary of working prototype</h1>
-        <hr class="line">
-        <br>
-        <p>
-
-          <a id="head5"></a>
-         <p>     this should include the point wise details
-            
-It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
- 
-          </p>
-      
-        <br>
-
         <hr class="line">
         <h1 class = "font-head" id="head6" style="color: #002147">Future of the device</h1>
         <hr class="line">
