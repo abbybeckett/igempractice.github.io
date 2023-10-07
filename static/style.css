@@ -70,6 +70,9 @@ a:not([href]):not([class]):hover {
  p {
   font-family: 'Poppins', 'normal', sans-serif;
 }
+.font-p {
+  font-family: 'Poppins', 'normal', sans-serif;
+}
 
 .font-head {
   font-family: 'Montserrat', 'normal', sans-serif;
