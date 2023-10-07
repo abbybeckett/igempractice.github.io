@@ -7541,11 +7541,6 @@ a#menu-share:hover > i {
 }
 */
 
-/* for biomarker analysis */
-#container {
-  height: 500px;
-}
-
 /* for safety images*/
 body {
   display: flex;
