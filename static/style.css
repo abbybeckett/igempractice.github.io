@@ -6634,19 +6634,19 @@ i.fa-star.rating{color: rgb(232, 217, 31);}
       background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/ilu_bg.jpg");
   }
   .layer-1 {
-    background-image: url("https://static.igem.wiki/teams/4693/wiki/assets/mainpage/forth-layer.png");
+    background-image: url("https://static.igem.wiki/teams/4693/wiki/assets/mainpage/first-layer.png");
   }
   
   .layer-2 {
-    background-image: url("https://static.igem.wiki/teams/4693/wiki/assets/mainpage/third-layer.png");
-  }
-  
-  .layer-3 {
     background-image: url("https://static.igem.wiki/teams/4693/wiki/assets/mainpage/second-layer.png");
   }
   
+  .layer-3 {
+    background-image: url("https://static.igem.wiki/teams/4693/wiki/assets/mainpage/third-layer.png");
+  }
+  
   .layer-4 {
-    background-image: url("https://static.igem.wiki/teams/4693/wiki/assets/mainpage/first-layer.png");
+    background-image: url("https://static.igem.wiki/teams/4693/wiki/assets/mainpage/forth-layer.png");
   }
   
   layer-overlay {
