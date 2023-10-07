@@ -6,11 +6,16 @@
 {% block page_content %}
 
 
-<div id="bayesian-container"></div>
+<div id="container"></div>
+
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/networkgraph.js"></script>
+<script src="script.js"></script>
 
 <div class="row mt-4">
   <div class="col">
     <div class="bd-callout bd-callout-info">
+
       <h4>Best Model</h4>
       <p>Models and computer simulations provide a great way to describe the functioning and operation of BioBrick Parts and Devices. Synthetic biology is an engineering discipline and part of engineering is simulation and modeling to determine system behavior before building your design. Designing and simulating can be iterated many times in a computer before moving to the lab. This award is for teams who build a model of their system and use it to inform system design or simulate expected behavior before or in conjunction with experiments in the wetlab.</p>
       <p>To compete for the Best Model prize, please describe your work on this page and also fill out the description on the <a href="https://competition.igem.org/deliverables/judging-form">judging form</a>.</p>
@@ -20,26 +25,85 @@
   </div>
 </div>
 
-<div class="row mt-4">
-  <div class="col-lg-8">
-    <h2>Overview</h2>
-    <hr>
-    <p>Mathematical models and computer simulations provide a great way to describe the function and operation of Parts and Devices. Synthetic Biology is an engineering discipline, and part of engineering is simulation and modeling to determine the behavior of your design before you build it. Designing and simulating can be iterated many times in a computer before moving to the lab.</p>
-  </div>
-  <div class="col-lg-4">
-    <h2>Inspirations</h2>
-    <hr>
-    <ul>
-      <li><a href="http://2018.igem.org/Team:GreatBay_China/Model">2018 GreatBay China</a></li>
-      <li><a href="http://2018.igem.org/Team:Leiden/Model">2018 Leiden</a></li>
-      <li><a href="https://2019.igem.org/Team:IISER_Kolkata/Model">2019 IISER Kolkata</a></li>
-      <li><a href="https://2019.igem.org/Team:Exeter/Model">2019 Exeter</a></li>
-      <li><a href="https://2019.igem.org/Team:Mingdao/Model">2019 Mingdao</a></li>
-      <li><a href="https://2020.igem.org/Team:Harvard/Model">2020 Harvard</a></li>
-      <li><a href="https://2020.igem.org/Team:Leiden/Model">2020 Leiden</a></li>
-    </ul>
-  </div>
-</div>
+<div data-bs-target="sidenav" data-bs-spy="scroll" class="col-9" style="padding-top: 20px">
+      <div class="container a-href-fix" data-bs-spy="scroll" data-bs-offset="-200px">
+
+        <!--intro-->
+       
+        <h1 class = "font-head" id="head1" style="color: #002147">Overview</h1>
+       
+        <br>
+        <p align="justify">
+          
+          Our project began with research on biomarkers and their diagnostic assays. Initially, microfluidics seemed to be a promising approach to streamlining the diagnostic process. However, as we progressed, it became evident that there was also a pressing need for a hardware solution capable of fluorescence detection and quantification. We recognized the need to keep it an accessible, affordable and practical device for widespread use, in comparison to traditional fluorimeters. In an effort to provide a more reliable and objective diagnostic tool, we have attempted to develop a novel FRET-based microfluidic device to diagnose clinical depression. 
+<br><br>Our main goal is to introduce an affordable and user-friendly biomarker-based diagnostic tool for Major Depressive Disorder (MDD). To achieve this, we’ve designed a simple and accessible system. It consists of a microfluidic chip that is inserted into the slot of a 3D printed box equipped with an LCD screen, an Arduino UNO setup, and the necessary accessories.
+<br><br>Here’s how it works: when the microfluidic chip is inserted into the device, the internal blue LED excites the sample, and the fluorescence emitted is detected by a photodarlington sensor. The intensity of fluorescence measured is then converted into the biomarker concentration levels and displayed on the LCD screen,with all data readings being managed by the Arduino UNO microcontroller. This prototype is designed to show the functionality of the system, using the most basic components and with the least complexities.
+
+           <a id="head2"></a>
+        </p>
+        <br>
+        
+        <h1 class = "font-head" id="head2" style="color: #002147">Design</h1>
+       
+        <br>
+        <p align="justify">
+          The development of a device capable of detecting biological samples requires the integration of various components. This device has a unique design that allows it to accurately identify fluorescence in a sample.The outer shell of the device is being 3D printed using PLA(Polylactic acid) a thermoplastic monomer derived from renewable, organic sources such as corn starch or sugar cane. The main components of the device include a photodarlington (also known as a photodarlington transistor or photodarlington sensor, operates based on the principle of photoelectric effect and amplification.), Customized LED of 480 nm, ARDUINO UNO(It is a microcontroller board based on the Microchip ATmega328P), 16-bit ADC converter(this will make the measurements more precise), and an LCD screen. These components work together to create an ultra-sensitive device that can detect fluorescence which is not generally visible to the naked eye. The device's inside is pitch black to ensure maximum absorption of blue light and avoid any interference. 
+          <br>When the microfluidic chip is inserted into the slot of the device, the 480 nm specific LED will excite the sample, and the photodarlington placed directly above the sample, will detect the most feeble fluorescence. The device's design is such that it can screen the noise created by blue light, ensuring that the fluorescence value is not affected. 
+          </p>
+
+        <h1 class = "font-head" id="head3" style="color: #002147">Basic principle</h1>
+        <hr class="line">
+        <br>
+        
+        <p align="justify">
+
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+             <a id="head3"></a>
+        </p>
+        <br>
+
+      
+        <hr class="line">
+        <h1 class = "font-head" id="head4" style="color: #002147">Testing and calibration</h1>
+        <hr class="line">
+        <br>
+        <p align="justify">
+
+          <a id="head4"></a>
+          <b>Which sensor is the best?</b>
+          <br><br>
+          To determine which sensor would detect the lowest fluorescence, we conducted experimental trials with three different sensors: a photodiode, a phototransistor, and a Darlington transistor. We ultimately chose to use the Darlington transistor in our hardware design. 
+          <br><br><b>Why not the other two?  </b>
+          <br>
+          Even though Photodiodes are very specific to the wavelength of our interest it can't detect the lowest intensity of them hence both photodiodes and phototransistors require an external amplifier to boost the signal, which increases the cost and complexity of the circuit.
+          <br><br>
+          To determine the sensitivity of the photodarlington sensor, we conducted a series of experiments:
+          <br><br>
+          Firstly,we measured the output voltage of the sensor at different light intensities from a green LED. We then plotted the output voltage versus the light intensity to create a calibration curve.
+          <br><br>
+          In the second, we moved on with a real lab sample, where we measured the output voltage of the sensor when exposed to different concentrations of PTE(phenyl tetraene) in DCM(dichloromethane). We also plotted the output voltage versus the PTE concentration to create a calibration curve.
+          <br><br>
+          Lastly, we immobilized the biomarker on an apta sensor and then measured the output voltage of the sensor when exposed to different concentrations of the Biomarker bound with the aptasensor. We again plotted the output voltage versus the biomarker concentration to create a calibration curve.
+          
+        </p>
+
+        <br>
+        <hr class="line">
+        <h1 class = "font-head" id="head6" style="color: #002147">Future of the device</h1>
+        <hr class="line">
+        <br>
+        <p align="justify">
+          
+          <a id="head6"></a>
+          Our current prototype uses basic components to showcase the concept, but we plan to use more efficient and affordable components in the future. 
+          <br>
+          We are considering upgrading to a microprocessor like the ESP32 series, which has more processing power and memory, built-in WiFi and Bluetooth modules, and can run Python and TensorFlow. This would allow us to add more photo sensors and modules, improve the results display system, and run machine learning algorithms on the device. 
+          We will also design a well-organized circuit board layout to make the hardware small and compact. One possibility is to change the measurement from a voltage measurement to a capacitor discharge time measurement. This would allow us to measure even very low currents accurately.
+          <br><br>
+          Finally, Please refer our <a href="https://2023.igem.wiki/iiser-tvm/implementation">PI page</a> for more information about the future of our hardware device.
+          </p>
+          
 <script>
   // Add the nodes option through an event call. We want to start with the parent
 // item and apply separate colors to each child element, then the same color to

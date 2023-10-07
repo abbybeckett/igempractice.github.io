@@ -7540,3 +7540,8 @@ a#menu-share:hover > i {
   display: block;
 }
 */
+
+/* for biomarker analysis */
+#container {
+  height: 500px;
+}
