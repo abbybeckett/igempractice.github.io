@@ -51,6 +51,13 @@
     {% block page_content %}{% endblock %}
   </div>
 
+  <div class="up">
+    <div>
+      <a class="static" href="#" id="toTopBtn" style="font-size: xx-large"><img alt="Top" class="align-middle fs-4" id="mascotte_dance"
+                              src="https://static.igem.wiki/teams/4239/wiki/tirement.png" width="50px" >↑</a>
+    </div>
+  </div>
+  
   <!-- Footer: MUST mention license AND have a link to team wiki's repository on gitlab.igem.org -->
   {% include 'footer.html' %}
 
@@ -66,6 +73,18 @@
          $(".nav").toggleClass("mobile-nav");
          $(this).toggleClass("is-active");
       });
+      </script>
+      <script>
+        var scroll = window.scrollY;
+    if(scroll > 50) {
+        const element = document.getElementById('toTopBtn');
+        element.style.visibility = 'visible';
+    }
+    if(scroll < 50) {
+        const element = document.getElementById('toTopBtn');
+        element.style.visibility = 'hidden';
+    }
+
       </script>
 </body>
 </html>

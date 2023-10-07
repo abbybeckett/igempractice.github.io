@@ -7469,3 +7469,23 @@ a#menu-share:hover > i {
 
 /* waves css ends */
 
+/* up button */
+
+.up {
+  visibility: hidden;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.up a {
+  text-decoration: none;
+  color: #004D40;
+  font: 4.8em "Fira Sans", sans-serif;
+}
+
+.up img {
+  vertical-align: top;
+  max-width: 100px;
+}
