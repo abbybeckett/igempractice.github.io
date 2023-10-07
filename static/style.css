@@ -7490,7 +7490,7 @@ a#menu-share:hover > i {
   max-width: 100px;
 }
 
-/* this is for sidenav hardware*/
+/* this is for sidenav hardware
 
 .side-navigation {
   position: fixed;
@@ -7539,3 +7539,4 @@ a#menu-share:hover > i {
 .side-navigation.active {
   display: block;
 }
+*/
