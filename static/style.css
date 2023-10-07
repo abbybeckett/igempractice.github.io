@@ -6603,6 +6603,7 @@ i.fa-star.rating{color: rgb(232, 217, 31);}
     width: 100%;
     height: 800px;
     position: fixed;
+    z-index: -1;
   }
   
   #hero-mobile {
