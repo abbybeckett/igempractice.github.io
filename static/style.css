@@ -7541,7 +7541,7 @@ a#menu-share:hover > i {
 }
 */
 
-/* for safety images*/
+/* for safety images
 body {
   display: flex;
   flex-direction: row;
@@ -7656,6 +7656,7 @@ body .options .option.active {
   /*&:active {
    transform:scale(0.9);
 }*/
+/*
 }
 
 body .options .option.active .shadow {
@@ -7743,4 +7744,4 @@ body .options .option .label .info .main {
 
 body .options .option .label .info .sub {
   transition-delay: 0.1s;
-}
+}*/
