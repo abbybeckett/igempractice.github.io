@@ -341,7 +341,7 @@ h4 {
   /* MOBILE MENU & ANIMATION */
   
   .menu-toggle .bar{
-    width: 25px;
+    width: 5px;
     height: 3px;
     background-color: #3f3f3f;
     margin: 5px auto;
@@ -6335,7 +6335,7 @@ i.fa-star.rating{color: rgb(232, 217, 31);}
       margin: -1px 0;
   }
   
-  .bar {
+  .scrollbar {
       width: 10px;
       height: auto;
       background-color:transparent;
