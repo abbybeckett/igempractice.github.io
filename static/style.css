@@ -7501,6 +7501,7 @@ a#menu-share:hover > i {
   background-color: white;
   overflow-y: auto;
   z-index: 10;
+  pointer-events: none;
 }
 .side-navigation:hover {
   pointer-events: all;
@@ -7519,6 +7520,11 @@ a#menu-share:hover > i {
   background-color: black;
   cursor: pointer;
   z-index: 11;
+  transition: all 0.3s ease-in-out;
+}
+.arrow-to-popup img {
+  width: 50px;
+  height: 50px;
 }
 
 .arrow-to-popup:hover {
