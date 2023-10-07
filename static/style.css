@@ -7489,3 +7489,30 @@ a#menu-share:hover > i {
   vertical-align: top;
   max-width: 100px;
 }
+
+.side-navigation {
+  display: none;
+}
+
+.arrow-to-popup {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 50px;
+  background-color: black;
+  cursor: pointer;
+  z-index: 11;
+}
+
+.arrow-to-popup:hover {
+  background-color: rgb(127, 174, 175);
+}
+
+.arrow-to-popup.active {
+  background-color: rgb(100, 144, 170);
+}
+
+.side-navigation.active {
+  display: block;
+}

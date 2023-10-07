@@ -7,11 +7,21 @@
 <tag>
 
 </tag>  
+<script>
+var sideNavigation = document.querySelector('.side-navigation');
+var arrowToPopup = document.querySelector('.arrow-to-popup');
+
+arrowToPopup.addEventListener('click', function() {
+  sideNavigation.classList.toggle('active');
+});
+
+
+</script>
 
 <div class="cointainer my-4 mx-4">
   <div class="row">
     <div class="col-3">
-      <ul class=" fixed-content font-acc" id="sidenav" >
+      <ul class=" fixed-content font-acc side-navigation" id="sidenav" >
         <ul class="navbar-links menuprop">
           <li class="navbar-dropdown list-group-item list-group-item-action">
             <a href="#head1" style="color: black;">Overview</a>
@@ -35,6 +45,9 @@
           
         </ul>
       </ul>
+      <div class="arrow-to-popup">
+        <img src="arrow.png" />
+      </div>
     </div>
 
     <div data-bs-target="sidenav" data-bs-spy="scroll" class="col-9" style="padding-top: 20px">
