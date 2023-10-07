@@ -52,9 +52,12 @@
     </div>
   </div>
 </div>-->
+
  <div class="container">
       <div class="row">
+        <div id="container10"></div>
         <div class="col-4">
+          
          
 <div class="wrapper">
   <div class="item"> <span class="close"></span>
@@ -180,27 +183,214 @@ gsap.utils.toArray(".cards").forEach((row) => {
                 });
                 </script>
                 <script>
-                  var cardsModule = (function() {
-  var trigger = $(".item"),
-    closetrigger = $(".item span.close");
+var data = [
+  {
+    id: "0",
+    parent: "",
+    name: " ",
+    color: "#FFFFFF"
+  },
+  {
+    id: "R",
+    parent: "0",
+    name: "Academia",
+    color: "#905cc4"
+  },
+  {
+    id: "U",
+    parent: "0",
+    name: "Civillians",
+    color:"#5a91c7"
+  },
+  {
+    id: "RV",
+    name: "Seminar",
+    parent: "R"
+  },
+  /*{
+    id: "RO",
+    name: "Others",
+    parent: "R",
+    color: "#FFFFFF"
+  },*/
+  {
+    id: "UV",
+    name: "Adults",
+    parent: "U"
+  },
+  {
+    id: "UO",
+    name: "Colleges",
+    parent: "U"
+  },
+  {
+    id: "US",
+    name: "Schools",
+    parent: "U"
+  },
+   {
+    id: "UP",
+    name: "Public",
+    parent: "U"
+  },
+ 
+ 
+  {
+    name: "Seminar 1",
+    parent: "RV",
+    value: 6767
+  },
+  {
+    name: "Database of Science",
+    parent: "RV",
+    value: 2965
+  },
+  {
+    name: "DOST",
+    parent: "RV",
+    value: 2973
+  },
+  {
+    name: "WEtlab Youtube",
+    parent: "RV",
+    value: 501
+  },
+  {
+    name: "random shit",
+    parent: "RV",
+    value: 1986
+  },
+  {
+    name: "Pedestrians",
+    parent: "RO",
+    value: 0
+  },
+  {
+    name: "Bicyclists",
+    parent: "RO",
+    value: 0
+  },
+  {
+    name: "Cars and minivans",
+    parent: "UV",
+    value: 6727
+  },
+  {
+    name: "Pickups",
+    parent: "UV",
+    value: 1367
+  },
+  {
+    name: "SUVs",
+    parent: "UV",
+    value: 2114
+  },
+  {
+    name: "Large trucks",
+    parent: "UV",
+    value: 173
+  },
+  {
+    name: "Motorcycles",
+    parent: "UV",
+    value: 3025
+  },
+  {
+    name: "Pedestrians",
+    parent: "UO",
+    value: 4642
+  },
+  {
+    name: "Bicyclists",
+    parent: "UO",
+    value: 554
+  },
+  {
+    name: "Infographics",
+    parent: "US",
+    value: 2965
+  },
+  {
+    name: "DIY Synbio",
+    parent: "US",
+    value: 2965
+  },
+ 
+];
 
-  var animateCard = function() {
-    $(this).addClass("animate");
-  };
+Highcharts.setOptions({
+  colors: ["#ecb37c", "#ECE100"]
+});
+Highcharts.chart("container10", {
+  chart: {
+    height: "100%"
+  },
 
-  var closeCard = function(e) {
-    console.log($(this)
-      .parent())
-    $(this)
-      .parent()
-      .removeClass("animate");
-    e.stopPropagation();
-  };
-
-  trigger.on("click", animateCard);
-  closetrigger.on("click", closeCard);
-})();
-
-                </script>
+  title: {
+    text: "Urban vs rural road fatalities in 2017"
+  },
+  subtitle: {
+    text:
+      'Source: <a href="https://www.iihs.org/topics/fatality-statistics/detail/urban-rural-comparison">Insurance Institute for Highway Safety </a>'
+  },
+  series: [
+    {
+      type: "sunburst",
+      data: data,
+      allowDrillToNode: true,
+      cursor: "pointer",
+      borderWidth: 3,
+      borderColor: "#000000",
+      dataLabels: {
+        format: "{point.name}",
+        filter: {
+          property: "innerArcLength",
+          operator: ">",
+          value: 16
+        },
+        style: {
+          textOutline: false,
+          color: "#000000"
+        }
+      },
+      levels: [
+        {
+          level: 1,
+          levelIsConstant: false,
+          dataLabels: {
+            filter: {
+              property: "outerArcLength",
+              operator: ">",
+              value: 64
+            }
+          }
+        },
+        {
+          level: 2,
+          colorByPoint: true
+        },
+        {
+          level: 3,
+          colorVariation: {
+            key: "brightness",
+            to: -0.5
+          }
+        },
+        {
+          level: 4,
+          colorVariation: {
+            key: "brightness",
+            to: 0.5
+          }
+        }
+      ]
+    }
+  ],
+  tooltip: {
+    headerFormat: "",
+    pointFormat: "The Number of <b>{point.name}</b> is <b>{point.value}</b>"
+  }
+});
+</script>
             
 {% endblock %}

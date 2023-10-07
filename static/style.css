@@ -7491,7 +7491,8 @@ a#menu-share:hover > i {
   max-width: 100px;
 }
 
-
-#container2 {
-  height: 75vh;
+#container10 {
+	min-width: 310px;
+	max-width: 500px;
+	margin: 0 auto
 }
