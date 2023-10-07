@@ -81,11 +81,12 @@ a:not([href]):not([class]):hover {
     color: #000000;
     text-align: center;
     line-height: 1.4;
-
+    font-family: 'Montserrat', 'normal', sans-serif;
   }
   
   h1 {
     font-size: 4.2rem;
+    font-family: 'Montserrat', 'normal', sans-serif;
   }
   
   h2 {
@@ -94,21 +95,25 @@ a:not([href]):not([class]):hover {
     text-align: center;
     line-height: 1.4;
     margin-bottom: 10px;
+    font-family: 'Montserrat', 'normal', sans-serif;
   }
   h3 {
     color: #000000;
     text-align: center;
     line-height: 1.4;
+    font-family: 'Montserrat', 'normal', sans-serif;
   }
   
   .h4,
 h4 {
     font-size: calc(1.275rem + 0.3vw);
+    font-family: 'Montserrat', 'normal', sans-serif;
 }
 @media (min-width: 1200px) {
     .h4,
     h4 {
         font-size: 1.5rem;
+        font-family: 'Montserrat', 'normal', sans-serif;
     }
 }
 
