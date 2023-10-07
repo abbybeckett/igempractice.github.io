@@ -206,7 +206,7 @@ gsap.utils.toArray(".cards").forEach((row) => {
 
                 </script>
                 <script>
-                  var data = [
+             var data = [
   {
     id: "0",
     parent: "",
@@ -216,164 +216,122 @@ gsap.utils.toArray(".cards").forEach((row) => {
   {
     id: "R",
     parent: "0",
-    name: "Academia",
-    color: "#905cc4"
+    name: "Rural",
+    color: "#ecb37c"
   },
   {
     id: "U",
     parent: "0",
-    name: "Schools",
-    color:"#7fe87b"
-  },
-  
-  {
-    id: "V",
-    parent: "0",
-    name: "Adults",
-    color:"#e87be6"
+    name: "Urban",
+    color:"#7CB5EC"
   },
   {
-    id: "X",
-    parent: "0",
-    name: "colleges",
-    color:"#f5fc88"
+    id: "RV",
+    name: "Vehicles",
+    parent: "R"
   },
   {
-    id: "Y",
-    parent: "0",
-    name: "Public",
-    color:"#f09567"
-  },
-  {
-    name: "Synbio conclave",
-    parent: "R",
-    value: 260
-  },
-  {
-    name:"depression discussion",
-    parent:"R",
-    value: 125
-  },
-  {,
-    name:"Lekha maam talk",
-    parent:"R",
-    value: 55
-  },
-  /*{
     id: "RO",
     name: "Others",
     parent: "R",
     color: "#FFFFFF"
-  },*/
-  {
-    name: "VVM",
-    parent: "U",
-    value: 325
   },
   {
-    name: "2 Schools",
-    parent: "U",
-    value: 210
+    id: "UV",
+    name: "Vehicles",
+    parent: "U"
   },
   {
-    name: "Yusuf Hamied",
-    parent: "U",
-    value: 75
-  },
-  
-  {
-    name: "Dart Game",
-    parent: "X",
-    value: 90
+    id: "UO",
+    name: "Others",
+    parent: "U"
   },
   {
-    name: "Queer science quiz",
-    parent: "X",
-    value: 55
+    name: "Cars and minivans",
+    parent: "RV",
+    value: 6767
   },
   {
-    name: "Synbiokalam",
-    parent: "X",
-    value: 35
+    name: "Pickups",
+    parent: "RV",
+    value: 2965
   },
   {
-    name: "Rhetor stall",
-    parent: "X",
-    value: 140
+    name: "SUVs",
+    parent: "RV",
+    value: 2973
   },
   {
-    name: "Dr.Krishnan",
-    parent: "X",
-    value: 90
+    name: "Large trucks",
+    parent: "RV",
+    value: 501
   },
   {
-    name: "Meet and greet",
-    parent: "X",
-    value: 35
+    name: "Motorcycles",
+    parent: "RV",
+    value: 1986
   },
   {
-    name: "Masters students outreach",
-    parent: "X",
-    value: 90
+    name: "Pedestrians",
+    parent: "RO",
+    value: 1141
   },
   {
-    name: "Technopark",
-    parent: "V",
-    value: 275
+    name: "Bicyclists",
+    parent: "RO",
+    value: 187
   },
   {
-    name: "Kudumbashree",
-    parent: "V",
-    value: 65
+    name: "Cars and minivans",
+    parent: "UV",
+    value: 6727
   },
   {
-    name: "Old age homes",
-    parent: "V",
-    value: 30
+    name: "Pickups",
+    parent: "UV",
+    value: 1367
   },
   {
-    name: "Spiti trip",
-    parent: "Y",
-    value: 40
+    name: "SUVs",
+    parent: "UV",
+    value: 2114
   },
   {
-    name: "Podcast",
-    parent: "Y",
-    value: 200
+    name: "Large trucks",
+    parent: "UV",
+    value: 173
   },
   {
-    name: "ITM",
-    parent: "Y",
-    value: 200
+    name: "Motorcycles",
+    parent: "UV",
+    value: 3025
   },
   {
-    name: "Mythbusting",
-    parent: "Y",
-    value: 200
+    name: "Pedestrians",
+    parent: "UO",
+    value: 4642
   },
   {
-    name: "Streetplay",
-    parent: "Y",
-    value: 190
+    name: "Bicyclists",
+    parent: "UO",
+    value: 554
   }
-
- 
 ];
 
 Highcharts.setOptions({
   colors: ["#ecb37c", "#ECE100"]
 });
-Highcharts.chart("container10", {
+Highcharts.chart("container", {
   chart: {
     height: "100%"
   },
 
   title: {
-    text: "Outreach Impact??"
+    text: "Urban vs rural road fatalities in 2017"
   },
   subtitle: {
     text:
-      'Source: <a href="https://2023.igem.wiki/iiser-tvm/home">iGEM IISERTVM  </a>'
+      'Source: <a href="https://www.iihs.org/topics/fatality-statistics/detail/urban-rural-comparison">Insurance Institute for Highway Safety </a>'
   },
   series: [
     {
@@ -389,7 +347,7 @@ Highcharts.chart("container10", {
           property: "innerArcLength",
           operator: ">",
           value: 16
-        }
+        },
         style: {
           textOutline: false,
           color: "#000000"
@@ -430,10 +388,9 @@ Highcharts.chart("container10", {
   ],
   tooltip: {
     headerFormat: "",
-    pointFormat: "The Number of <b>{point.name}</b> is <b>{point.value}</b>"
+    pointFormat: "The population of <b>{point.name}</b> is <b>{point.value}</b>"
   }
 });
-
                 </script>
             
 {% endblock %}
