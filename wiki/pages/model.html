@@ -9,9 +9,9 @@
 <script src="script.js"></script>
 -->
 <div class="row mt-4">
-  <div class="col">
-<div id="container2"></div>
-<div data-bs-target="sidenav" data-bs-spy="scroll" class="col-9" style="padding-top: 20px">
+ <div class="row">
+    <div id="container2"></div>
+ <div data-bs-target="sidenav" data-bs-spy="scroll" class="col-9" style="padding-top: 20px">
       <div class="container a-href-fix" data-bs-spy="scroll" data-bs-offset="-200px">
 
         <!--intro-->
@@ -97,9 +97,10 @@
           We will also design a well-organized circuit board layout to make the hardware small and compact. One possibility is to change the measurement from a voltage measurement to a capacitor discharge time measurement. This would allow us to measure even very low currents accurately.
           <br><br>
           Finally, Please refer our <a href="https://2023.igem.wiki/iiser-tvm/implementation">PI page</a> for more information about the future of our hardware device.
-          </p>
-          
-<script>
+        </p>
+ </div>
+</div>
+    <script>
   // Add the nodes option through an event call. We want to start with the parent
 // item and apply separate colors to each child element, then the same color to
 // grandchildren.
@@ -190,6 +191,8 @@ Highcharts.chart('container2', {
         ]
     }]
 });
-</script>
+    </script>
+ </div>
+</div>
 
 {% endblock %}
