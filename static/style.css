@@ -7416,3 +7416,11 @@ a#menu-share:hover > i {
 .tb-card p {
   font-size: 16px;
 }
+
+.comm {
+  padding: 12px 24px !important;
+  font-size: 15px !important;
+  margin: 0px 20px !important;
+  min-width: 15vw;
+  font-weight: 600 !important;
+}
