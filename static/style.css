@@ -6627,6 +6627,7 @@ i.fa-star.rating{color: rgb(232, 217, 31);}
     max-width: 1900px;
     margin: 0 auto;
     overflow: hidden;
+    position: relative;
   }
   
   /*.layer-bg {
@@ -7488,4 +7489,9 @@ a#menu-share:hover > i {
 .up img {
   vertical-align: top;
   max-width: 100px;
+}
+
+
+#container2 {
+  height: 75vh;
 }

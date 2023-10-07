@@ -5,6 +5,9 @@
 
 {% block page_content %}
 
+<div id="container2"></div>
+      </div>
+      
 <div class="row mt-4">
   <div class="col">
     <div class="bd-callout bd-callout-info">
@@ -16,5 +19,58 @@
     </div>
   </div>
 </div>
+<script>
+  anychart.onDocumentReady(function () {
+    anychart.data.loadJsonFile('./education.json',
+      function (data) {
+
+        // create a data tree from the dataset
+        var dataTree = anychart.data.tree(data);
+
+        // create a sunburst chart
+        var chart = anychart.sunburst(dataTree);
+
+        // set the calculation mode
+        chart.calculationMode('parent-independent');
+
+        // set the ascending sort order
+        chart.sort('asc');
+
+        // set the chart title
+        chart.title("Our Education Plan");
+
+        // enable HTML in labels
+        chart.labels().useHtml(true);
+        // customize the format of the sunburst chart labels
+        chart
+          .level(1)
+          .labels()
+          .fontFamily("Verdana, sans-serif")
+          .format("<span style='font-size:16px'>{%name}</span>");
+        chart
+          .level(0)
+          .labels()
+          .fontFamily("Verdana, sans-serif")
+          .fontWeight(500)
+          .format("<span style='font-size:16px'>Education</span><br><br><span style='font-size:16px'>{%value}{groupsSeparator:\\,}</span>");
+
+        // enable HTML in tooltips
+        chart.tooltip().useHtml(true);
+        // customize the format of the sunburst chart tooltip
+        chart
+          .tooltip()
+          .fontFamily("Verdana, sans-serif")
+          .format("<h5 style='font-size:14px; margin: 0.25rem 0;'>{%name}</h5><h6 style='font-size:14px; font-weight:400; margin: 0.2rem 0;'>Total Cases: <b>{%value}{groupsSeparator:\\,}</b></h6><h6 style='font-size:14px; font-weight:400; margin: 0.2rem 0;'>Total Deaths: <b>{%total_deaths}{groupsSeparator:\\,}</b></h6>");
+
+        // set the chart container element id
+        chart.container('container2');
+
+        // initiate chart drawing
+        chart.draw();
+
+      });
+  });
+</script>
+
 
 {% endblock %}
