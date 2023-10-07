@@ -5651,6 +5651,7 @@ opacity : 1 !important ;
 }
 .navbar-links {
     display: grid;
+    border-radius: 20px;
 }
 .menuprop {
     font-size: smaller;
