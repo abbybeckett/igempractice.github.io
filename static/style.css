@@ -155,7 +155,7 @@ h4 {
     display: grid;
     grid-template-columns: 1fr 3fr;
     align-items: center;
-    height:100px;
+    height:80px;
     z-index: 1000;
     font-family: 'Quattrocento Sans';
     border-bottom-right-radius: 20px;
