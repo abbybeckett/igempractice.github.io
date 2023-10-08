@@ -158,6 +158,8 @@ h4 {
     height:100px;
     z-index: 1000;
     font-family: 'Quattrocento Sans';
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
   }
   
   .navbar img {
