@@ -84,8 +84,12 @@
         });
 </script>
 
+<tag>
+
+
+</tag>
+
 <div class="cointainer my-4 mx-4">
-<div class="row mt-4">
  <div class="row">
     <div class="col-3">
         <ul class="fixed-content font-acc" id="sidenav" >
@@ -131,7 +135,7 @@
         </p>
         <br>
         
-        <h1 class = "font-head" id="head2" style="color: #002147">Bayesian </h1>
+        <h1 class = "font-head" id="head2" style="color: #002147">Bayesian Network </h1>
        <h2>Introduction</h2>
         <br>
         <p align="justify">
@@ -514,7 +518,7 @@ Highcharts.addEvent(
 Highcharts.chart('container2', {
     chart: {
         type: 'networkgraph',
-        height: '200%'
+        height: '50%'
     },
     title: {
         text: 'MDD(major depressive disorder)'
@@ -532,7 +536,7 @@ Highcharts.chart('container2', {
     },
     series: [{
         dataLabels: {
-            enabled: true,
+            enabled: false,
             linkFormat: ''
         },
         data: [
@@ -563,7 +567,6 @@ Highcharts.chart('container2', {
     }]
 });
     </script> 
- </div>
 </div>
 </div>
 {% endblock %}
