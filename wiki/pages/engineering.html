@@ -5,15 +5,157 @@
 
 {% block page_content %}
 
-<div class="row mt-4">
-  <div class="col">
-    <div class="bd-callout bd-callout-info">
-      <h4>Silver Medal Criterion #1</h4>
-      <p>Demonstrate engineering success in a part of your project by going through at least one iteration of the engineering design cycle. This achievement should be distinct from your Contribution for Bronze.<p>
-      <p>If you plan to show engineering success by creating a new Part that has been shown to work as expected, you must document your contribution on the Part's Main Page on the <a href="http://parts.igem.org/Main_Page">Registry</a> for your team to be eligible for this criteria.</p>
-      <hr>
-      <p>Please see the <a href="https://competition.igem.org/judging/medals">2023 Medals Page</a> for more information.</p>
+<script defer>
+
+  $(document).ready(function(){
+    $(".c1").click(function(){
+      $(".dbtl1").fadeIn().css("display", "flow");
+      $(".dbtl2").fadeOut().css("display", "none");
+      $(".dbtl3").fadeOut().css("display", "none");
+      
+      $(".dbtl4").fadeOut().css("display", "none");
+    });
+  });
+  
+  $(document).ready(function(){
+    $(".c2").click(function(){
+      $(".dbtl2").fadeIn().css("display", "flow");
+      $(".dbtl1").fadeOut().css("display", "none");
+      $(".dbtl3").fadeOut().css("display", "none");
+      $(".dbtl4").fadeOut().css("display", "none");
+      
+    });
+  });
+  
+  $(document).ready(function(){
+    $(".c3").click(function(){
+      $(".dbtl3").fadeIn().css("display", "flow");
+      $(".dbtl1").fadeOut().css("display", "none");
+      $(".dbtl2").fadeOut().css("display", "none");
+      $(".dbtl4").fadeOut().css("display", "none");
+      
+    });
+  });
+  
+  $(document).ready(function(){
+    $(".c4").click(function(){
+      $(".dbtl4").fadeIn().css("display", "flow");
+      $(".dbtl1").fadeOut().css("display", "none");
+      $(".dbtl2").fadeOut().css("display", "none");
+      $(".dbtl3").fadeOut().css("display", "none");
+      
+    });
+  });
+  
+      
+</script>
+
+<div class="container3 " data-bs-spy="scroll" data-bs-offset="-200px">
+                
+  <div class="row3">
+    <div class="tl-change-buttons" >
+        <div class="col3">
+        <div class="square-container">    
+            <a class="change-btn comm tb-1 c1"><img src="newtimeline-learn.png" style="margin-right:-20%;margin-bottom: -10.5%;margin-left:10%;"></a>
+            <a class="change-btn comm tb-1 c2"><img src="newtimeline-design.png" style="margin-bottom: -16.5%;"></a>
+        <br>
+            <a class="change-btn comm tb-1 c4 "><img src="newtimeline-test.png" style=" margin-top: -10%;margin-bottom: 7%;margin-left: 2%;" ></a>
+            <a class="change-btn comm tb-1 c3"> <img src="newtimeline-build.png" style="margin-left: -20.5% ;margin-top:8%;"></a>
+             </div>
     </div>
+    </div>
+</div>              
+    <div class = "dbtl1">
+    <!--intro-->
+    <hr class="line">
+    <h1 id="head1" style="color: #002147">Heading - 1</h1>
+    <hr class="line">
+    <br>
+    <p>
+
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      In non risus sollicitudin, pharetra orci non, cursus justo.
+      Aenean pulvinar consequat est sit amet cursus. 
+      In fermentum massa sit amet cursus mattis. 
+      Integer eget tellus vitae nunc pulvinar sollicitudin. 
+      Etiam vulputate lorem aliquet mi ullamcorper, id lobortis diam mollis. 
+      Maecenas porta volutpat dui, at facilisis turpis. Nullam sed finibus ex. 
+      Nam elementum nunc non massa imperdiet cursus. Suspendisse rutrum dignissim consectetur. 
+      Praesent feugiat, lorem ac bibendum tempor, enim turpis blandit risus, rhoncus faucibus risus massa vel dui. 
+      In vulputate orci ut mollis vehicula. Suspendisse sit amet rutrum arcu. 
+      Integer a ante fermentum, rhoncus nibh vel, iaculis nisl.
+       <a id="head2"></a>
+    </p>
+    <br>
+    </div>
+    <hr class="line">
+    <div class="dbtl2">
+    <h1 id="head2" style="color: #002147">Heading - 2</h1>
+    <hr class="line">
+    <br>
+    <p>
+
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      In non risus sollicitudin, pharetra orci non, cursus justo.
+      Aenean pulvinar consequat est sit amet cursus. 
+      In fermentum massa sit amet cursus mattis. 
+      Integer eget tellus vitae nunc pulvinar sollicitudin. 
+      Etiam vulputate lorem aliquet mi ullamcorper, id lobortis diam mollis. 
+      Maecenas porta volutpat dui, at facilisis turpis. Nullam sed finibus ex. 
+      Nam elementum nunc non massa imperdiet cursus. Suspendisse rutrum dignissim consectetur. 
+      Praesent feugiat, lorem ac bibendum tempor, enim turpis blandit risus, rhoncus faucibus risus massa vel dui. 
+      In vulputate orci ut mollis vehicula. Suspendisse sit amet rutrum arcu. 
+      Integer a ante fermentum, rhoncus nibh vel, iaculis nisl.
+       <a id="head2"></a>
+    </p>
+    <br>
+    </div>
+    <hr class="line">
+    <div class ="dbtl3">
+    <h1 id="head3" style="color: #002147">Heading - 3</h1>
+    <hr class="line">
+    <br>
+    <p>
+
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      In non risus sollicitudin, pharetra orci non, cursus justo.
+      Aenean pulvinar consequat est sit amet cursus. 
+      In fermentum massa sit amet cursus mattis. 
+      Integer eget tellus vitae nunc pulvinar sollicitudin. 
+      Etiam vulputate lorem aliquet mi ullamcorper, id lobortis diam mollis. 
+      Maecenas porta volutpat dui, at facilisis turpis. Nullam sed finibus ex. 
+      Nam elementum nunc non massa imperdiet cursus. Suspendisse rutrum dignissim consectetur. 
+      Praesent feugiat, lorem ac bibendum tempor, enim turpis blandit risus, rhoncus faucibus risus massa vel dui. 
+      In vulputate orci ut mollis vehicula. Suspendisse sit amet rutrum arcu. 
+      Integer a ante fermentum, rhoncus nibh vel, iaculis nisl.
+       <a id="head3"></a>
+    </p>
+    <br>
+    </div>
+    <hr class="line">
+    <div class ="dbtl4">
+    <h1 id="head4" style="color: #002147">Heading - 4</h1>
+    <hr class="line">
+    <br>
+    <p>
+
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      In non risus sollicitudin, pharetra orci non, cursus justo.
+      Aenean pulvinar consequat est sit amet cursus. 
+      In fermentum massa sit amet cursus mattis. 
+      Integer eget tellus vitae nunc pulvinar sollicitudin. 
+      Etiam vulputate lorem aliquet mi ullamcorper, id lobortis diam mollis. 
+      Maecenas porta volutpat dui, at facilisis turpis. Nullam sed finibus ex. 
+      Nam elementum nunc non massa imperdiet cursus. Suspendisse rutrum dignissim consectetur. 
+      Praesent feugiat, lorem ac bibendum tempor, enim turpis blandit risus, rhoncus faucibus risus massa vel dui. 
+      In vulputate orci ut mollis vehicula. Suspendisse sit amet rutrum arcu. 
+      Integer a ante fermentum, rhoncus nibh vel, iaculis nisl.
+      <a id="head4"></a>
+    </p>
+    <br>
+    </div>
+</div>
+    <hr class="line">
   </div>
 </div>
 
