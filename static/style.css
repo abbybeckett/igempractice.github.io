@@ -8018,6 +8018,13 @@ button-1 {
   font-weight: 700;
 }
 
+.nav-pills {
+  position: fixed;
+  display: none;
+  
+}
+
+
 .nav-pills>li.active>a:hover {
     background-color: transparent;
     color: #5361AC;
