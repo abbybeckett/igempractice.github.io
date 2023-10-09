@@ -1278,7 +1278,8 @@ footer {
   }
   .col-lg-5 {
       flex: 0 0 auto;
-      width: 41.6666666667%;
+      width: 20.6666666667%;
+      position: relative;
   }
   .col-lg-6 {
       flex: 0 0 auto;
@@ -1286,7 +1287,7 @@ footer {
   }
   .col-lg-7 {
       flex: 0 0 auto;
-      width: 58.3333333333%;
+      width: 75.3333333333%;
   }
   .col-lg-8 {
       flex: 0 0 auto;
