@@ -7519,3 +7519,7 @@ a#menu-share:hover > i {
 	max-width: 700px;
 	margin: 0 auto;
 }
+
+.ihp2 {
+  display: none;
+}
