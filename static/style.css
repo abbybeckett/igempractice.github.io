@@ -7824,7 +7824,7 @@ a#menu-share:hover > i {
 	display: -webkit-flex;
 	list-style: none;
 	padding: 20px;
-	webkit-flex-flow: row wrap;
+	-webkit-flex-flow: row wrap;
 	position: relative;
   align-items: center;
 	justify-content: center;
