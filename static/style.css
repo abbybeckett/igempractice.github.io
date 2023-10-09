@@ -73,6 +73,9 @@ a:not([href]):not([class]):hover {
 td {
   font-family: 'Poppins', 'normal', sans-serif;
 }
+li {
+  font-family: 'Poppins', 'normal', sans-serif;
+}
 .font-p {
   font-family: 'Poppins', 'normal', sans-serif;
 }
