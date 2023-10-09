@@ -177,22 +177,6 @@ h4 {
     justify-self: end;
     
   }
-
-  .nav-item z {
-    color: #000;
-    font-size: 1.1rem;
-    font-weight: 1000;
-    text-decoration: none;
-    transition: color 0.3s ease-out;
-  }
-  
-  .nav-item z:hover {
-    color: #ffffff;
-    background-color: #4e7989;
-    padding:10px;
-    border-radius:12px;
-   
-  }
   
   .nav-item a {
     color: #000;
