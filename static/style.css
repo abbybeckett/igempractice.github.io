@@ -7993,7 +7993,9 @@ button-1 {
 
 .nav-pills {
   position: fixed;
-  display: none;
+  display: flex;
+  flex-direction:column;
+  align-items: stretch;
   
 }
 
