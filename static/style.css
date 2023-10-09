@@ -1279,8 +1279,6 @@ footer {
   .col-lg-5 {
       flex: 0 0 auto;
       width: 20.6666666667%;
-      position: relative;
-      justify-items: left;
   }
   .col-lg-6 {
       flex: 0 0 auto;
