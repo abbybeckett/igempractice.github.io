@@ -7814,7 +7814,7 @@ a#menu-share:hover > i {
   html{
      font-size: 50%;
   }
-/rotateY(-180deg);
+}
 /*sponsor flipcards*/
 .flex-container {
 	display: flex;
@@ -7874,7 +7874,10 @@ a#menu-share:hover > i {
 }
 .card-front {
   /*background: #123456;*/
-  border: solid 5px #9b111e;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  border:solid 5px #9b111e;
   border-radius: 10px;
 }
 .card-front i.tile-icon {
@@ -7898,6 +7901,7 @@ a#menu-share:hover > i {
 	background-color: #9b111e;
   border: solid 5px #efefef;
   border-radius: 10px;
+	/*-webkit-transform: rotateY(-180deg);*/
 	transform: rotateY(-180deg);
 }
 .card-back p.title {
@@ -7914,18 +7918,13 @@ a#menu-share:hover > i {
 
 /*-------- cards / flip effect --------*/
 .flex-item:hover .card-front {
+	/*-webkit-transform: rotateY(-180deg);*/
 	transform: rotateY(-180deg);
 }
 .flex-item:hover .card-back {
+	/*-webkit-transform: rotateY(0);*/
 	transform: rotateY(0);
 }
-
-@media screen and (max-width: 480px){
-	.flex-container{
-		flex-direction : column;
-	}
-}
-
 .tl-change-buttons {
   width: 100% !important;
   display: flex;
