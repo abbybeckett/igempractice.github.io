@@ -489,17 +489,18 @@ Highcharts.addEvent(
             nodes = {};
         e.options.data.forEach(function (link) {
 
-            if (link[0] === 'MDD(major depressive disorder)') {
-                nodes['MDD(major depressive disorder)'] = {
-                    id: 'MDD(major depressive disorder)',
+            if (link[0] === 'Data visualization') {
+                nodes['Data visualization'] = {
+                    id: 'Data visualization',
                     marker: {
-                        radius: 40
+                        radius: 20
                     }
                 };
+              
                 nodes[link[1]] = {
                     id: link[1],
                     marker: {
-                        radius: 20
+                        radius: 10
                     },
                     color: colors[i++]
                 };
@@ -517,36 +518,38 @@ Highcharts.addEvent(
     }
 );
 
-Highcharts.chart('container2', {
+Highcharts.chart('container', {
     chart: {
         type: 'networkgraph',
-        height: '50%'
+        height: '100%'
     },
     title: {
-        text: 'MDD(major depressive disorder)'
+        text: 'Data visualization'
+    },
+    credits: { 
+      enabled: false 
     },
   
     plotOptions: {
         networkgraph: {
             keys: ['from', 'to'],
             layoutAlgorithm: {
-                enableSimulation: false,
+                enableSimulation: true,
                 friction: -0.9
-                
             }
         }
     },
     series: [{
         dataLabels: {
-            enabled: false,
+            enabled: true,
             linkFormat: ''
         },
         data: [
             ['Temporal', 'Time series(6)'],
             ['Temporal', 'Timeline(4)'],
             ['Temporal', 'Alluvial Diagram (3)'],
-            ['MDD(major depressive disorder)', 'Temporal'],
-            ['MDD(major depressive disorder)', 'nD/Multi-Dimensional'],
+            ['Data visualization', 'Temporal'],
+            ['Data visualization', 'nD/Multi-Dimensional'],
             ['nD/Multi-Dimensional', 'Line chart(5)'],
             ['nD/Multi-Dimensional', 'Bar chart(3)'],
             ['nD/Multi-Dimensional', 'Bubble chart(4)'],
@@ -556,15 +559,15 @@ Highcharts.chart('container2', {
             ['nD/Multi-Dimensional', 'Pie charts(3)'],
            ['nD/Multi-Dimensional', 'Box plot(4)'],
            ['nD/Multi-Dimensional', 'Scatter plot(5)'],
-           ['MDD(major depressive disorder)', 'Tree/Hierarchy'],
+           ['Data visualization', 'Tree/Hierarchy'],
            ['Tree/Hierarchy', 'Sunburst chart(1)'],
              ['Tree/Hierarchy', 'tree Map(2)'],
-           ['MDD(major depressive disorder)', '2-D Planner'],
+           ['Data visualization', '2-D Planner'],
           ['2-D Planner', 'Choropleth (3)'],
                
-          ['MDD(major depressive disorder)', 'Network'],
+          ['Data visualization', 'Network'],
                ['Network', 'Node-link diagram(3)'],
-               ['MDD(major depressive disorder)', 'Customized  visualization(3)'],
+               ['Data visualization', 'Customized  visualization(3)'],
         ]
     }]
 });
