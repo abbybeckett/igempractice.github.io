@@ -127,11 +127,12 @@
         <br>
         <p align="justify">
           
-          Our project began with research on biomarkers and their diagnostic assays. Initially, microfluidics seemed to be a promising approach to streamlining the diagnostic process. However, as we progressed, it became evident that there was also a pressing need for a hardware solution capable of fluorescence detection and quantification. We recognized the need to keep it an accessible, affordable and practical device for widespread use, in comparison to traditional fluorimeters. In an effort to provide a more reliable and objective diagnostic tool, we have attempted to develop a novel FRET-based microfluidic device to diagnose clinical depression. 
-<br><br>Our main goal is to introduce an affordable and user-friendly biomarker-based diagnostic tool for Major Depressive Disorder (MDD). To achieve this, we’ve designed a simple and accessible system. It consists of a microfluidic chip that is inserted into the slot of a 3D printed box equipped with an LCD screen, an Arduino UNO setup, and the necessary accessories.
-<br><br>Here’s how it works: when the microfluidic chip is inserted into the device, the internal blue LED excites the sample, and the fluorescence emitted is detected by a photodarlington sensor. The intensity of fluorescence measured is then converted into the biomarker concentration levels and displayed on the LCD screen,with all data readings being managed by the Arduino UNO microcontroller. This prototype is designed to show the functionality of the system, using the most basic components and with the least complexities.
-
-           <a id="head2"></a>
+          Mathematical modeling played an essential role in understanding and optimizing our project. It allowed us to investigate aspects of the project that could not be determined through experimentation, such as the volume of blood required for the microfluidic chip. Using variables for the unknown quantities, we could get an equation to calculate the volume of blood needed.
+<br><br>Modeling also allowed us to make predictions regarding the kinetics of the aptamer and cDNA binding using simple formulas. These predictions were cross-validated with our wet lab data.
+<br><br>Additionally, we analyzed the five putative biomarkers central to our project. We used Bayes’ Theorem to find the correlation factor between each biomarker and MDD, as well as other diseases where they show upregulation or downregulation. This analysis gave us a Bayesian network with probabilities.
+<br><br>We are developing additional models, such as a feasibility/reliability model, which strengthens our purpose of choosing five biomarkers instead of one. 
+<br><br>
+        <a id="head2"></a>
         </p>
         <br>
         
@@ -182,8 +183,8 @@
                         <thead>
                         <tr>
                         <th scope="col">Diseases</th>
-                        <th scope="col">Up or down regulation</th>
-                        <th scope="col">Correlation factor</th>
+                        <th scope="col">Bayesian probability</th>
+
                         </tr>
                         </thead>
                         <tbody>
