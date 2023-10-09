@@ -7815,4 +7815,123 @@ a#menu-share:hover > i {
   html{
      font-size: 50%;
   }
+/*sponsor flipcards*/
+.flex-container {
+	display: flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-box;
+	display: -webkit-flex;
+	list-style: none;
+	padding: 20px;
+	webkit-flex-flow: row wrap;
+	position: relative;
+  align-items: center;
+	justify-content: center;
+  margin: 0 -5px;
+  row-gap: 90px;
+}
+.flex-item {
+	color: #fff;
+	height: 210px;
+	margin: 10px 20px;
+	width: 200px;
+	position: relative;
+  padding-bottom: 5%;
+}
+.flex-item-inner {
+	display: flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-box;
+	display: -webkit-flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	height: 210px;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+.flex-item-inner a {
+	color: #333;
+	cursor: pointer;
+}
 
+.flex-item-inner a i {
+  color: #9b111e;
+}
+
+/*-------- cards --------*/
+.card-front,
+.card-back {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 200px;
+	height: 280px;
+	padding: 20px;
+	margin: 0;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-transition: -webkit-transform 0.3s;
+	transition: transform 0.3s;
+	justify-content: flex-end;
+}
+.card-front {
+  //background: #123456;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  border:solid 5px #9b111e;
+  border-radius: 10px;
+}
+.card-front i.tile-icon {
+	display: block;
+	margin: 10px auto 20px auto;
+	text-align: center;
+}
+.card-front h4 {
+	font-size: 18px;
+	font-weight: normal;
+	margin: 10px 0;
+  
+}
+.card-front p.detail {
+	font-size: 24px;
+	font-weight: bold;
+	margin: 0;
+}
+
+.card-back {
+	background-color: #9b111e;
+  border: solid 5px #efefef;
+  border-radius: 10px;
+	-webkit-transform: rotateY(-180deg);
+	transform: rotateY(-180deg);
+}
+.card-back p.title {
+	color: #000;
+	margin-top: 0;
+	text-transform: uppercase;
+}
+.card-back p.desc {
+	color: #fff;
+}
+.card-back p.link {
+	color: #702082;
+}
+
+/*-------- cards / flip effect --------*/
+.flex-item:hover .card-front {
+	-webkit-transform: rotateY(-180deg);
+	transform: rotateY(-180deg);
+}
+.flex-item:hover .card-back {
+	-webkit-transform: rotateY(0);
+	transform: rotateY(0);
+}
+@media screen and (max-width: 480px){
+	.flex-container{
+		flex-direction : column;
+	}
+}
