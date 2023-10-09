@@ -144,7 +144,20 @@ $(document).ready(function(){
         $(".timeline-2").fadeOut().css("display", "none");
       });
     });
-  
+
+    $(document).ready(function () {
+      $(".g1").click(function () {
+        $(".graph-1").fadeIn().css("display", "inline-block");
+        $(".graph-2").fadeOut().css("display", "none");
+      });
+    });
+    $(document).ready(function () {
+      $(".g2").click(function () {
+        $(".graph-2").fadeIn().css("display", "inline-block");
+        $(".graph-1").fadeOut().css("display", "none");
+      });
+    });
+    
     // function scrolldiv() {
     //   window.scrollTo(
     //     0,
@@ -429,12 +442,7 @@ $(document).ready(function(){
    <<!--div class="section-main hp-main">
     <div class="section-title hp-title">-->
       
-    </div>
-  </div>
-  <div class="tl-change-buttons">
-    <a class="change-btn comm tb-1 first ih1" href="#!">Human Practices</a>
-    <a class="change-btn comm tb-1 first ih2" href="#!">Integrated Human Practices</a>
-  </div>
+  
     <div class="hp1">
       <section class="container">
     <div class="section-content hp-content">
