@@ -7832,6 +7832,7 @@ a#menu-share:hover > i {
 	padding: 0;
 	flex-flow: row wrap;
 	position: relative;
+  row-gap: 90px;
 }
 .flex-item {
 	color: #fff;
