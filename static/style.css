@@ -7884,6 +7884,7 @@ a#menu-share:hover > i {
   background-position: center;
   border:solid 5px #9b111e;
   border-radius: 10px;
+  height: 280px;
 }
 .card-front i.tile-icon {
 	display: block;
