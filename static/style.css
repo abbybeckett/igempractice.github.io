@@ -7829,14 +7829,14 @@ a#menu-share:hover > i {
 	justify-content: space-around;
 	list-style: none;
 	margin: 0;
-	padding: 0;
+	padding: 20px;
 	flex-flow: row wrap;
 	position: relative;
   row-gap: 90px;
 }
 .flex-item {
 	color: #fff;
-	height: 210px;
+	height: 280px;
 	margin: 10px 20px;
 	padding:10px;
 	width: 200px;
@@ -7850,7 +7850,7 @@ a#menu-share:hover > i {
 	display: -webkit-flex;*/
 	flex-direction: column;
 	justify-content: flex-start;
-	height: 210px;
+	height: 280px;
 	margin: 0;
 	padding: 10px;
 	width: 100%;
@@ -7871,7 +7871,7 @@ a#menu-share:hover > i {
 	top: 0;
 	left: 0;
 	width: 185px;
-	height: 170px;
+	height: 280px;
 	padding: 20px;
 	margin: 0;
 	backface-visibility: hidden;
