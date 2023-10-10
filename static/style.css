@@ -8072,3 +8072,21 @@ button-1 {
     font-weight: 700; 
     color: #5361AC;
 }
+
+/* this is for the experiment page button*/
+
+.first1  {
+  background-color: #67a09e;
+  background-image: linear-gradient( 108deg, #7ec2b1 0%, #33d9de 55%, #7fc5b2 90% );
+  background-position: 100% 0 !important;
+  background-size: 200% 200% !important;
+  color: white;
+  border-radius: 8px !important;
+  padding: 12px 48px;
+  font-size: 1.4rem;
+  font-weight: 200;
+  text-decoration: none;
+  box-shadow: 8px 7px 20px 0 rgba(0, 40, 120, 0.35) !important;
+  transition: all 0.5s ease;
+  text-align: center;
+}
