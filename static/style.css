@@ -8205,10 +8205,6 @@ button-1 {
   margin-right: auto;
   padding: 20px;
 }
-img{
-    width: 500px;
-    height: 500px;
-}
 /* This container is needed to position the front and back side */
 .flip-card-img-inner {
   position: relative;
