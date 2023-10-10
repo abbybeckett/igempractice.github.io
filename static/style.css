@@ -829,6 +829,9 @@ footer {
   flex: 0 0 auto;
   width: 100%;
 }
+.offset-0 {
+  margin-left: 0%;
+}
 .offset-1 {
   margin-left: 8.3333333333%;
 }
