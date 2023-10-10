@@ -7958,10 +7958,10 @@ display:none;
 }
 
 .square-container{
-  width: 730px;
-  height: 730px;
-  top: 10%;
-}
+  width: 60vh;
+  height: 60vh;
+  position:relative;
+ }
 
 /* Styling the navbar */ 
 
