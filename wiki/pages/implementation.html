@@ -185,9 +185,9 @@ The assessment of the response and efficacy of antidepressant treatment in Major
           As mentioned in the TRL analysis of our project, we are currently at TRL level 4.
           There were a lot of things we planned to do that we weren't able to do due to time, financial, and competition constraints. However, talking to relevant stakeholders like Anvaya Biotech and  Vidcare Innovations boosted our spirits to keep working on OASYS even after the iGEM competition since it would be a start of, or at least be a catalyst in the field of PoCT in mental healthcare. We realized that the preliminary design of the device proposed for the competition will have to undergo several optimizations to comply with the safety, qualitative and technical requirements. 
         </p>
-        <p>
+        
           Biomarkers <br>
-
+         <p>
           The primary challenge in attempting to devise a biomarker-based diagnosis for MDD lies not just in the absence of specific established markers but also in the stagnation observed in the research of biomarkers for mental health disorders. We were faced with an acute lack of biomarker data when it came to MDD and this was also affirmed by the words of Dr Krishnan S, the HoD of psychiatry at Govt Medical College and Lekha Dinesh Kumar, a scientist working on cancer research at thе Cеntrе for Cеllular and Molеcular Biology. (Find the detailed report of their inputs on our iHP timeline). 
           </p>
           <p>
@@ -232,8 +232,10 @@ The assessment of the response and efficacy of antidepressant treatment in Major
             </ol>
             
             </p>
-        <br>
-        <p>Wetlab <br>
+         <br>
+         
+
+        Wetlab <br>
           <p> Temperature based assays for Aptasensors <br>
             Performing temperature-based assays for our aptasensor experiments can be crucial due to the change in aptamer binding affinity which can be temperature-dependent. This is because temperature could affect the secondary structure of the aptamer, which can in turn affect its ability to bind to its target, which in our case is the cDNA strand for the formation of the aptasensor and also the biomolecule once the cDNA has been displaced. 
             For example, some aptamers may have a higher affinity for their target at lower temperatures, while others may have a higher affinity for their target at higher temperatures. Therefore, performing temperature-based assays can help to identify the optimal temperature for aptamer binding. Therefore running the hybridisation fluorescence based experiments for the formation and sensitivity of our aptasensors in varying temperatures will not only aim to hasten the formation of the quantifier molecules but could also in theory provide us with optimal temperature conditions for increased sensitivity of the aptasensor. In addition, temperature-based assays can also be used to study the thermodynamics of aptamer binding. This information can be used to design aptasensors with improved binding affinity and stability. 
@@ -258,10 +260,62 @@ The assessment of the response and efficacy of antidepressant treatment in Major
            <li> Probing Molecular Details: By comparing ITC data from experiments conducted with modified DNA sequences or conditions, it's possible to probe the role of specific bases or structural elements in the binding interaction. This can help in understanding the molecular basis for specificity or the role of certain regions in DNA binding. </li>
           </ul>
           </p>
+
+        <br>
+        Hardware
+        <br>
+          <p>Once the assay has been run, the individual fluorescence readouts need to be measured and analyzed. Commercial fluorimetry, due to its relatively high cost, might not be the optimal approach. Consequently, we propose an alternative, cost-effective fluorimetry device, informed by our expertise and insights garnered from available resources. This approach also allows for the readouts of each channel to be measured simultaneously. </p>
+          <p> Our current prototype {1, hyperlink to hardware design} uses basic components to showcase the concept, but we plan to use more efficient and affordable components in the future when our product is ready for market.</p>
+          <p>Towards the future, we are considering upgrading from a microcontroller, like the Arduino uno, to a microprocessor like the ESP32 series. There is a significant upgrade in the allowed memory ( 2 KB RAM to 520 KBRAM, 32 KB flash memory to 4 MB flash memory ) which allows us to expand our product to include more photo sensors and modules and also add more complex programming structures and functions. ESP32 boards have built-in WiFi and Bluetooth, allowing us to connect them to a user-friendly app or website. They can also run Python and TensorFlow, enabling machine learning on the device. This means that the product can measure data, collect it to a server, analyze it with machine learning, and optimize itself for any demographic.
+            All these advantages come along with the point that currently the ESP32 board is ~20% cheaper than the Arduino, which is a key factor as our primary goal is humanitarian and to make the product affordable, even in developing or third-world countries.ESP32 boards are not ideal for beginners or intermediates and add complexity to the device. They require more voltage regulatory components, are more fragile and noise sensitive, and are not built for the simple but rough use that Arduino boards can’t handle.
+          </p>
+          <p>For our proof of concept and demo, we have decided to forgo aesthetics and additional functionality that the ESP32 offers, and stick to the more simple yet robust Arduino Uno while not compromising on rigorous scientific thoroughness.
+            We will also design a compact circuit board layout to minimize the size of the device. We are considering changing the measurement from voltage to capacitor discharge time, which would allow us to measure very low currents accurately.
+          </p>
+          <p>We believe that our hardware has the potential to revolutionize the field of diagnostics. By making it easier and more affordable to develop and deploy new diagnostic tests, we can help people get the care they need sooner and start living healthier lives.
+          </p>
           
+        
+        <br>
+        Software <br>
+          <p> The initial design of the microfluidic chip is based on extensive research into the identification and quantification of specific biomarkers associated with depression. As the project progresses, we will continually refine the chip's design to enhance its sensitivity, accuracy, and efficiency. 
+          </p> <br>
+          Data Analysis
+          <p>One of the primary functions of the microfluidic chip is to analyze biomarker data obtained from blood samples and provide a degree of risk for clinical depression. This risk assessment will be based on complex algorithms and statistical analysis of the biomarker data. We will continuously refine the algorithms used for risk assessment. This iterative process will involve incorporating newly discovered biomarker data, whether from our tool or independently, and improving the accuracy of of our quantification system. 
+          </p> <br>
+        
+        <br>
+        
+        Database
+        <br>
+          <p>To support our microfluidic chip's research and diagnostic capabilities, we hope to establish a secure, cloud-based database system. This database will serve as the repository for biomarker data collected from blood samples. The infrastructure of this will be designed to scale seamlessly with the growing volume of biomarker data generated by our chip and other research sources. This ensures that we can accommodate the expanding dataset efficiently. </p>
+          <p>The database will collect biomarker data, but it is important to stress that this data will be limited to relevant biomarkers and anonymized patient history. The focus is strictly on research and diagnostics, with no personal data involved. Robust encryption, access controls, and regular security audits will be implemented to protect the integrity and confidentiality of the biomarker data. Advanced anonymization techniques will be applied to the data to remove any identifying information, ensuring that patient privacy is preserved throughout the research process. Informed consent will be a fundamental aspect of data collection. Participants contributing their data to the database will be required to provide explicit consent, which will be documented and stored securely. We will establish a clear and user-friendly opt-out mechanism, allowing individuals to withdraw their data from the database at any time if they change their mind or wish to discontinue participation. Our project will adhere to ethical guidelines and data protection regulations. We will seek ethical oversight and approval from relevant authorities to ensure transparency and compliance with ethical standards. </p>
+          <p>A well-structured database is critical for efficient data retrieval and analysis. Our database will be organized to support various research inquiries related to depression biomarkers. Biomarker data will be categorized and tagged to facilitate easy sorting, filtering, and retrieval based on different parameters, such as sample source, date, or biomarker type. </p>
+          <p>The database will consist of multiple interconnected data tables that include, but not be limited to:
+          <ul>
+            <li>Patient Information - This table will store anonymized patient identifiers, such as unique study IDs, demographic data (age, gender), and relevant medical history. </li>
+            <li>Biomarker Data - Biomarker data will be stored in a structured format, associating each data point with a specific patient and timestamp. Attributes may include biomarker type, concentration, and any related metadata. 
+            </li>
+            <li>Consent Records - Consent records will document when and how consent was obtained from participants. It will link consent to specific patient data, ensuring transparency and compliance. 
 
-
+            </li>
+            <li>Researcher Information - If applicable, this table will contain information about authorized researchers with access to the database, including their credentials, roles, and research objectives. 
+            </li>
+          </ul>
+          <br>
+        App
+        <br>
+        <p>We also pan to develop a mental health tracking app, designed to complement the microfluidic chip and enhance mental health monitoring. The app will prioritize accessibility, user-friendliness, and engagement. To maximize accessibility, the app will be developed to run on multiple platforms, including iOS and Android devices, making it available to a wide range of users. </p>
+        <p>The app's core functionality will revolve around tracking mental health and well-being, with a range of features to support users in monitoring and improving their mental health. Users will be able to record their daily moods and emotions through the app. This data will be graphically displayed, allowing users to visualize trends and identify patterns in their emotional states. The app will include the option to log daily activities and routines, helping users correlate their activities with changes in their mental well-being. A journaling feature will allow users to document their thoughts, feelings, and experiences. This serves as a therapeutic outlet and provides valuable insights into mental health fluctuations. Links to mental health resources, crisis helplines, and expert advice will be readily available to users. </p>
+        <p>Respecting user privacy is paramount in the development of the mental health tracking app. We will implement stringent privacy measures to ensure user data remains confidential and secure. Users will be required to provide informed consent before using the app. This consent will explicitly outline what data is collected, how it is used, and users' rights regarding their data. Similar to the database for biomarker data, the app will collect only anonymized data, with no personally identifiable information included. </p> 
+        <p>The app's data can also be a valuable resource for research purposes, particularly in identifying correlations between mental health trends and new biomarkers relevant to clinical depression. 
+          Data collected from those undergoing antidepressant treatment along with biomarker tracking may lead to a deeper understanding of the relationship between medicines and biomarkers. </p>
+        
+        
+        
         </p>
+        <br>
+
         <hr class="line">
         <h1 class = "font-head" id="head5" style="color: #002147">Safety and Ethics</h1>
         <hr class="line">
@@ -377,9 +431,9 @@ The assessment of the response and efficacy of antidepressant treatment in Major
           <h1 class = "font-head" id="head8" style="color: #002147">McGill</h1>
           <hr class="line">
           <br>
-          <p>
+          
 
-          </p><br>
+          
            
 </div>
 </div>
