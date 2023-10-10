@@ -2,7 +2,15 @@
   
 {% block title %}Education{% endblock %}
 {% block lead %}{% endblock %}
-
+<script>
+    $(document).ready(function () {
+      //call functions
+      $(".show-hotha").click(function () {
+        $(".hotha-content").removeClass("hidden");
+        $(".overlay").removeClass("hidden");
+      });
+    })
+</script>
 {% block page_content %}
 
 <div class="row mt-4">
@@ -56,8 +64,77 @@
 <div id="container10"></div>
  <div class="container">
       <div class="row">
-
-<div class="wrapper">
+        <div class="cmodal hidden hotha-content">
+          <button class="close-modal">&times;</button>
+          <h1>Prof A</h1>
+          <div>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+              Vestibulum sit amet metus lectus. Maecenas interdum nisi maximus efficitur congue. 
+              Aenean aliquet eu ex nec sodales. Nullam euismod gravida tristique. 
+              Sed vel lectus et ex interdum egestas. Sed convallis quam nec tortor tincidunt elementum. 
+              Sed ante sapien, tristique nec sem imperdiet, venenatis convallis dolor. 
+              Fusce consectetur dictum risus, eu dictum felis iaculis sit amet. 
+              Praesent purus urna, hendrerit et dui eget, mattis consequat sem. 
+              Pellentesque vel enim euismod felis sagittis eleifend.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+              Vestibulum sit amet metus lectus. Maecenas interdum nisi maximus efficitur congue. 
+              Aenean aliquet eu ex nec sodales. Nullam euismod gravida tristique. 
+              Sed vel lectus et ex interdum egestas. Sed convallis quam nec tortor tincidunt elementum. 
+              Sed ante sapien, tristique nec sem imperdiet, venenatis convallis dolor. 
+              Fusce consectetur dictum risus, eu dictum felis iaculis sit amet. 
+              Praesent purus urna, hendrerit et dui eget, mattis consequat sem. 
+              Pellentesque vel enim euismod felis sagittis eleifend.
+            </p>
+            <p>TAKEAWAY:</p>
+            <ul>
+              <li>some point </li>
+              <li>another point</li>
+            </ul>
+          </div>
+          <div class="popup-img">
+            <img src="https://static.igem.wiki/teams/.jpg"/>
+          </div>
+        </div>
+        <div class="cmodal hidden hotha-content">
+          <button class="close-modal">&times;</button>
+          <h1>Prof A</h1>
+          <div>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+              Vestibulum sit amet metus lectus. Maecenas interdum nisi maximus efficitur congue. 
+              Aenean aliquet eu ex nec sodales. Nullam euismod gravida tristique. 
+              Sed vel lectus et ex interdum egestas. Sed convallis quam nec tortor tincidunt elementum. 
+              Sed ante sapien, tristique nec sem imperdiet, venenatis convallis dolor. 
+              Fusce consectetur dictum risus, eu dictum felis iaculis sit amet. 
+              Praesent purus urna, hendrerit et dui eget, mattis consequat sem. 
+              Pellentesque vel enim euismod felis sagittis eleifend.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+              Vestibulum sit amet metus lectus. Maecenas interdum nisi maximus efficitur congue. 
+              Aenean aliquet eu ex nec sodales. Nullam euismod gravida tristique. 
+              Sed vel lectus et ex interdum egestas. Sed convallis quam nec tortor tincidunt elementum. 
+              Sed ante sapien, tristique nec sem imperdiet, venenatis convallis dolor. 
+              Fusce consectetur dictum risus, eu dictum felis iaculis sit amet. 
+              Praesent purus urna, hendrerit et dui eget, mattis consequat sem. 
+              Pellentesque vel enim euismod felis sagittis eleifend.
+            </p>
+            <p>TAKEAWAY:</p>
+            <ul>
+              <li>some point </li>
+              <li>another point</li>
+            </ul>
+          </div>
+          <div class="popup-img">
+            <img src="https://static.igem.wiki/teams/.jpg"/>
+          </div>
+        </div>
+      
+    
+<!--<div class="wrapper">
   <div class="item"> <span class="close"></span>
     <div class="graphic"><img src="https://cdn1.vox-cdn.com/thumbor/EC4X77BDJU-0T7ckeVIeLcEhR8o=/0x1080/volume-assets.voxmedia.com/production/274228316beb82085aabc047060ca11e/angry-birds-family-art_1920.jpg" alt="Angry bird" onClick="animateCard()"/><span>Game of the day</span></div>
     <div class="brief">
@@ -101,7 +178,7 @@
           </p>
         </div>
       </div>
-      </div>
+      </div>-->
        </div>
     </div>
       
