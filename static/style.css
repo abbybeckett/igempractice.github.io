@@ -5134,8 +5134,8 @@ container,
     width: 100%;
     padding-right: var(--bs-gutter-x, 0.75rem);
     padding-left: var(--bs-gutter-x, 0.75rem);
-    margin-right: 9%;
-    margin-left: 9%;
+    margin-right: 50%;
+    margin-left: 50%;
     background-color: #F1EFE5;
 }
 @media (min-width: 576px) {
