@@ -7931,8 +7931,8 @@ a#menu-share:hover > i {
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 305px;
-	height: 280px;
+	width: 315px;
+	height: 240px;
 	padding: 20px;
 	margin: 0;
 	backface-visibility: hidden;
@@ -7943,7 +7943,7 @@ a#menu-share:hover > i {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-  border: solid 5px #2b32524a;
+  border:solid 3px #2b3252;
   border-radius: 12px;
 }
 .card-front i.tile-icon {
@@ -7965,8 +7965,8 @@ a#menu-share:hover > i {
 
 .card-back {
 	background-color: #2b3252;
-  border: solid 5px #efefef;
-  border-radius: 10px;
+  border: solid 1px #0000003b;
+  border-radius: 12px;
 	/*-webkit-transform: rotateY(-180deg);*/
 	transform: rotateY(-180deg);
 }
@@ -7981,6 +7981,7 @@ a#menu-share:hover > i {
 .card-back p.link {
 	color: #702082;
 }
+
 
 /*-------- cards / flip effect --------*/
 .flex-item:hover .card-front {
