@@ -31,27 +31,78 @@
 <script src="https://code.highcharts.com/modules/accessibility.js"></script>
 <script>
   (function() {
-      window.addEventListener('scroll', function(event) {
-        var depth, i, layer, layers, len, movement, topDistance, translate3d;
-        topDistance = this.pageYOffset;
-        layers = document.querySelectorAll("[data-type='parallax']");
-        for (i = 0, len = layers.length; i < len; i++) {
-          layer = layers[i];
-          depth = layer.getAttribute('data-depth');
-          movement = -(topDistance * depth);
-          translate3d = 'translate3d(0, ' + movement + 'px, 0)';
-          layer.style['-webkit-transform'] = translate3d;
-          layer.style['-moz-transform'] = translate3d;
-          layer.style['-ms-transform'] = translate3d;
-          layer.style['-o-transform'] = translate3d;
-          layer.style.transform = translate3d;
+    // Tutorial: https://medium.com/@patrickwestwood/how-to-make-multi-layered-parallax-illustration-with-css-javascript-2b56883c3f27
+    window.addEventListener('scroll', function(event) {
+      var depth, i, layer, layers, len, movement, topDistance, translate3d;
+      topDistance = this.pageYOffset;
+      layers = document.querySelectorAll("[data-type='parallax']");
+      console.log(topDistance)
+      for (i = 0, len = layers.length; i < len; i++) {
+        layer = layers[i];
+        depth = layer.getAttribute('data-depth');
+        movement = -(topDistance * depth) ;
+        translate3d = 'translate3d(0, ' + movement + 'px, 0)';
+        layer.style['-webkit-transform'] = translate3d;
+        layer.style['-moz-transform'] = translate3d;
+        layer.style['-ms-transform'] = translate3d;
+        layer.style['-o-transform'] = translate3d;
+        layer.style.transform = translate3d;
+      }
+    });
+  
+  }).call(this);
+
+  (function() {
+    // Tutorial: https://medium.com/@patrickwestwood/how-to-make-multi-layered-parallax-illustration-with-css-javascript-2b56883c3f27
+    window.addEventListener('scroll', function(event) {
+      var depth, i, layer, layers, len, movement, topDistance, translate3d;
+      topDistance = this.pageYOffset;
+      layers = document.querySelectorAll("[data-type='parallax1']");
+      for (i = 0, len = layers.length; i < len; i++) {
+        layer = layers[i];
+        depth = layer.getAttribute('data-depth');
+        if (topDistance>2000){
+          movement = 1.12 * (-((topDistance - 3960) * depth) - 3960);
         }
-      });
-    
-    }).call(this);
-    
-    //# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiPGFub255bW91cz4iXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQWdJO0VBQUE7RUFFaEksTUFBTSxDQUFDLGdCQUFQLENBQXdCLFFBQXhCLEVBQWtDLFFBQUEsQ0FBQyxLQUFELENBQUE7QUFDbEMsUUFBQSxLQUFBLEVBQUEsQ0FBQSxFQUFBLEtBQUEsRUFBQSxNQUFBLEVBQUEsR0FBQSxFQUFBLFFBQUEsRUFBQSxXQUFBLEVBQUE7SUFBRSxXQUFBLEdBQWMsSUFBQyxDQUFBO0lBQ2YsTUFBQSxHQUFTLFFBQVEsQ0FBQyxnQkFBVCxDQUEwQix3QkFBMUI7SUFFVCxLQUFBLHdDQUFBOztNQUNFLEtBQUEsR0FBUSxLQUFLLENBQUMsWUFBTixDQUFtQixZQUFuQjtNQUNSLFFBQUEsR0FBVyxDQUFDLENBQUMsV0FBQSxHQUFjLEtBQWY7TUFDWixXQUFBLEdBQWMsaUJBQUEsR0FBb0IsUUFBcEIsR0FBK0I7TUFDN0MsS0FBSyxDQUFDLEtBQUssQ0FBQyxtQkFBRCxDQUFYLEdBQW1DO01BQ25DLEtBQUssQ0FBQyxLQUFLLENBQUMsZ0JBQUQsQ0FBWCxHQUFnQztNQUNoQyxLQUFLLENBQUMsS0FBSyxDQUFDLGVBQUQsQ0FBWCxHQUErQjtNQUMvQixLQUFLLENBQUMsS0FBSyxDQUFDLGNBQUQsQ0FBWCxHQUE4QjtNQUM5QixLQUFLLENBQUMsS0FBSyxDQUFDLFNBQVosR0FBd0I7SUFSMUI7RUFKZ0MsQ0FBbEM7QUFGZ0kiLCJzb3VyY2VzQ29udGVudCI6WyIjIFR1dG9yaWFsOiBodHRwczovL21lZGl1bS5jb20vQHBhdHJpY2t3ZXN0d29vZC9ob3ctdG8tbWFrZS1tdWx0aS1sYXllcmVkLXBhcmFsbGF4LWlsbHVzdHJhdGlvbi13aXRoLWNzcy1qYXZhc2NyaXB0LTJiNTY4ODNjM2YyN1xuXG53aW5kb3cuYWRkRXZlbnRMaXN0ZW5lciAnc2Nyb2xsJywgKGV2ZW50KSAtPlxuICB0b3BEaXN0YW5jZSA9IEBwYWdlWU9mZnNldCBcbiAgbGF5ZXJzID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvckFsbChcIltkYXRhLXR5cGU9J3BhcmFsbGF4J11cIilcbiAgXG4gIGZvciBsYXllciBpbiBsYXllcnNcbiAgICBkZXB0aCA9IGxheWVyLmdldEF0dHJpYnV0ZSgnZGF0YS1kZXB0aCcpXG4gICAgbW92ZW1lbnQgPSAtKHRvcERpc3RhbmNlICogZGVwdGgpXG4gICAgdHJhbnNsYXRlM2QgPSAndHJhbnNsYXRlM2QoMCwgJyArIG1vdmVtZW50ICsgJ3B4LCAwKSdcbiAgICBsYXllci5zdHlsZVsnLXdlYmtpdC10cmFuc2Zvcm0nXSA9IHRyYW5zbGF0ZTNkXG4gICAgbGF5ZXIuc3R5bGVbJy1tb3otdHJhbnNmb3JtJ10gPSB0cmFuc2xhdGUzZFxuICAgIGxheWVyLnN0eWxlWyctbXMtdHJhbnNmb3JtJ10gPSB0cmFuc2xhdGUzZFxuICAgIGxheWVyLnN0eWxlWyctby10cmFuc2Zvcm0nXSA9IHRyYW5zbGF0ZTNkXG4gICAgbGF5ZXIuc3R5bGUudHJhbnNmb3JtID0gdHJhbnNsYXRlM2RcbiAgcmV0dXJuIl19
-    //# sourceURL=coffeescript
+        else {
+          movement = 0
+        }
+        translate3d = 'translate3d(0, ' + parseInt(movement) + 'px, 0)';
+        layer.style['-webkit-transform'] = translate3d;
+        layer.style['-moz-transform'] = translate3d;
+        layer.style['-ms-transform'] = translate3d;
+        layer.style['-o-transform'] = translate3d;
+        layer.style.transform = translate3d;
+      }
+    });
+  
+  }).call(this);
+
+  (function() {
+    // Tutorial: https://medium.com/@patrickwestwood/how-to-make-multi-layered-parallax-illustration-with-css-javascript-2b56883c3f27
+    window.addEventListener('scroll', function(event) {
+      var depth, i, layer, layers, len, movement, topDistance, translate3d;
+      topDistance = this.pageYOffset;
+      layers = document.querySelectorAll("[data-type='parallax2']");
+      for (i = 0, len = layers.length; i < len; i++) {
+        layer = layers[i];
+        depth = layer.getAttribute('data-depth');
+        if (topDistance>2000){
+          movement = 1.125 * (-((topDistance) * depth));
+        }
+        else {
+          movement = 0
+        }
+        translate3d = 'translate3d(0, ' + parseInt(movement) + 'px, 0)';
+        layer.style['-webkit-transform'] = translate3d;
+        layer.style['-moz-transform'] = translate3d;
+        layer.style['-ms-transform'] = translate3d;
+        layer.style['-o-transform'] = translate3d;
+        layer.style.transform = translate3d;
+      }
+    });
+  
+  }).call(this);
   </script>
 
     <title>Home</title>
@@ -71,7 +122,7 @@
         <span class="bar"></span>
       </div>
       <ul class="nav no-search">
-        <li class="nav-item" style = "padding-top: 4.8px; font-weight: 400; font-size: 1.1rem;";><a href="index.html">Home</a></li>
+        <li class="nav-item" style = "padding-top: 4.8px; font-weight: 700; font-size: 1.1rem;";><a href="index.html">Home</a></li>
         <li class="nav-item"><div class="dropdown">
           <button class="dropbtn">Team
             <i class="fa fa-caret-down"></i>
@@ -162,19 +213,14 @@
       </div>
     </div>
   </header>-->
-  
 
 <div id='hero'>
-  <div class='layer-bg layer' data-depth='0.10' data-type='parallax'></div>
-  <div class='layer-4 layer' data-depth='0.20' data-type='parallax'></div>
-  <div class='layer-3 layer' data-depth='0.50' data-type='parallax'></div>
-  <div class='layer-2 layer' data-depth='0.80' data-type='parallax'></div>
-  <div class='layer-overlay layer' data-depth='0.85' data-type='parallax'></div>
-  <div class='layer-1 layer' data-depth='1.00' data-type='parallax'></div>
+  <div class='layer-11 layer' data-depth='0.4' data-type='parallax'></div>
+  <div class='layer-10 layer' data-depth='0.8' data-type='parallax'></div>
+  <div class='layer-9 layer' data-depth='0.8' data-type='parallax'></div>
+  <div class='layer-8 layer' data-depth='1' data-type='parallax'></div>
 </div>
 <div id='hero-mobile'></div>
-
-
 
 <div id='content'>
   <div class='container'>
@@ -201,23 +247,95 @@
     </section>
   </div>
 </div>
-<div id ="container3">
-<div id="main">
-
-	<!--END / FONT AWESOME DEMO -->	
 
 
-	<!-- 3 COLUMN DEMO  -->		
-	<div class="col_third">	
-		<section class="section--yellow wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; -webkit-animation-delay: 0.1s; -moz-animation-delay: 0.1s; animation-delay: 0.1s;"></section>
-	</div>
+<div id='hero2'>
+  <div class='layer-7 layer' data-depth='0.70' data-type='parallax1'></div>
+  <div class='layer-6 layer' data-depth='0.85' data-type='parallax1'></div>
+  <div class='layer-5 layer' data-depth='1.00' data-type='parallax1'></div>
+</div>
+<div id='hero-mobile'></div>
 
-	<div class="col_half">	
-    <p> HEy this is dummy teext to see what happens HEy this is dummy teext to see what happens HEy this is dummy teext to see what happens HEy this is dummy teext to see what happens HEy this is dummy teext to see what hppens HEy this is dummy teext to see what happens HEy this is dummy teext to see what happens HEy this is dummy teext to see what happens HEy this is dummy teext to see what happens HEy this is dummy teext to see what happens HEy this is dummy teext to see what happens </p>		
-	</div>
-	<div class="clear"></div>
+<div id='content'>
+  <div class='container'>
+    <section class='first-section'>
+      <div class='row'>
+        <div class='col-sm-6'>
+          <h1>You cannot hide the soul. Through all his unearthly tattooings, I thought I saw the traces of a simple honest heart.</h1>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='col-sm-6'>
+          <p>And besides all this, there was a certain lofty bearing about the Pagan, which even his uncouthness could not altogether maim. He looked like a man who had never cringed and never had had a creditor. Whether it was, too, that his head being shaved, his forehead was drawn out in freer and brighter relief, and looked more expansive than it otherwise would, this I will not venture to decide; but certain it was his head was phrenologically an excellent one.</p>
+          <p>It may seem ridiculous, but it reminded me of General Washington's head, as seen in the popular busts of him. It had the same long regularly graded retreating slope from above the brows, which were likewise very projecting, like two long promontories thickly wooded on top. Queequeg was George Washington cannibalistically developed.</p>
+          <p>Whilst I was thus closely scanning him, half-pretending meanwhile to be looking out at the storm from the casement, he never heeded my presence, never troubled himself with so much as a single glance; but appeared wholly occupied with counting the pages of the marvellous book. Considering how sociably we had been sleeping together the night previous, and especially considering the affectionate arm I had found thrown over me upon waking in the morning, I thought this indifference of his very strange. But savages are strange beings; at times you do not know exactly how to take them.</p>
+        </div>
+        <div class='col-sm-6'>
+          <p>At first they are overawing; their calm self-collectedness of simplicity seems a Socratic wisdom. I had noticed also that Queequeg never consorted at all, or but very little, with the other seamen in the inn. He made no advances whatever; appeared to have no desire to enlarge the circle of his acquaintances. All this struck me as mighty singular; yet, upon second thoughts, there was something almost sublime in it. Here was a man some twenty thousand miles from home, by the way of Cape Horn, that is—which was the only way he could get there—thrown among people as strange to him as though he were in the planet Jupiter; and yet he seemed entirely at his ease; preserving the utmost serenity; content with his own companionship; always equal to himself.</p>
+          <p>Here was a man some twenty thousand miles from home, by the way of Cape Horn, that is—which was the only way he could get there—thrown among people as strange to him as though he were in the planet Jupiter; and yet he seemed entirely at his ease; preserving the utmost serenity; content with his own companionship; always equal to himself. Surely this was a touch of fine philosophy; though no doubt he had never heard there was such a thing as that.</p>
+          <a class='tutorial-link' href='https://medium.com/@PatrickWestwood/how-to-make-multi-layered-parallax-illustration-with-css-javascript-2b56883c3f27'>
+            Learn how to create this parallax effect
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
 </div>
 
+<div id='hero3'>
+  <div class='layer-bg layer' data-depth='1.0' data-type='parallax2'></div>
+  <div class='layer-4 layer' data-depth='1.0' data-type='parallax2'></div>
+  <div class='layer-3 layer' data-depth='1.0' data-type='parallax2'></div>
+  <div class='layer-2 layer' data-depth='0.99' data-type='parallax2'></div>
+  <div class='layer-overlay layer' data-depth='0.9' data-type='parallax2'></div>
+  <div class='layer-1 layer' data-depth='0.99' data-type='parallax2'></div>
+</div>
+<div id='hero-mobile'></div>
+
+<div id='content'>
+  <div class='container'>
+    <section class='first-section'>
+      <div class='row'>
+        <div class='col-sm-6'>
+          <h1>You cannot hide the soul. Through all his unearthly tattooings, I thought I saw the traces of a simple honest heart.</h1>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='col-sm-6'>
+          <p>And besides all this, there was a certain lofty bearing about the Pagan, which even his uncouthness could not altogether maim. He looked like a man who had never cringed and never had had a creditor. Whether it was, too, that his head being shaved, his forehead was drawn out in freer and brighter relief, and looked more expansive than it otherwise would, this I will not venture to decide; but certain it was his head was phrenologically an excellent one.</p>
+          <p>It may seem ridiculous, but it reminded me of General Washington's head, as seen in the popular busts of him. It had the same long regularly graded retreating slope from above the brows, which were likewise very projecting, like two long promontories thickly wooded on top. Queequeg was George Washington cannibalistically developed.</p>
+          <p>Whilst I was thus closely scanning him, half-pretending meanwhile to be looking out at the storm from the casement, he never heeded my presence, never troubled himself with so much as a single glance; but appeared wholly occupied with counting the pages of the marvellous book. Considering how sociably we had been sleeping together the night previous, and especially considering the affectionate arm I had found thrown over me upon waking in the morning, I thought this indifference of his very strange. But savages are strange beings; at times you do not know exactly how to take them.</p>
+        </div>
+        <div class='col-sm-6'>
+          <p>At first they are overawing; their calm self-collectedness of simplicity seems a Socratic wisdom. I had noticed also that Queequeg never consorted at all, or but very little, with the other seamen in the inn. He made no advances whatever; appeared to have no desire to enlarge the circle of his acquaintances. All this struck me as mighty singular; yet, upon second thoughts, there was something almost sublime in it. Here was a man some twenty thousand miles from home, by the way of Cape Horn, that is—which was the only way he could get there—thrown among people as strange to him as though he were in the planet Jupiter; and yet he seemed entirely at his ease; preserving the utmost serenity; content with his own companionship; always equal to himself.</p>
+          <p>Here was a man some twenty thousand miles from home, by the way of Cape Horn, that is—which was the only way he could get there—thrown among people as strange to him as though he were in the planet Jupiter; and yet he seemed entirely at his ease; preserving the utmost serenity; content with his own companionship; always equal to himself. Surely this was a touch of fine philosophy; though no doubt he had never heard there was such a thing as that.</p>
+          <a class='tutorial-link' href='https://medium.com/@PatrickWestwood/how-to-make-multi-layered-parallax-illustration-with-css-javascript-2b56883c3f27'>
+            Learn how to create this parallax effect
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<!-- <div id="container3">
+  <div id="main">
+    <div class="col_third">
+      <section class="section--yellow wow fadeInLeft" data-wow-delay="0.1s"
+        style="visibility: visible; -webkit-animation-delay: 0.1s; -moz-animation-delay: 0.1s; animation-delay: 0.1s;">
+      </section>
+    </div>
+
+    <div class="col_half">
+      <p> HEy this is dummy teext to see what happens HEy this is dummy teext to see what happens HEy this is dummy
+        teext to see what happens HEy this is dummy teext to see what happens HEy this is dummy teext to see what hppens
+        HEy this is dummy teext to see what happens HEy this is dummy teext to see what happens HEy this is dummy teext
+        to see what happens HEy this is dummy teext to see what happens HEy this is dummy teext to see what happens HEy
+        this is dummy teext to see what happens </p>
+    </div>
+    <div class="clear"></div>
+  </div>
+</div> -->
 
 
 <!--<div class="row">

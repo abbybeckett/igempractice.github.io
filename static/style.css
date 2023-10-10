@@ -6646,12 +6646,27 @@ i.fa-star.rating{color: rgb(232, 217, 31);}
     font-size: 50px;
     text-align: center;
   }
-  
-  
+
   #hero,
   .layer {
-    min-height: 800px;
-    max-width: 1900px;
+    min-height: 1640px;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  #hero2,
+  .layer2 {
+    min-height: 1080px;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  #hero3,
+  .layer3 {
+    min-height: 920px;
+    max-width: 100%;
     margin: 0 auto;
     overflow: hidden;
   }
@@ -6679,6 +6694,35 @@ i.fa-star.rating{color: rgb(232, 217, 31);}
       background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/ilu_overlay.png");
   }
   
+
+  .layer-5 {
+    background-image: url('https://static.igem.wiki/teams/4693/wiki/assets/mainpage/data-first-layer.png');
+  }
+
+  .layer-6 {
+    background-image: url('https://static.igem.wiki/teams/4693/wiki/assets/mainpage/data-second-layer.png');
+  }
+
+  .layer-7 {
+    background-image: url('https://static.igem.wiki/teams/4693/wiki/assets/mainpage/data-third-layer.png');
+  }
+
+  .layer-8 {
+    background-image: url('https://static.igem.wiki/teams/4693/wiki/assets/mainpage/depressed-girl-layer-1.png');
+  }
+
+  .layer-9 {
+    background-image: url('https://static.igem.wiki/teams/4693/wiki/assets/mainpage/depressed-girl-layer-2.png');
+  }
+
+  .layer-10 {
+    background-image: url('https://static.igem.wiki/teams/4693/wiki/assets/mainpage/depressed-girl-layer-3.png');
+  }
+
+  .layer-11 {
+    background-image: url('https://static.igem.wiki/teams/4693/wiki/assets/mainpage/depressed-girl-layer-4.png');
+  }
+
   @media only screen and (max-width: 768px) {
     #hero {
       display: none;
