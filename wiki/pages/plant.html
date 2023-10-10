@@ -1,57 +1,9 @@
 {% extends "layout.html" %}
   
-{% block title %}Education{% endblock %}
-{% block lead %}Innovative educational tools and outreach activities have the ability to establish a two-way dialogue with new communities by discussing public values and the science behind synthetic biology.{% endblock %}
+{% block title %}Plant{% endblock %}
+{% block lead %}This award is designed to celebrate exemplary work done in plant synthetic biology.{% endblock %}
 
 {% block page_content %}
-
-<div class="row mt-4">
-  <div class="col">
-    <div class="bd-callout bd-callout-info">
-      
-      
-<!--<div class="wrapper">
-  <div class="parallax-card">
-    <div class="parallax-card__holder">
-      <div class="parallax-card__front" style="background: url(http://3.bp.blogspot.com/-pALEvZsxjLY/Voj79q4lExI/AAAAAAAAGbE/HLFxzSWDoKQ/w480-h854-c/cute-cartoon-owl-art-android-best-wallpaper.jpg) 50% 50% no-repeat;">
-        <div class="parallax-card__content"><span class="parallax-card__front-title">Title</span></div>
-      </div>
-      <div class="parallax-card__back">
-        <div class="parallax-card__content"><span class="parallax-card__back-descr">Description</span></div>
-      </div>
-    </div>
-  </div>
-  <div class="parallax-card">
-    <div class="parallax-card__holder">
-      <div class="parallax-card__front" style="background: url(https://i.pinimg.com/originals/c7/5c/6c/c75c6c75494096e28ab71878d06c98d4.jpg) 50% 50% no-repeat;">
-        <div class="parallax-card__content"><span class="parallax-card__front-title">Title</span></div>
-      </div>
-      <div class="parallax-card__back">
-        <div class="parallax-card__content"><span class="parallax-card__back-descr">Description</span></div>
-      </div>
-    </div>
-  </div>
-  <div class="parallax-card">
-    <div class="parallax-card__holder">
-      <div class="parallax-card__front" style="background: url(https://i.pinimg.com/originals/c7/5c/6c/c75c6c75494096e28ab71878d06c98d4.jpg) 50% 50% no-repeat;">
-        <div class="parallax-card__content"><span class="parallax-card__front-title">Title</span></div>
-      </div>
-      <div class="parallax-card__back">
-        <div class="parallax-card__content"><span class="parallax-card__back-descr">Description</span></div>
-      </div>
-    </div>
-  </div>
-  <div class="parallax-card">
-    <div class="parallax-card__holder">
-      <div class="parallax-card__front" style="background: url(https://i.pinimg.com/originals/c7/5c/6c/c75c6c75494096e28ab71878d06c98d4.jpg) 50% 50% no-repeat;">
-        <div class="parallax-card__content"><span class="parallax-card__front-title">Title</span></div>
-      </div>
-      <div class="parallax-card__back">
-        <div class="parallax-card__content"><span class="parallax-card__back-descr">Description</span></div>
-      </div>
-    </div>
-  </div>
-</div>-->
 
 <div id="container10"></div>
  <div class="container">
@@ -112,60 +64,7 @@
 </div>
 
 
-      <!--<h4>Best Education</h4>
-      <p>How have you developed new opportunities to include more people in shaping synthetic biology? Innovative educational tools and outreach activities have the ability to establish a two-way dialogue with new communities by discussing public values and the science behind synthetic biology. Document your approach and what was learned by everyone involved to compete for this award.</p>
-      <p>To compete for the Best Education prize, please describe your work on this page and also fill out the description on the <a href="https://competition.igem.org/deliverables/judging-form">judging form</a>.</p>
-      <hr>
-      <p>Please see the <a href="https://competition.igem.org/judging/awards">2023 Awards Page</a> for more information.</p>
-    </div>
-  </div>
-</div>
-
-<div class="row mt-4">
-  <div class="col">
-    <h2>Inspirations</h2>
-    <hr>
-    <ul>
-      <li><a href="https://2020.igem.org/Team:CCA_San_Diego/Education">2020 CCA San Diego</a></li>
-      <li><a href="https://2020.igem.org/Team:Lambert_GA/Education">2020 Lambert GA</a></li>
-      <li><a href="https://2020.igem.org/Team:Stanford/Education">2020 Stanford</a></li>
-      <li><a href="https://2020.igem.org/Team:Waseda/Education">2020 Waseda</a></li>
-      <li><a href="https://2020.igem.org/Team:Fudan/Education">2020 Fudan</a></li>
-      <li><a href="https://2020.igem.org/Team:Toulouse_INSA-UPS/Education">2020 Toulouse INSA UPS</a></li>
-    </ul>
-  </div>
-</div>-->
-<!--
-<script>
-gsap.registerPlugin(ScrollTrigger);
-
-gsap.utils.toArray(".cards").forEach((row) => {
-  const tl = gsap.timeline();
-  const cards = row.querySelectorAll(".card");
-  const title = row.parentNode.querySelector(".page-section__title");
-
-  ScrollTrigger.create({
-    trigger: row,
-    start: "+=200px bottom",
-    animation: tl
-      .to(title, {
-        duration: 0.5,
-        opacity: 1,
-        x: 0,
-        ease: "back.out(1.4)"
-      })
-      .to(cards, {
-        duration: 1,
-        opacity: 1,
-        x: 0,
-        ease: "elastic.out(1, 0.75)",
-        stagger: { axis: "x", each: 0.04 }
-      }, "-=0.2")
-  });
-});
-
-</script>-->
-<script>
+  <script>
            $('.menu-toggle').click(function(){
                    $(".nav").toggleClass("mobile-nav");
                    $(this).toggleClass("is-active");
@@ -424,5 +323,5 @@ Highcharts.chart("container10", {
   }
 });
                 </script>
-            
+
 {% endblock %}
