@@ -5214,8 +5214,8 @@ container,
 
 .our-team .picture {
   display: inline-block;
-  height: 130px;
-  width: 130px;
+  height: 500px;
+  width: 500px;
   margin-bottom: 50px;
   z-index: 5;
   position: relative;
