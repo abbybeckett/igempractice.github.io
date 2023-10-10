@@ -9,9 +9,15 @@
       <span class="bar"></span>
     </div>
     <ul class="nav no-search">
-      <li class="nav-item" style=" font-weight: 400; font-size: 1.1rem;"><div class="dropdown">
-        <button class="dropbtn"><a href="{{ url_for('pages', page='home') }}">Home</a></button></div></li>
-      <li class="nav-item"><div class="dropdown">
+    <li class="nav-item" style=" font-weight: 400; font-size: 1.1rem;">
+      <div class="dropdown">
+        <button class="dropbtn">
+          <a href="{{ url_for('pages', page='home') }}">Home</a>
+        </button>
+      </div>
+    </li>
+    <li class="nav-item">
+      <div class="dropdown">
         <button class="dropbtn">Team
           <i class="fa fa-caret-down"></i>
         </button>
@@ -21,10 +27,10 @@
           <a href="{{ url_for('pages', page='collaboration') }}">Collaborations</a>
           <a href="{{ url_for('pages', page='sponsors') }}">Sponsors</a>
         </div> 
-        </div>
-      </li>
-      <li class="nav-item">
-         <div class="dropdown">
+      </div>
+    </li>
+    <li class="nav-item">
+      <div class="dropdown">
         <button class="dropbtn">Project
           <i class="fa fa-caret-down"></i>
         </button>
@@ -42,12 +48,12 @@
         </div>
       </div>
     </li>
-      <li class="nav-item">
-        <div class="dropdown">
-          <button class="dropbtn">Wetlab
-            <i class="fa fa-caret-down"></i>
-          </button>
-          <div class="dropdown-content">
+    <li class="nav-item">
+      <div class="dropdown">
+        <button class="dropbtn">Wetlab
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
 
             <a href="{{ url_for('pages', page='experiments') }}">Experiments</a>
             <!--<a href="{{ url_for('pages', page='notebook') }}">Notebook</a>-->
@@ -57,20 +63,20 @@
             <a href="{{ url_for('pages', page='results') }}">Results</a>
             
            
-      </div>
+        </div>
       </div>
     </li>
     <li class="nav-item">
       <div class="dropdown">
-      <button class="dropbtn">Dry Lab
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-content">
-        <a href="{{ url_for('pages', page='model') }}">Model</a>
-        <a href="{{ url_for('pages', page='microfluidics') }}">Microfluidics</a>
-        <a href="{{ url_for('pages', page='hardware') }}">Hardware</a>
-       
-                
+        <button class="dropbtn">Dry Lab
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="{{ url_for('pages', page='model') }}">Model</a>
+          <a href="{{ url_for('pages', page='microfluidics') }}">Microfluidics</a>
+          <a href="{{ url_for('pages', page='hardware') }}">Hardware</a>
+        </div>
+      </div>    
     </li>
     
     <li class="nav-item">
@@ -84,9 +90,9 @@
           <!--<a href="{{ url_for('pages', page='human-practices') }}">Human Practices</a>-->
           <a href="{{ url_for('pages', page='inclusivity') }}">Inclusivity</a>
          
-    </div>
-    </div>
-  </li>
+        </div>
+      </div>
+    </li>
     </ul>
   </nav>
 </div>
