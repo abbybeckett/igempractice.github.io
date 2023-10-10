@@ -7931,7 +7931,7 @@ a#menu-share:hover > i {
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 185px;
+	width: 305px;
 	height: 280px;
 	padding: 20px;
 	margin: 0;
@@ -7943,8 +7943,8 @@ a#menu-share:hover > i {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-  border:solid 5px #9b111e;
-  border-radius: 10px;
+  border: solid 5px #2b32524a;
+  border-radius: 12px;
 }
 .card-front i.tile-icon {
 	display: block;
@@ -7964,7 +7964,7 @@ a#menu-share:hover > i {
 }
 
 .card-back {
-	background-color: #9b111e;
+	background-color: #2b3252;
   border: solid 5px #efefef;
   border-radius: 10px;
 	/*-webkit-transform: rotateY(-180deg);*/
