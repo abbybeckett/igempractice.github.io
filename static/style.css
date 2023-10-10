@@ -7977,20 +7977,20 @@ a#menu-share:hover > i {
 	transform: rotateY(0);
 }
 
-* 
+/* 
 html, body {
   max-width: 100%;
   overflow-x: hidden;
 }
 .mySlides {display: none}
-/* Slideshow container */
+/* Slideshow container
 .slideshow-container {
   max-width: 100%;
   position: relative;
   margin: auto;
 }
 
-/* Next & previous buttons */
+/* Next & previous buttons
 .prev, .next {
   cursor: pointer;
   position: absolute;
@@ -8006,18 +8006,18 @@ html, body {
   user-select: none;
 }
 
-/* Position the "next button" to the right */
+/* Position the "next button" to the right
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
 
-/* On hover, add a black background color with a little bit see-through */
+/* On hover, add a black background color with a little bit see-through
 .prev:hover, .next:hover {
   background-color: rgba(0,0,0,0.8);
 }
 
-/* Fading animation */
+/* Fading animation 
 .fade {
   animation-name: fade;
   animation-duration: 1.5s;
@@ -8028,10 +8028,10 @@ html, body {
   to {opacity: 1}
 }
 
-/* On smaller screens, decrease text size */
+/* On smaller screens, decrease text size
 @media only screen and (max-width: 300px) {
   .prev, .next,.text {font-size: 11px}
-}
+}*/
 
 .dbtl2,
 .dbtl3,
