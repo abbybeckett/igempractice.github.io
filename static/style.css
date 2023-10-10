@@ -8271,3 +8271,17 @@ button-1 {
   transform: rotateY(180deg);
 }
 /*END IMAGE FLIP CARD*/
+
+/*images hardware  */
+.flex-container9 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;  
+}
+.flex-container9 img {
+  margin-right: 15px;
+}
+
+.flex-container9 iframe {
+  margin-left: 15px;
+}
