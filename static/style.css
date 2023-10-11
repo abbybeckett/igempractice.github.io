@@ -8002,6 +8002,75 @@ a#menu-share:hover > i {
 	transform: rotateY(0);
 }
 
+/*-------- cards --------*/
+.card-front1,
+.card-back1 {
+	position: absolute;
+	top: 0;
+	left: -140px;
+	width: 500px;
+	height: 240px;
+	padding: 20px;
+	margin: 0;
+	backface-visibility: hidden;
+	transition: transform 0.3s;
+}
+.card-front1 {
+  /*background: #123456;*/
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  border:solid 3px #2b3252;
+  border-radius: 12px;
+}
+.card-front1 i.tile-icon {
+	display: block;
+	margin: 10px auto 20px auto;
+	text-align: center;
+}
+.card-front1 h4 {
+	font-size: 18px;
+	font-weight: normal;
+	margin: 10px 0;
+  
+}
+.card-front1 p.detail {
+	font-size: 24px;
+	font-weight: bold;
+	margin: 0;
+}
+
+.card-back1 {
+	background-color: #2b3252;
+  border: solid 1px #0000003b;
+  border-radius: 12px;
+	/*-webkit-transform: rotateY(-180deg);*/
+	transform: rotateY(-180deg);
+}
+.card-back1 p.title {
+	color: #000;
+	margin-top: 0;
+	text-transform: uppercase;
+}
+.card-back1 p.desc {
+	color: #fff;
+}
+.card-back1 p.link {
+	color: #702082;
+}
+
+
+/*-------- cards / flip effect --------*/
+.flex-item:hover .card-front1 {
+	/*-webkit-transform: rotateY(-180deg);*/
+	transform: rotateY(-180deg);
+}
+.flex-item:hover .card-back1 {
+	/*-webkit-transform: rotateY(0);*/
+	transform: rotateY(0);
+}
+
+
 /* 
 html, body {
   max-width: 100%;
