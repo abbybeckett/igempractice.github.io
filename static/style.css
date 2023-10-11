@@ -7980,12 +7980,13 @@ a#menu-share:hover > i {
 	transform: rotateY(-180deg);
 }
 .card-back p.title {
-	color: #000;
-	margin-top: 0;
+	color: #7ec4b2;
+	margin-top: -12px;
 	text-transform: uppercase;
 }
 .card-back p.desc {
 	color: #fff;
+  margin-top: -15px;
 }
 .card-back p.link {
 	color: #702082;
